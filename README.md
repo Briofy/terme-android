@@ -1,1 +1,0 @@
-# lynqify-android

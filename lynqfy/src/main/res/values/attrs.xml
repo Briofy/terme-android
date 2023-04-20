@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="LyCrypto">
+        <attr name="headerTitle" format="string" />
+        <attr name="headerBody" format="string" />
+        <attr name="helperText" format="string" />
+
+        <attr name="itemCount" format="integer" />
+        <attr name="itemTextColor" format="color" />
+        <attr name="item" format="color" />
+
+
+    </declare-styleable>
+
+
+</resources>

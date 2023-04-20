@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ly_card_background">#FDFDFD</color>
+    <color name="ly_card_item_background">#F7F8F9</color>
+    <color name="ly_popular_background">#E3E5E9</color>
+    <color name="ly_card_title">#0F1927</color>
+    <color name="ly_card_content">#68717E</color>
+</resources>

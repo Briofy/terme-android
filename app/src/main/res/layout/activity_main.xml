@@ -1,19 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity">
 
-    <net.lynqfy.offical.card.LyCrypto
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:headerBody="@string/body"
-        app:headerTitle="@string/title"
-        app:helperText="@string/helper"
-        app:itemCount="15"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/popular" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:body="@string/body"
+            app:header="@string/title"
+            app:helperText="@string/helper"
+
+            app:type="crypto" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/testimonial" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:authorAvatar="@drawable/tt"
+            app:authorName="@string/author_name"
+            app:authorText="@string/author_text"
+            app:body="@string/body"
+            app:header="@string/title"
+            app:type="testimonial" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="card button" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:authorAvatar="@drawable/tt"
+            app:authorName="@string/author_name"
+            app:authorText="@string/author_text"
+            app:body="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+            app:header="Noteworthy technology acquisitions 2021"
+            app:actionButtonText="Read more"
+            app:type="card_button" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

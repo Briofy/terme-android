@@ -5,8 +5,11 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import com.google.android.material.card.MaterialCardView
 import net.lynqfy.offical.R
+import net.lynqfy.offical.card.typed.cardbutton.CardButton
 import net.lynqfy.offical.card.typed.cardbutton.CardButtonIm
+import net.lynqfy.offical.card.typed.crypto.Crypto
 import net.lynqfy.offical.card.typed.crypto.CryptoIm
+import net.lynqfy.offical.card.typed.testimonial.Testimonial
 import net.lynqfy.offical.card.typed.testimonial.TestimonialIm
 
 open class LyCardView : MaterialCardView {
@@ -27,6 +30,8 @@ open class LyCardView : MaterialCardView {
         initLyCardViewTheme(attr, defStyleAttr)
     }
 
+
+    fun getLyAction()  = mLyCardActionUi
     private fun initLyCardViewTheme(attrs: AttributeSet?, defStyleAttr: Int = 0) {
 
         // Ensure we are using the correctly themed context rather than the context that was passed in.
@@ -39,12 +44,14 @@ open class LyCardView : MaterialCardView {
             )
             val cardType = TypedValue()
             if (attributes.getValue(R.styleable.LyCardView_type, cardType)) {
+                mLyCardUiType = cardType.data
+
                 when (cardType.data) {
                     /*"crypto typed" */      1 -> {
-                    CryptoIm(this, attributes, attrs, defStyleAttr)
+                    mLyCardActionUi = CryptoIm(this, attributes, attrs, defStyleAttr)
                 }
                     /*"testimonial"*/  2 -> {
-                    TestimonialIm(this, attributes, attrs, defStyleAttr)
+                    mLyCardActionUi = TestimonialIm(this, attributes, attrs, defStyleAttr)
                 }
                     /*"pricing" */     3 -> {
                     //Pricing(this, attributes, attrs, defStyleAttr)
@@ -80,7 +87,7 @@ open class LyCardView : MaterialCardView {
                     //CTACard(this, attributes, attrs, defStyleAttr)
                 }
                     /*"card_button"*/ 14 -> {
-                    CardButtonIm(this, attributes, attrs, defStyleAttr)
+                    mLyCardActionUi = CardButtonIm(this, attributes, attrs, defStyleAttr)
                 }
                 }
                 invalidate()
@@ -91,5 +98,9 @@ open class LyCardView : MaterialCardView {
         radius = 18f
         useCompatPadding = true
     }
+
+
+    private lateinit var mLyCardActionUi: LyCardAction
+    private var mLyCardUiType: Int = 1
 
 }

@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
 import net.lynqfy.offical.R
+import net.lynqfy.offical.callbacks.OnItemClickListener
+import net.lynqfy.offical.card.LyCardAction
 import com.google.android.material.R as MR
 import net.lynqfy.offical.databinding.LyCryptoUiBinding
 import net.lynqfy.offical.databinding.LyItemUiBinding
@@ -16,27 +18,45 @@ import net.lynqfy.offical.model.Header
 import net.lynqfy.offical.model.Item
 
 internal class CryptoIm(
-    private  var parent: ViewGroup,
+    private var parent: ViewGroup,
     private val typedArray: TypedArray,
     attr: AttributeSet,
-    defStyleAttr: Int) : Crypto{
+    defStyleAttr: Int
+) : Crypto  {
 
     override fun setHeaderInfo(header: Header) {
         ui.title.text = header.title
         ui.body.text = header.body
     }
+
     override fun setHelperMessage(helper: String) {
         ui.helper.text = helper
     }
+
     override fun addWallet(item: Item) {
         createItemsUi(item)
     }
-    override  fun addWallets(wallets: List<Item>) {
+
+    override fun addWallets(wallets: List<Item>) {
         wallets.forEach {
             createItemsUi(it)
         }
     }
-    fun getItemCount() = itemCount
+
+    override fun onBadgeClicked(callback: () -> Unit) {
+        if (mItemUis.isEmpty()) {
+            throw IllegalStateException("Wallet list is Empty ... ")
+        }
+        mItemUis[0].badge.setOnClickListener {
+            callback.invoke()
+        }
+    }
+
+    override fun onOnItemClickListener(listener: OnItemClickListener) {
+        mOnItemClickListener = listener
+    }
+
+    fun getItemCount() = mItemUis.size
 
     private fun initCryptoTheme(attrs: AttributeSet?, defStyleAttr: Int = 0) {
         // Ensure we are using the correctly themed context rather than the context that was passed in.
@@ -59,24 +79,26 @@ internal class CryptoIm(
     }
 
     private fun generateTestContent() {
-        val item = Item(
-            AppCompatResources
-                .getDrawable(parent.context, R.drawable.ic_help), badge = Badge("Popular")
-        )
         for (i in 0 until 5) {
-            item.name = "Sample Text ${i + 1}"
-            createItemsUi(item)
+            createItemsUi(Item(
+                AppCompatResources
+                    .getDrawable(parent.context, R.drawable.ic_help),"Sample Text $i", badge = Badge("Popular")
+            ))
         }
     }
 
     private fun createItemsUi(item: Item) {
+        mItems.add(item)
+
         LyItemUiBinding.inflate(LayoutInflater.from(parent.context), parent, false).apply {
+
             root.setOnClickListener {
-                Toast.makeText(it.context, "You Clicked : ${content.text}", Toast.LENGTH_LONG).show()
+                val index = mItemUis.indexOf(this)
+                mOnItemClickListener?.onItemClicked(index, mItems[index])
             }
             content.text = item.name
             item.badge?.let {
-                if (itemCount == 0) {
+                if (mItemUis.size == 0) {
                     badge.visibility = View.VISIBLE
                 }
                 badge.text = it.text
@@ -87,7 +109,6 @@ internal class CryptoIm(
 
             ui.listItem.addView(root)
             mItemUis.add(this)
-            itemCount++
         }
     }
 
@@ -95,7 +116,8 @@ internal class CryptoIm(
         LyCryptoUiBinding.inflate(LayoutInflater.from(parent.context), parent, true)
     }
     private val mItemUis: MutableList<LyItemUiBinding> = mutableListOf()
-    private var itemCount = 0
+    private val mItems: MutableList<Item> = mutableListOf()
+    private var mOnItemClickListener: OnItemClickListener? = null
 
     init {
         initCryptoTheme(attr, defStyleAttr)

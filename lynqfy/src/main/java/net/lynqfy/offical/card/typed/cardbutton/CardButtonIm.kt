@@ -4,13 +4,9 @@ import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import net.lynqfy.offical.R
 import net.lynqfy.offical.databinding.LyCardButtonUiBinding
-import net.lynqfy.offical.databinding.LyTestimonialUiBinding
-import net.lynqfy.offical.model.Author
 import net.lynqfy.offical.model.Header
-import net.lynqfy.offical.model.LyContent
 
 internal class CardButtonIm(
     private val parent: ViewGroup,
@@ -21,6 +17,12 @@ internal class CardButtonIm(
     override fun setHeaderInfo(header: Header) {
         ui.title.text = header.title
         ui.body.text = header.body
+    }
+
+    override fun onButtonClicked(callback: () -> Unit) {
+        ui.actionButton.setOnClickListener {
+            callback.invoke()
+        }
     }
 
     private fun initTestimonialTheme(attrs: AttributeSet?, defStyleAttr: Int = 0) {
@@ -43,7 +45,7 @@ internal class CardButtonIm(
                 ui.actionButton.text = it
             }
             attributes.getDrawable(R.styleable.LyCardButton_actionButtonIconStart)?.let {
-                ui.actionButton.setCompoundDrawablesRelative(null,null,it,null)
+                ui.actionButton.setCompoundDrawablesRelative(null, null, it, null)
             }
             attributes.recycle()
         }
@@ -52,6 +54,7 @@ internal class CardButtonIm(
     private val ui by lazy {
         LyCardButtonUiBinding.inflate(LayoutInflater.from(parent.context), parent, true)
     }
+
     init {
         initTestimonialTheme(attr, defStyleAttr)
     }

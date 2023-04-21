@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="start|center"
         android:text="@string/popular"
+        android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
         android:textColor="@color/ly_card_title" />
 
@@ -23,6 +24,7 @@
         android:gravity="start|center"
         android:paddingEnd="8dp"
         android:paddingBottom="8dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
         android:text="@string/popular"
         android:textColor="@color/ly_card_content" />
 

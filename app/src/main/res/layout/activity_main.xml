@@ -112,5 +112,22 @@
             app:header="Need a help in Claim?"
             app:externalLinkText="See our guideline"
             app:type="card_link" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cta_card" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:id="@+id/cta_card_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:authorAvatar="@drawable/tt"
+            app:authorName="@string/author_name"
+            app:authorText="@string/author_text"
+            app:body="Stay up to date and move work forward with Flowbite on iOS and Android. Download the app today."
+            app:header="Work fast from anywhere"
+            app:externalLinkText="See our guideline"
+            app:type="cta_card" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

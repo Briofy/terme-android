@@ -27,8 +27,8 @@
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         android:paddingBottom="8dp"
-        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
         android:text="@string/popular"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
         android:textColor="@color/ly_card_content" />
 
     <com.google.android.material.card.MaterialCardView
@@ -36,15 +36,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/ly_cta_button_background"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/ly_cta_button_background"
         app:cardCornerRadius="8dp"
         app:cardUseCompatPadding="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:padding="8dp"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:padding="8dp">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/google_play_icon"
@@ -86,15 +88,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/ly_cta_button_background"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/ly_cta_button_background"
         app:cardCornerRadius="8dp"
         app:cardUseCompatPadding="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:padding="8dp"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:padding="8dp">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/apple_icon"

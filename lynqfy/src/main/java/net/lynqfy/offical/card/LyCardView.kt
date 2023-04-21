@@ -14,6 +14,7 @@ import net.lynqfy.offical.card.typed.crypto.Crypto
 import net.lynqfy.offical.card.typed.crypto.CryptoIm
 import net.lynqfy.offical.card.typed.testimonial.Testimonial
 import net.lynqfy.offical.card.typed.testimonial.TestimonialIm
+import net.lynqfy.offical.card.typed.userprofile.UserProfileIm
 
 open class LyCardView : MaterialCardView {
 
@@ -66,7 +67,7 @@ open class LyCardView : MaterialCardView {
                     //FormInputs(this, attributes, attrs, defStyleAttr)
                 }
                     /*"user_profile"*/ 6 -> {
-                    //UserProfile(this, attributes, attrs, defStyleAttr)
+                    mLyCardActionUi =   UserProfileIm(this, attrs, defStyleAttr)
                 }
                     /*"card_link"*/    7 -> {
                     mLyCardActionUi =  CardLinkIm(this, attributes, attrs, defStyleAttr)

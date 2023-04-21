@@ -54,12 +54,12 @@
             android:id="@+id/card_button_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:actionButtonText="Read more"
             app:authorAvatar="@drawable/tt"
             app:authorName="@string/author_name"
             app:authorText="@string/author_text"
             app:body="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
             app:header="Noteworthy technology acquisitions 2021"
-            app:actionButtonText="Read more"
             app:type="card_button" />
 
         <TextView
@@ -71,12 +71,12 @@
             android:id="@+id/card_image_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:actionButtonText="Read more"
             app:authorAvatar="@drawable/tt"
             app:authorName="@string/author_name"
             app:authorText="@string/author_text"
             app:body="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
             app:header="Noteworthy technology acquisitions 2021"
-            app:actionButtonText="Read more"
             app:type="card_image" />
 
         <TextView
@@ -88,12 +88,12 @@
             android:id="@+id/card_horizontal_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:actionButtonText="Read more"
             app:authorAvatar="@drawable/tt"
             app:authorName="@string/author_name"
             app:authorText="@string/author_text"
             app:body="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
             app:header="Noteworthy technology acquisitions 2021"
-            app:actionButtonText="Read more"
             app:type="horizontal" />
 
         <TextView
@@ -109,8 +109,8 @@
             app:authorName="@string/author_name"
             app:authorText="@string/author_text"
             app:body="Go to this step by step guideline process on how to certify for your weekly benefits:"
-            app:header="Need a help in Claim?"
             app:externalLinkText="See our guideline"
+            app:header="Need a help in Claim?"
             app:type="card_link" />
 
         <TextView
@@ -126,8 +126,22 @@
             app:authorName="@string/author_name"
             app:authorText="@string/author_text"
             app:body="Stay up to date and move work forward with Flowbite on iOS and Android. Download the app today."
-            app:header="Work fast from anywhere"
             app:externalLinkText="See our guideline"
+            app:header="Work fast from anywhere"
             app:type="cta_card" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="user_profile" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:id="@+id/user_profile_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:type="user_profile"
+            app:userImage="@drawable/tt"
+            app:userName="@string/author_name"
+            app:userWork="@string/author_text" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

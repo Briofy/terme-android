@@ -54,5 +54,11 @@
         <attr name="externalLinkText" format="string"  localization="suggested" />
     </declare-styleable>
 
+    <declare-styleable name="LyUserProfile">
+        <attr name="userName" format="string"  localization="suggested" />
+        <attr name="userWork" format="string"  localization="suggested" />
+        <attr name="userImage" format="reference" />
+    </declare-styleable>
+
 
 </resources>

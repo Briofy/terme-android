@@ -82,4 +82,23 @@
     <declare-styleable name="LyTag">
         <attr name="tag" format="string" localization="suggested" />
     </declare-styleable>
+
+    <declare-styleable name="LyRadio">
+<!--        <attr name="tag" format="string" localization="suggested" />-->
+    </declare-styleable>
+    <declare-styleable name="LySpinner" >
+        <attr name="spinner_mode" format="boolean" localization="suggested" />
+        <attr name="spinnerColorName" format="enum">
+            <enum name="Indigo" value="1" />
+            <enum name="Pink" value="2" />
+            <enum name="Yellow" value="3" />
+            <enum name="Purple" value="4" />
+            <enum name="Orange" value="5" />
+            <enum name="Dark" value="6" />
+            <enum name="Green" value="7" />
+            <enum name="Primary" value="8" />
+        </attr>
+    </declare-styleable>
+
+
 </resources>

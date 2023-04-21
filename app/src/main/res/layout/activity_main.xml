@@ -179,15 +179,30 @@
         <net.lynqfy.offical.progress.LyProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:progressValue="10"
-            app:colorName="Pink" />
+            app:colorName="Pink"
+            app:progressValue="10" />
 
         <net.lynqfy.offical.progress.LyProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:colorName="Primary"
-            app:progressValue="20"
-            app:mode="true" />
+            app:mode="true"
+            app:progressValue="20" />
+
+        <net.lynqfy.offical.radio.LyRadio
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <net.lynqfy.offical.spinner.LySpinner
+            app:spinnerColorName="Pink"
+            app:spinner_mode="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <net.lynqfy.offical.spinner.LySpinner
+            app:spinnerColorName="Primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

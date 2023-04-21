@@ -70,7 +70,9 @@ open class LyCardView : MaterialCardView {
                     //CardLink(this, attributes, attrs, defStyleAttr)
                 }
                     /*"horizontal"*/   8 -> {
-                    //Horizontal(this, attributes, attrs, defStyleAttr)
+                    mLyCardActionUi =   CardImageIm(this, attributes, attrs, defStyleAttr).apply {
+                        disableButton()
+                    }
                 }
                     /*"ecommerce"*/    9 -> {
                     //Ecommerce(this, attributes, attrs, defStyleAttr)

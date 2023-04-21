@@ -3,6 +3,7 @@ package net.lynqfy.offical.card.typed.cardbutton
 import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import net.lynqfy.offical.R
 import net.lynqfy.offical.databinding.LyCardButtonUiBinding
@@ -24,6 +25,7 @@ internal class CardButtonIm(
             callback.invoke()
         }
     }
+
 
     private fun initTestimonialTheme(attrs: AttributeSet?, defStyleAttr: Int = 0) {
         // Ensure we are using the correctly themed context rather than the context that was passed in.

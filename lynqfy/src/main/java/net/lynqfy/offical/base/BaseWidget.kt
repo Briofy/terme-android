@@ -2,17 +2,27 @@ package net.lynqfy.offical.base
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.FrameLayout
+import androidx.annotation.LayoutRes
+
 
 abstract class BaseWidget : FrameLayout {
 
+
+    lateinit var mView: View
+
+
     constructor(mContext: Context) : super(mContext) {
-        init()
+        init(mContext)
     }
 
+    @LayoutRes
+    abstract fun getLayoutId(): Int
 
     constructor(mContext: Context, attr: AttributeSet?) : super(mContext, attr) {
-
+    init(mContext,attr)
     }
 
     constructor(mContext: Context, attr: AttributeSet?, defStyleAttr: Int) : super(
@@ -20,11 +30,14 @@ abstract class BaseWidget : FrameLayout {
         attr,
         defStyleAttr
     ) {
-        init(attr)
+        init(mContext,attr)
     }
 
 
-    abstract fun init(attr: AttributeSet? = null, defStyleAttr: Int = 0)
+    open fun init(mContext:Context,attr: AttributeSet? = null, defStyleAttr: Int = 0) {
+        mView =LayoutInflater.from(mContext).inflate( getLayoutId(), this, false)
+        addView(mView)
+    }
 
 
 }

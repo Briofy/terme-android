@@ -12,6 +12,7 @@ import net.lynqfy.offical.card.typed.cardlink.CardLinkIm
 import net.lynqfy.offical.card.typed.cat.CtaCardIm
 import net.lynqfy.offical.card.typed.crypto.Crypto
 import net.lynqfy.offical.card.typed.crypto.CryptoIm
+import net.lynqfy.offical.card.typed.ecommerce.EcommerceIm
 import net.lynqfy.offical.card.typed.testimonial.Testimonial
 import net.lynqfy.offical.card.typed.testimonial.TestimonialIm
 import net.lynqfy.offical.card.typed.userprofile.UserProfileIm
@@ -78,7 +79,7 @@ open class LyCardView : MaterialCardView {
                     }
                 }
                     /*"ecommerce"*/    9 -> {
-                    //Ecommerce(this, attributes, attrs, defStyleAttr)
+                    mLyCardActionUi =  EcommerceIm(this, attrs, defStyleAttr)
                 }
                     /*"card_image"*/  10 -> {
                     mLyCardActionUi =   CardImageIm(this, attributes, attrs, defStyleAttr)

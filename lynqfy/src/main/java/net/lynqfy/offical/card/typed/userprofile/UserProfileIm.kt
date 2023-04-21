@@ -8,11 +8,10 @@ import net.lynqfy.offical.R
 import net.lynqfy.offical.databinding.LyUserProfileUiBinding
 import net.lynqfy.offical.model.UserInfo
 
-class UserProfileIm(
+internal class UserProfileIm(
     private val parent: ViewGroup,
     attr: AttributeSet,
     defStyleAttr: Int
-
 ) : UserProfile {
 
     override fun setUserInfo(info: UserInfo) {

@@ -36,7 +36,7 @@
         android:backgroundTint="@color/ly_card_button"
         android:drawableEnd="@drawable/round_arrow_forward"
         android:drawablePadding="8dp"
-        android:paddingStart="8dp"
+        android:paddingStart="16dp"
         android:paddingTop="0dp"
         android:paddingEnd="8dp"
         android:paddingBottom="0dp"

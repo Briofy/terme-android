@@ -143,5 +143,21 @@
             app:userImage="@drawable/tt"
             app:userName="@string/author_name"
             app:userWork="@string/author_text" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ecommerce" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:id="@+id/ecommerce_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:type="ecommerce"
+            app:ecommerceImage="@drawable/card_header"
+            app:ecommerceName="Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport"
+            app:ecommerceRating="2.5"
+            app:ecommerceCast="600" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

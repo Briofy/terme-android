@@ -8,7 +8,7 @@ import net.lynqfy.offical.R
 import net.lynqfy.offical.databinding.LyCtaCardUiBinding
 import net.lynqfy.offical.model.Header
 
-class CtaCardIm(
+internal class CtaCardIm(
     private val parent: ViewGroup,
     private val typedArray: TypedArray,
     attr: AttributeSet,

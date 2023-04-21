@@ -60,5 +60,12 @@
         <attr name="userImage" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="LyEcommerce">
+        <attr name="ecommerceName" format="string"  localization="suggested" />
+        <attr name="ecommerceCast" format="float"  localization="suggested" />
+        <attr name="ecommerceRating" format="float"  localization="suggested" />
+        <attr name="ecommerceImage" format="reference" />
+    </declare-styleable>
+
 
 </resources>

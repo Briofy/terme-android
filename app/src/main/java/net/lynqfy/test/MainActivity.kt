@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         }
         cc.getLyAction().onOnItemClickListener(object : OnItemClickListener{
             override fun onItemClicked(index: Int, item: Item) {
+                //    prog , tab checbox , radio
                 Toast.makeText(this@MainActivity,"ItemClicked Index $index , ${item.name}" ,Toast.LENGTH_LONG).show()
             }
         })

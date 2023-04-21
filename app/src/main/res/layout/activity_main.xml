@@ -154,10 +154,28 @@
             android:id="@+id/ecommerce_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:type="ecommerce"
+            app:ecommerceCast="600"
             app:ecommerceImage="@drawable/card_header"
             app:ecommerceName="Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport"
             app:ecommerceRating="2.5"
-            app:ecommerceCast="600" />
+            app:type="ecommerce" />
+
+
+        <net.lynqfy.offical.tag.LyTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tag="Apple Watch Series 7 GPS" />
+
+        <net.lynqfy.offical.tag.LyTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tag="Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport" />
+
+        <net.lynqfy.offical.tag.LyTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tag="Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport" />
+
+
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

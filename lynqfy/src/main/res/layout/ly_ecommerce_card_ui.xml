@@ -54,7 +54,6 @@
         app:layout_constraintTop_toTopOf="@+id/rating"
         app:shapeAppearance="@style/RoundedShapeAppearance" />
 
-
     <FrameLayout
         android:paddingStart="20sp"
         android:paddingEnd="20sp"
@@ -98,6 +97,5 @@
             android:textColor="@android:color/white"
             app:shapeAppearance="@style/RoundedShapeAppearance" />
     </FrameLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

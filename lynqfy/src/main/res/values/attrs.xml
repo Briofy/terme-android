@@ -50,5 +50,9 @@
         <attr name="actionButtonIconStart" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="LyCardLink">
+        <attr name="externalLinkText" format="string"  localization="suggested" />
+    </declare-styleable>
+
 
 </resources>

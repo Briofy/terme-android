@@ -8,6 +8,7 @@ import net.lynqfy.offical.R
 import net.lynqfy.offical.card.typed.cardbutton.CardButton
 import net.lynqfy.offical.card.typed.cardbutton.CardButtonIm
 import net.lynqfy.offical.card.typed.cardimage.CardImageIm
+import net.lynqfy.offical.card.typed.cardlink.CardLinkIm
 import net.lynqfy.offical.card.typed.crypto.Crypto
 import net.lynqfy.offical.card.typed.crypto.CryptoIm
 import net.lynqfy.offical.card.typed.testimonial.Testimonial
@@ -67,7 +68,7 @@ open class LyCardView : MaterialCardView {
                     //UserProfile(this, attributes, attrs, defStyleAttr)
                 }
                     /*"card_link"*/    7 -> {
-                    //CardLink(this, attributes, attrs, defStyleAttr)
+                    mLyCardActionUi =  CardLinkIm(this, attributes, attrs, defStyleAttr)
                 }
                     /*"horizontal"*/   8 -> {
                     mLyCardActionUi =   CardImageIm(this, attributes, attrs, defStyleAttr).apply {

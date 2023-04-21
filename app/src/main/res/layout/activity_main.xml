@@ -95,5 +95,22 @@
             app:header="Noteworthy technology acquisitions 2021"
             app:actionButtonText="Read more"
             app:type="horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="card link" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:id="@+id/card_link_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:authorAvatar="@drawable/tt"
+            app:authorName="@string/author_name"
+            app:authorText="@string/author_text"
+            app:body="Go to this step by step guideline process on how to certify for your weekly benefits:"
+            app:header="Need a help in Claim?"
+            app:externalLinkText="See our guideline"
+            app:type="card_link" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

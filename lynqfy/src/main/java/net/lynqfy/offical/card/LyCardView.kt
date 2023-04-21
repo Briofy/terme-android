@@ -7,6 +7,7 @@ import com.google.android.material.card.MaterialCardView
 import net.lynqfy.offical.R
 import net.lynqfy.offical.card.typed.cardbutton.CardButton
 import net.lynqfy.offical.card.typed.cardbutton.CardButtonIm
+import net.lynqfy.offical.card.typed.cardimage.CardImageIm
 import net.lynqfy.offical.card.typed.crypto.Crypto
 import net.lynqfy.offical.card.typed.crypto.CryptoIm
 import net.lynqfy.offical.card.typed.testimonial.Testimonial
@@ -75,7 +76,7 @@ open class LyCardView : MaterialCardView {
                     //Ecommerce(this, attributes, attrs, defStyleAttr)
                 }
                     /*"card_image"*/  10 -> {
-                    //CardImage(this, attributes, attrs, defStyleAttr)
+                    mLyCardActionUi =   CardImageIm(this, attributes, attrs, defStyleAttr)
                 }
                     /*"type11"*/      11 -> {
                     //NavTabs(this, attributes, attrs, defStyleAttr)

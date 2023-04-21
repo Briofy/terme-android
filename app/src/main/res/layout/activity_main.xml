@@ -62,5 +62,22 @@
             app:actionButtonText="Read more"
             app:type="card_button" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="card Image" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:id="@+id/card_image_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:authorAvatar="@drawable/tt"
+            app:authorName="@string/author_name"
+            app:authorText="@string/author_text"
+            app:body="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+            app:header="Noteworthy technology acquisitions 2021"
+            app:actionButtonText="Read more"
+            app:type="card_image" />
+
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

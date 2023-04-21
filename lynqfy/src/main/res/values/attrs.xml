@@ -4,7 +4,7 @@
     <declare-styleable name="LyCardView">
         <attr name="header" format="string" localization="suggested" />
         <attr name="body" format="string" localization="suggested" />
-        
+
         <attr name="type" format="enum">
             <enum name="crypto" value="1" />
 
@@ -35,41 +35,51 @@
     </declare-styleable>
 
     <declare-styleable name="LyTestimonial">
-        <attr name="authorName" format="string"  localization="suggested" />
+        <attr name="authorName" format="string" localization="suggested" />
         <attr name="authorAvatar" format="reference" />
-        <attr name="authorText" format="string"  localization="suggested" />
+        <attr name="authorText" format="string" localization="suggested" />
     </declare-styleable>
 
     <declare-styleable name="LyCardButton">
-        <attr name="actionButtonText" format="string"  localization="suggested" />
+        <attr name="actionButtonText" format="string" localization="suggested" />
         <attr name="actionButtonIconStart" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="LyCardLink">
-        <attr name="externalLinkText" format="string"  localization="suggested" />
+        <attr name="externalLinkText" format="string" localization="suggested" />
     </declare-styleable>
 
     <declare-styleable name="LyUserProfile">
-        <attr name="userName" format="string"  localization="suggested" />
-        <attr name="userWork" format="string"  localization="suggested" />
+        <attr name="userName" format="string" localization="suggested" />
+        <attr name="userWork" format="string" localization="suggested" />
         <attr name="userImage" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="LyEcommerce">
-        <attr name="ecommerceName" format="string"  localization="suggested" />
-        <attr name="ecommerceCast" format="float"  localization="suggested" />
-        <attr name="ecommerceRating" format="float"  localization="suggested" />
+        <attr name="ecommerceName" format="string" localization="suggested" />
+        <attr name="ecommerceCast" format="float" localization="suggested" />
+        <attr name="ecommerceRating" format="float" localization="suggested" />
         <attr name="ecommerceImage" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="LyProgressBar">
-<!--        <attr name="ecommerceName" format="string"  localization="suggested" />-->
-<!--        <attr name="ecommerceCast" format="float"  localization="suggested" />-->
-<!--        <attr name="ecommerceRating" format="float"  localization="suggested" />-->
-<!--        <attr name="ecommerceImage" format="reference" />-->
+        <attr name="mode" format="boolean" localization="suggested" />
+        <attr name="maxValue" format="integer" localization="suggested" />
+        <attr name="progressValue" format="integer" localization="suggested" />
+
+        <attr name="colorName" format="enum">
+            <enum name="Indigo" value="1" />
+            <enum name="Pink" value="2" />
+            <enum name="Yellow" value="3" />
+            <enum name="Purple" value="4" />
+            <enum name="Orange" value="5" />
+            <enum name="Dark" value="6" />
+            <enum name="Green" value="7" />
+            <enum name="Primary" value="8" />
+        </attr>
     </declare-styleable>
 
     <declare-styleable name="LyTag">
-        <attr name="tag" format="string"  localization="suggested" />
+        <attr name="tag" format="string" localization="suggested" />
     </declare-styleable>
 </resources>

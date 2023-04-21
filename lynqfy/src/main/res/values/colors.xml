@@ -11,4 +11,19 @@
     <color name="ly_card_button">#0067E8</color>
     <color name="ly_link_action">#0067E8</color>
 
+
+
+    <color name="ly_progress_primary">#0067E8</color>
+    <color name="ly_progress_green">#00A071</color>
+    <color name="ly_progress_dark">#68717E</color>
+    <color name="ly_progress_orange">#FD8354</color>
+    <color name="ly_progress_purple">#823CE8</color>
+    <color name="ly_progress_yellow">#FDC642</color>
+    <color name="ly_progress_pink">#F63A90</color>
+    <color name="ly_progress_indigo">#5352E2</color>
+    <color name="ly_progress_black">#4F5966</color>
+
+
+
+
 </resources>

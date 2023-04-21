@@ -176,6 +176,18 @@
             android:layout_height="wrap_content"
             app:tag="Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport" />
 
+        <net.lynqfy.offical.progress.LyProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:progressValue="10"
+            app:colorName="Pink" />
+
+        <net.lynqfy.offical.progress.LyProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:colorName="Primary"
+            app:progressValue="20"
+            app:mode="true" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

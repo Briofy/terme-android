@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget">
+
+    </style>
+
+    <style name="Widget.LyButton">
+
+    </style>
+
+    <declare-styleable name="LyButton">
+        <attr name="buttonText" format="string" />
+        <attr name="backgroundType" format="enum">
+            <enum name="filled" value="1" />
+            <enum name="bordered" value="2" />
+        </attr>
+        <attr name="buttonShape" format="enum">
+            <enum name="rect" value="1" />
+            <enum name="circular" value="2" />
+        </attr>
+        <attr name="buttonType" format="enum">
+            <enum name="text" value="1" />
+            <enum name="image" value="2" />
+        </attr>
+        <attr name="buttonTextColorRes" format="reference" />
+        <attr name="buttonEnable" format="boolean" />
+        <attr name="icon" format="reference" />
+        <attr name="leftIcon" format="reference" />
+        <attr name="rightIcon" format="reference" />
+
+        <attr name="ButtonBackground" format="reference" />
+    </declare-styleable>
+
+
+</resources>

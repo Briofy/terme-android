@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="defualt_button_color">#1A56DB</color>
+    <color name="transparent">#00000000</color>
+    <color name="battleship_button_activated_ripple">#f0f0f0</color>
+    <color name="disable_color">#a0a0a0</color>
+    <color name="white_black">#ffffff</color>
+    <color name="black_white">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="test_color">#ff0000</color>
+
+</resources>

@@ -4,12 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_700"
+    android:background="@color/disable_color"
     tools:context=".MainActivity">
 
-<net.lynqfy.offical.LyButton
-    app:layout_constraintTop_toTopOf="parent"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
+    <ScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <net.lynqfy.offical.LyButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundType="bordered"
+                app:buttonEnable="false"
+                app:buttonShape="rect"
+                app:buttonText="Bordered\nRect\nText"
+                android:padding="10dp"
+                app:buttonType="text" />
+
+            <net.lynqfy.offical.LyButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundType="bordered"
+                app:buttonEnable="false"
+                app:buttonShape="rect"
+                app:buttonText="Bordered-Rect_image"
+                app:buttonType="image" />
+
+            <net.lynqfy.offical.LyButton
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                app:backgroundType="bordered"
+                app:buttonEnable="false"
+                app:leftIcon="@drawable/ic_deaful_icon"
+                app:rightIcon="@drawable/ic_deaful_icon"
+                app:buttonShape="circular"
+                app:buttonText="Bordered-circular_Text"
+                app:buttonType="text" />
+
+            <net.lynqfy.offical.LyButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundType="bordered"
+                app:buttonEnable="false"
+                app:buttonShape="circular"
+                app:buttonText="Bordered-circular_Image"
+                app:buttonType="image" />
+
+            <net.lynqfy.offical.LyButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundType="filled"
+                app:buttonEnable="false"
+                app:buttonShape="rect"
+                app:buttonText="filled-Rect_Text"
+                app:buttonType="text" />
+
+            <net.lynqfy.offical.LyButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundType="bordered"
+                app:buttonEnable="false"
+                app:buttonShape="rect"
+                app:buttonText="filled-Rect_image"
+                app:leftIcon="@drawable/ic_deaful_icon"
+
+                app:buttonType="image" />
+
+            <net.lynqfy.offical.LyButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundType="filled"
+                app:buttonEnable="false"
+                app:buttonShape="circular"
+                app:buttonText="filled-circular_Text"
+                app:buttonType="text" />
+
+            <net.lynqfy.offical.LyButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundType="filled"
+                app:buttonEnable="false"
+                app:buttonShape="circular"
+                app:buttonText="filled-circular_Image"
+                app:buttonType="image" />
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

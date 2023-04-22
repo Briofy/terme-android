@@ -22,7 +22,7 @@ abstract class BaseWidget : FrameLayout {
     abstract fun getLayoutId(): Int
 
     constructor(mContext: Context, attr: AttributeSet?) : super(mContext, attr) {
-    init(mContext,attr)
+        init(mContext, attr)
     }
 
     constructor(mContext: Context, attr: AttributeSet?, defStyleAttr: Int) : super(
@@ -30,12 +30,14 @@ abstract class BaseWidget : FrameLayout {
         attr,
         defStyleAttr
     ) {
-        init(mContext,attr)
+        init(mContext, attr)
     }
 
 
-    open fun init(mContext:Context,attr: AttributeSet? = null, defStyleAttr: Int = 0) {
-        mView =LayoutInflater.from(mContext).inflate( getLayoutId(), this, false)
+    open fun init(mContext: Context, attr: AttributeSet? = null, defStyleAttr: Int = 0) {
+      //  val binding = LayoutInflater.from(context).inflate(getLayoutId(),this,false);
+        mView = LayoutInflater.from(mContext).inflate(getLayoutId(), this, false)
+
         addView(mView)
     }
 

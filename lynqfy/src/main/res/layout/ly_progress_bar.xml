@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:indeterminate="false"
+        android:progressTintMode="src_in"
         android:paddingStart="8dp"
         android:paddingEnd="8dp" />
 </androidx.appcompat.widget.LinearLayoutCompat>

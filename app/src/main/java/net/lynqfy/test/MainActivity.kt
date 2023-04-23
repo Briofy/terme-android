@@ -6,6 +6,7 @@ import android.widget.Toast
 import net.lynqfy.offical.callbacks.OnItemClickListener
 import net.lynqfy.offical.card.LyCardView
 import net.lynqfy.offical.card.typed.crypto.Crypto
+import net.lynqfy.offical.datepicker.LyDatePicker
 import net.lynqfy.offical.model.Item
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,9 @@ class MainActivity : AppCompatActivity() {
             override fun onItemClicked(index: Int, item: Item) {
                 //    prog , tab checbox , radio
                 Toast.makeText(this@MainActivity,"ItemClicked Index $index , ${item.name}" ,Toast.LENGTH_LONG).show()
+
+                val ly = LyDatePicker(this@MainActivity)
+                ly.fggg()
             }
         })
     }

@@ -1,6 +1,5 @@
 package net.lynqfy.offical.datepicker
 
-import android.app.TimePickerDialog
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
@@ -23,12 +22,12 @@ class LyCalendarView : FrameLayout, DateSelectListener {
     private var attrs: AttributeSet? = null
     private var defStyleAttr = 0
 
-    constructor(context: Context?) : super(context!!) {
+    constructor(context: Context) : super(context) {
         init(null, 0)
     }
 
-    constructor(context: Context?, attrs: AttributeSet?) : super(
-        context!!, attrs
+    constructor(context: Context, attrs: AttributeSet?) : super(
+        context, attrs
     ) {
         this.attrs = attrs
     }
@@ -48,95 +47,97 @@ class LyCalendarView : FrameLayout, DateSelectListener {
         this.completeListener = completeListener
     }
 
-    fun setSlyCalendarData(slyCalendarData: LyCalendarData?) {
+    fun setSlyCalendarData(slyCalendarData: LyCalendarData) {
         this.slyCalendarData = slyCalendarData
         init(attrs, defStyleAttr)
         showCalendar()
     }
 
     private fun init(attrs: AttributeSet?, defStyle: Int) {
-        inflate(context, R.layout.slycalendar_frame, this)
+        inflate(context, R.layout.ly_calendar_frame, this)
         val typedArray =
-            context.obtainStyledAttributes(attrs, R.styleable.SlyCalendarView, defStyle, 0)
-        if (slyCalendarData!!.backgroundColor == null) {
-            slyCalendarData!!.backgroundColor = typedArray.getColor(
-                R.styleable.SlyCalendarView_backgroundColor,
-                ContextCompat.getColor(context, R.color.slycalendar_defBackgroundColor)
-            )
+            context.obtainStyledAttributes(attrs, R.styleable.LyCalendarView, defStyle, 0)
+
+        slyCalendarData?.apply {
+            if (backgroundColor == null) {
+                backgroundColor = typedArray.getColor(
+                    R.styleable.LyCalendarView_backgroundColor,
+                    ContextCompat.getColor(context, R.color.ly_calendar_background_color)
+                )
+            }
+            if (headerColor == null) {
+                headerColor = typedArray.getColor(
+                    R.styleable.LyCalendarView_headerColor,
+                    ContextCompat.getColor(context, R.color.slycalendar_defHeaderColor)
+                )
+            }
+            if (headerTextColor == null) {
+                headerTextColor = typedArray.getColor(
+                    R.styleable.LyCalendarView_headerTextColor,
+                    ContextCompat.getColor(context, R.color.slycalendar_defHeaderTextColor)
+                )
+            }
+            if (textColor == null) {
+                textColor = typedArray.getColor(
+                    R.styleable.LyCalendarView_textColor,
+                    ContextCompat.getColor(context, R.color.ly_calendar_text_color)
+                )
+            }
+            if (selectedColor == null) {
+                selectedColor = typedArray.getColor(
+                    R.styleable.LyCalendarView_selectedColor,
+                    ContextCompat.getColor(context, R.color.ly_calendar_selected_color)
+                )
+            }
+            if (selectedTextColor == null) {
+                selectedTextColor = typedArray.getColor(
+                    R.styleable.LyCalendarView_selectedTextColor,
+                    ContextCompat.getColor(context, R.color.ly_calendar_selected_text_color)
+                )
+            }
+            val vpager = findViewById<ViewPager>(R.id.content)
+            val mAdapter = MonthPagerAdapter(this, this@LyCalendarView) {
+              callback?.showYearList(it)
+            }
+            vpager.adapter = mAdapter
+            vpager.currentItem = mAdapter.count / 2
         }
-        if (slyCalendarData!!.headerColor == null) {
-            slyCalendarData!!.headerColor = typedArray.getColor(
-                R.styleable.SlyCalendarView_headerColor,
-                ContextCompat.getColor(context, R.color.slycalendar_defHeaderColor)
-            )
-        }
-        if (slyCalendarData!!.headerTextColor == null) {
-            slyCalendarData!!.headerTextColor = typedArray.getColor(
-                R.styleable.SlyCalendarView_headerTextColor,
-                ContextCompat.getColor(context, R.color.slycalendar_defHeaderTextColor)
-            )
-        }
-        if (slyCalendarData!!.textColor == null) {
-            slyCalendarData!!.textColor = typedArray.getColor(
-                R.styleable.SlyCalendarView_textColor,
-                ContextCompat.getColor(context, R.color.slycalendar_defTextColor)
-            )
-        }
-        if (slyCalendarData!!.selectedColor == null) {
-            slyCalendarData!!.selectedColor = typedArray.getColor(
-                R.styleable.SlyCalendarView_selectedColor,
-                ContextCompat.getColor(context, R.color.slycalendar_defSelectedColor)
-            )
-        }
-        if (slyCalendarData!!.selectedTextColor == null) {
-            slyCalendarData!!.selectedTextColor = typedArray.getColor(
-                R.styleable.SlyCalendarView_selectedTextColor,
-                ContextCompat.getColor(context, R.color.slycalendar_defSelectedTextColor)
-            )
-        }
+
         typedArray.recycle()
-        val vpager = findViewById<ViewPager>(R.id.content)
-        vpager.adapter = MonthPagerAdapter(slyCalendarData, this)
-        vpager.currentItem = vpager.adapter!!.count / 2
+
         showCalendar()
     }
 
     private fun showCalendar() {
         paintCalendar()
-        showTime()
         findViewById<View>(R.id.txtCancel).setOnClickListener {
-            if (callback != null) {
-                callback!!.onCancelled()
-            }
-            if (completeListener != null) {
-                completeListener!!.complete()
-            }
+            callback?.onCancelled()
+            completeListener?.complete()
         }
-        findViewById<View>(R.id.txtSave).setOnClickListener {
-            if (callback != null) {
-                var start: Calendar? = null
-                var end: Calendar? = null
-                if (slyCalendarData!!.selectedStartDate != null) {
-                    start = Calendar.getInstance()
-                    start.time = slyCalendarData!!.selectedStartDate
+        findViewById<View>(R.id.txtToday).setOnClickListener {
+
+            callback?.let {
+                val start = Calendar.getInstance()
+                val end = Calendar.getInstance()
+
+                slyCalendarData?.run {
+                    if (selectedStartDate != null) {
+                        start.time = selectedStartDate
+                    }
+                    if (selectedEndDate != null) {
+                        end.time = selectedEndDate
+                    }
+                    it.onDataSelected(start, end, selectedHour, selectedMinutes)
                 }
-                if (slyCalendarData!!.selectedEndDate != null) {
-                    end = Calendar.getInstance()
-                    end.time = slyCalendarData!!.selectedEndDate
-                }
-                callback!!.onDataSelected(
-                    start,
-                    end,
-                    slyCalendarData!!.selectedHour,
-                    slyCalendarData!!.selectedMinutes
-                )
             }
-            if (completeListener != null) {
-                completeListener!!.complete()
-            }
+
+            completeListener?.complete()
         }
+
         val calendarStart = Calendar.getInstance()
         var calendarEnd: Calendar? = null
+        // if (slyCalendarData)
+
         if (slyCalendarData!!.selectedStartDate != null) {
             calendarStart.time = slyCalendarData!!.selectedStartDate
         } else {
@@ -154,13 +155,13 @@ class LyCalendarView : FrameLayout, DateSelectListener {
         } else {
             if (calendarStart[Calendar.MONTH] == calendarEnd[Calendar.MONTH]) {
                 (findViewById<View>(R.id.txtSelectedPeriod) as TextView).text = context.getString(
-                    R.string.slycalendar_dates_period,
+                    R.string.ly_calendar_dates_period,
                     SimpleDateFormat("EE, dd", Locale.getDefault()).format(calendarStart.time),
                     SimpleDateFormat("EE, dd MMM", Locale.getDefault()).format(calendarEnd.time)
                 )
             } else {
                 (findViewById<View>(R.id.txtSelectedPeriod) as TextView).text = context.getString(
-                    R.string.slycalendar_dates_period,
+                    R.string.ly_calendar_dates_period,
                     SimpleDateFormat("EE, dd MMM", Locale.getDefault()).format(calendarStart.time),
                     SimpleDateFormat("EE, dd MMM", Locale.getDefault()).format(calendarEnd.time)
                 )
@@ -174,20 +175,20 @@ class LyCalendarView : FrameLayout, DateSelectListener {
             val vpager = findViewById<ViewPager>(R.id.content)
             vpager.currentItem = vpager.currentItem + 1
         }
-        findViewById<View>(R.id.txtTime).setOnClickListener {
-            var style = R.style.SlyCalendarTimeDialogTheme
-            if (slyCalendarData!!.timeTheme != null) {
-                style = slyCalendarData!!.timeTheme
-            }
-            val tpd = TimePickerDialog(context, style, { view, hourOfDay, minute ->
-                slyCalendarData!!.selectedHour = hourOfDay
-                slyCalendarData!!.selectedMinutes = minute
-                showTime()
-            }, slyCalendarData!!.selectedHour, slyCalendarData!!.selectedMinutes, true)
-            tpd.show()
-        }
+//        findViewById<View>(R.id.txtTime).setOnClickListener {
+//            var style = R.style.SlyCalendarTimeDialogTheme
+//            if (slyCalendarData!!.timeTheme != null) {
+//                style = slyCalendarData!!.timeTheme!!
+//            }
+//            val tpd = TimePickerDialog(context, style, { view, hourOfDay, minute ->
+//                slyCalendarData!!.selectedHour = hourOfDay
+//                slyCalendarData!!.selectedMinutes = minute
+//                showTime()
+//            }, slyCalendarData!!.selectedHour, slyCalendarData!!.selectedMinutes, true)
+//            tpd.show()
+//        }
         val vpager = findViewById<ViewPager>(R.id.content)
-        vpager.adapter!!.notifyDataSetChanged()
+        vpager.adapter?.notifyDataSetChanged()
         vpager.invalidate()
     }
 
@@ -231,17 +232,15 @@ class LyCalendarView : FrameLayout, DateSelectListener {
         findViewById<View>(R.id.mainFrame).setBackgroundColor(slyCalendarData!!.backgroundColor)
         findViewById<View>(R.id.headerView).setBackgroundColor(slyCalendarData!!.headerColor)
         (findViewById<View>(R.id.txtYear) as TextView).setTextColor(slyCalendarData!!.headerTextColor)
-        (findViewById<View>(R.id.txtSelectedPeriod) as TextView).setTextColor(
-            slyCalendarData!!.headerTextColor
-        )
-        (findViewById<View>(R.id.txtTime) as TextView).setTextColor(slyCalendarData!!.headerColor)
+        (findViewById<View>(R.id.txtSelectedPeriod) as TextView).setTextColor(slyCalendarData!!.headerTextColor)
+//        (findViewById<View>(R.id.txtTime) as TextView).setTextColor(slyCalendarData!!.headerColor)
     }
 
-    private fun showTime() {
-        val calendar = Calendar.getInstance()
-        calendar[Calendar.HOUR_OF_DAY] = slyCalendarData!!.selectedHour
-        calendar[Calendar.MINUTE] = slyCalendarData!!.selectedMinutes
-        (findViewById<View>(R.id.txtTime) as TextView).text =
-            SimpleDateFormat("HH:mm", Locale.getDefault()).format(calendar.time)
-    }
+//    private fun showTime() {
+//        val calendar = Calendar.getInstance()
+//        calendar[Calendar.HOUR_OF_DAY] = slyCalendarData!!.selectedHour
+//        calendar[Calendar.MINUTE] = slyCalendarData!!.selectedMinutes
+//        (findViewById<View>(R.id.txtTime) as TextView).text =
+//            SimpleDateFormat("HH:mm", Locale.getDefault()).format(calendar.time)
+//    }
 }

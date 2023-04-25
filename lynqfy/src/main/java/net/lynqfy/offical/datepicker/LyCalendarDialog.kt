@@ -42,6 +42,13 @@ class LyCalendarDialog : DialogFragment(), DialogCompleteListener {
         slyCalendarData.timeTheme = themeResource
         return this
     }
+    override fun onResume() {
+        super.onResume()
+        dialog?.window?.setLayout(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,12 +61,13 @@ class LyCalendarDialog : DialogFragment(), DialogCompleteListener {
         savedInstanceState: Bundle?
     ): View {
         val calendarView = requireActivity().layoutInflater.inflate(
-            R.layout.slycalendar_main,
+            R.layout.ly_calendar_main,
             container
         ) as LyCalendarView
         calendarView.setSlyCalendarData(slyCalendarData)
         calendarView.setCallback(callback)
         calendarView.setCompleteListener(this)
+        // make dialog itself transparent
         return calendarView
     }
 
@@ -68,6 +76,8 @@ class LyCalendarDialog : DialogFragment(), DialogCompleteListener {
     }
 
     interface Callback {
+
+        fun showYearList(date: Date)
         fun onCancelled()
         fun onDataSelected(firstDate: Calendar?, secondDate: Calendar?, hours: Int, minutes: Int)
     }

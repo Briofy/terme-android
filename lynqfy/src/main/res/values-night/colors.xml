@@ -5,6 +5,8 @@
     <color name="ly_popular_background">#1C2A36</color>
     <color name="ly_card_title">#FDFDFD</color>
     <color name="ly_card_content">#99A2AD</color>
+    <color name="ly_button_stroke_color">#68717E</color>
+
 
 
 </resources>

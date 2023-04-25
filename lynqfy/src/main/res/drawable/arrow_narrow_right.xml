@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:autoMirrored="true"
+    android:tint="@color/ly_calendar_text_color"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+    <path
+        android:fillColor="#111928"
+        android:fillType="evenOdd"
+        android:pathData="M12.293,5.293C12.481,5.106 12.735,5 13,5C13.265,5 13.519,5.106 13.707,5.293L17.707,9.293C17.895,9.481 18,9.735 18,10C18,10.265 17.895,10.519 17.707,10.707L13.707,14.707C13.518,14.889 13.266,14.99 13.004,14.988C12.741,14.985 12.491,14.88 12.305,14.695C12.12,14.509 12.015,14.259 12.012,13.996C12.01,13.734 12.111,13.482 12.293,13.293L14.586,11H3C2.735,11 2.48,10.895 2.293,10.707C2.105,10.52 2,10.265 2,10C2,9.735 2.105,9.48 2.293,9.293C2.48,9.105 2.735,9 3,9H14.586L12.293,6.707C12.106,6.519 12,6.265 12,6C12,5.735 12.106,5.481 12.293,5.293Z" />
+</vector>

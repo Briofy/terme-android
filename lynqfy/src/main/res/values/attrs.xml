@@ -100,8 +100,7 @@
         </attr>
     </declare-styleable>
 
-
-    <declare-styleable name="SlyCalendarView">
+    <declare-styleable name="LyCalendarView">
         <attr name="backgroundColor" format="color"/>
         <attr name="headerColor" format="color"/>
         <attr name="headerTextColor" format="color"/>

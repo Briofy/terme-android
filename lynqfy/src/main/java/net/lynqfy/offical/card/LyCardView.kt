@@ -18,24 +18,15 @@ import net.lynqfy.offical.card.typed.testimonial.TestimonialIm
 import net.lynqfy.offical.card.typed.userprofile.UserProfileIm
 
 open class LyCardView : MaterialCardView {
-
     constructor(ctx: Context) : super(ctx, null) {
         initLyCardViewTheme(null)
     }
-
     constructor(mContext: Context, attr: AttributeSet?) : super(mContext, attr) {
         initLyCardViewTheme(attr)
     }
-
-    constructor(ctx: Context, attr: AttributeSet, defStyleAttr: Int) : super(
-        ctx,
-        attr,
-        defStyleAttr
-    ) {
+    constructor(ctx: Context, attr: AttributeSet, defStyleAttr: Int) : super(ctx,attr,defStyleAttr) {
         initLyCardViewTheme(attr, defStyleAttr)
     }
-
-
     fun getLyAction()  = mLyCardActionUi
     private fun initLyCardViewTheme(attrs: AttributeSet?, defStyleAttr: Int = 0) {
 
@@ -106,8 +97,6 @@ open class LyCardView : MaterialCardView {
         useCompatPadding = true
     }
 
-
     private lateinit var mLyCardActionUi: LyCardAction
     private var mLyCardUiType: Int = 1
-
 }

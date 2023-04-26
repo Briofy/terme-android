@@ -10,6 +10,9 @@ class LyDatePicker (private  val ctx : AppCompatActivity) : LyCalendarDialog.Cal
 
 
     fun fggg() {
+
+        Timber.plant(Timber.DebugTree())
+
         LyCalendarDialog()
             .setSingle(false)
             .setFirstMonday(false)

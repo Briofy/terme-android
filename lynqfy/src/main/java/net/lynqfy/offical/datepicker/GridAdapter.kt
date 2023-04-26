@@ -39,6 +39,7 @@ class GridAdapter(
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val dateCal = Calendar.getInstance()
         dateCal.time = monthlyDates[position]
+
         var calendarStart: Calendar? = null
         if (calendarData.selectedStartDate != null) {
             calendarStart = Calendar.getInstance()
@@ -151,6 +152,7 @@ class GridAdapter(
         currentDate.add(Calendar.MONTH, shiftMonth)
         view.findViewById<View>(R.id.frameSelected).setBackgroundResource(0)
         (view.findViewById<View>(R.id.txtDate) as TextView).setTextColor(calendarData.textColor!!)
+
         if (calendarStart != null && dateCal[Calendar.DAY_OF_YEAR] == calendarStart[Calendar.DAY_OF_YEAR] && currentDate[Calendar.MONTH] == dateCal[Calendar.MONTH] && dateCal[Calendar.YEAR] == calendarStart[Calendar.YEAR]) {
             val shape = (ContextCompat.getDrawable(
                 context,R.drawable.calendar_selected_day_left

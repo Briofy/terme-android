@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Lynqfy</string>
+    <string name="title">Connect wallet</string>
+    <string name="helper">Why do I need to connect with my wallet?</string>
+    <string name="body">Connect with one of our available wallet providers or create a new one.</string>
+    <string name="author_text">Android developer</string>
+    <string name="author_name">Morteza</string>
+    <string name="testimonial">testimonial</string>
+
 </resources>

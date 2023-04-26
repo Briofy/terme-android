@@ -1,6 +1,5 @@
 package net.lynqfy.offical.datepicker;
 
-import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.LayerDrawable;
@@ -9,9 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.DatePicker;
 import android.widget.FrameLayout;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,9 +20,10 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 
 import net.lynqfy.offical.R;
-import net.lynqfy.offical.datepicker.listeners.GridChangeListener;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -33,24 +33,23 @@ import timber.log.Timber;
 
 public class MonthYearPickerDialog extends DialogFragment {
 
-    MonthYearPickerDialog(Date date) {
+    public MonthYearPickerDialog(Date date, MonthYearPickerCallback callback) {
         mDate = date;
+        this.callback = callback;
         generateYears();
     }
 
-    private static final String[] Months = new String[]{"January", "February",
-            "March", "April", "May", "June", "July", "August", "September",
-            "October", "November", "December"};
     private static final int MAX_YEAR = 2099;
     private int indexOfMapData = -1;
     private GridAdapter adapter;
     private final Date mDate;
     private TextView title;
-    private DatePickerDialog.OnDateSetListener listener;
+    private ImageView next, prev;
+    private String mSelectedYear;
+    private final String MONTHS = "months";
+    private boolean isPresentMonths = false;
+    private final MonthYearPickerCallback callback;
 
-    public void setListener(DatePickerDialog.OnDateSetListener listener) {
-        this.listener = listener;
-    }
 
     private final HashMap<String, ArrayList<String>> years = new HashMap<>();
     private final ArrayList<String> keys = new ArrayList<>();
@@ -63,6 +62,12 @@ public class MonthYearPickerDialog extends DialogFragment {
             years.put(key, generateYears(i, i + STEP));
             keys.add(key);
         }
+
+        final String[] Months = new String[]{"January", "February",
+                "March", "April", "May", "June", "July", "August", "September",
+                "October", "November", "December"};
+
+        years.put(MONTHS, new ArrayList<>(Arrays.asList(Months)));
     }
 
     private ArrayList<String> generateYears(int start, int end) {
@@ -99,6 +104,25 @@ public class MonthYearPickerDialog extends DialogFragment {
         return null;
     }
 
+    private void showMonths(String value) {
+        adapter.replaceItems(years.get(MONTHS));
+        isPresentMonths = true;
+
+        title.setText(value);
+        next.setVisibility(View.GONE);
+        prev.setVisibility(View.GONE);
+    }
+
+    private void showYears() {
+
+        String key = findSuitableKey(mSelectedYear);
+        adapter.replaceItems(years.get(key));
+        isPresentMonths = false;
+
+        title.setText(key);
+        next.setVisibility(View.VISIBLE);
+        prev.setVisibility(View.VISIBLE);
+    }
 
     @NonNull
     @Override
@@ -122,12 +146,21 @@ public class MonthYearPickerDialog extends DialogFragment {
         Timber.e("Selected Years %s", selectedYears);
 
         GridView gv = dialog.findViewById(R.id.grid);
+        mSelectedYear = cy;
+
         adapter = new GridAdapter(requireActivity(), R.layout.ly_calendar_item, cy, years.get(selectedYears),
                 (position, value) -> {
-                    Timber.e("onItemSelect %s-> %s", position, value);
-                    String selectedItem = adapter.mSelectedItem;
-
-                    adapter.notifyDataSetChanged();
+                    Timber.e("onItemSelect %s-> %s :: %s", position, value, mSelectedYear);
+                    if (isPresentMonths) {
+                        callback.onSelectedDate(this, Integer.parseInt(mSelectedYear), position);
+                        return;
+                    }
+                    if (Objects.equals(mSelectedYear, value)) {
+                        showMonths(value);
+                    } else {
+                        mSelectedYear = value;
+                        adapter.notifyDataSetChanged();
+                    }
                 });
         gv.setAdapter(adapter);
 
@@ -135,14 +168,16 @@ public class MonthYearPickerDialog extends DialogFragment {
         title.setText(selectedYears);
         indexOfMapData = keys.indexOf(selectedYears);
 
-        dialog.findViewById(R.id.btnMonthNext).setOnClickListener(v -> {
+        next = dialog.findViewById(R.id.btnMonthNext);
+        next.setOnClickListener(v -> {
             if (indexOfMapData < keys.size() - 1) {
                 indexOfMapData += 1;
             }
             updateGrid();
         });
 
-        dialog.findViewById(R.id.btnMonthPrev).setOnClickListener(v -> {
+        prev = dialog.findViewById(R.id.btnMonthPrev);
+        prev.setOnClickListener(v -> {
             if (indexOfMapData >= 1) {
                 indexOfMapData -= 1;
             }
@@ -155,7 +190,9 @@ public class MonthYearPickerDialog extends DialogFragment {
             indexOfMapData = keys.indexOf(toDay);
             updateGrid();
         });
-        dialog.findViewById(R.id.txtCancel).setOnClickListener(v -> Objects.requireNonNull(MonthYearPickerDialog.this.getDialog()).cancel());
+        dialog.findViewById(R.id.txtCancel).setOnClickListener(v ->
+                dismiss()
+        );
 
         return builder.setView(dialog).create();
     }
@@ -177,7 +214,7 @@ public class MonthYearPickerDialog extends DialogFragment {
             super(context, resource);
             inflater = LayoutInflater.from(context);
             listener = gridListener;
-            mSelectedItem  = mActiveItem = year;
+            mSelectedItem = mActiveItem = year;
             items.addAll(years);
         }
 
@@ -237,7 +274,15 @@ public class MonthYearPickerDialog extends DialogFragment {
         }
     }
 
-    public static MonthYearPickerDialog createDialogWithoutDateField(Date date) {
-        return new MonthYearPickerDialog(date);
+    public interface MonthYearPickerCallback {
+        void onSelectedDate(DialogFragment dialog, int year, int month);
+    }
+    private static WeakReference<MonthYearPickerDialog> mInstance = null;
+
+    public static MonthYearPickerDialog createDialogWithoutDateField(Date date, MonthYearPickerCallback callback) {
+        if (mInstance == null){
+            mInstance = new WeakReference<>(new MonthYearPickerDialog(date, callback));
+        }
+        return mInstance.get();
     }
 }

@@ -4,20 +4,35 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import net.lynqfy.offical.R
 import net.lynqfy.offical.datepicker.listeners.DialogCompleteListener
+import timber.log.Timber
 import java.util.Calendar
 import java.util.Date
 
-class LyCalendarDialog : DialogFragment(), DialogCompleteListener {
+internal class LyCalendarDialog : DialogFragment(), DialogCompleteListener {
     private val slyCalendarData = LyCalendarData()
     private var callback: Callback? = null
+
+    private var  calendarView : LyCalendarView? = null
     fun setStartDate(startDate: Date?): LyCalendarDialog {
         slyCalendarData.selectedStartDate = startDate
         return this
     }
 
+   /* fun setDate(date: Date): LyCalendarDialog{
+        slyCalendarData.selectedStartDate = date
+        calendarView?.let {
+            it.post {
+                it.setSlyCalendarData(slyCalendarData)
+                Timber.e("setDate $date ")
+                Toast.makeText(context , "setDate $date ", Toast.LENGTH_LONG).show()
+            }
+        }
+        return this
+    }*/
     fun setEndDate(endDate: Date?): LyCalendarDialog {
         slyCalendarData.selectedEndDate = endDate
         return this
@@ -60,22 +75,22 @@ class LyCalendarDialog : DialogFragment(), DialogCompleteListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val calendarView = requireActivity().layoutInflater.inflate(
+         calendarView = requireActivity().layoutInflater.inflate(
             R.layout.ly_calendar_main,
             container
         ) as LyCalendarView
-        calendarView.setSlyCalendarData(slyCalendarData)
-        calendarView.setCallback(callback)
-        calendarView.setCompleteListener(this)
+        calendarView?.setSlyCalendarData(slyCalendarData)
+        calendarView?.setCallback(callback)
+        calendarView?.setCompleteListener(this)
         // make dialog itself transparent
-        return calendarView
+        return calendarView!!
     }
 
     override fun complete() {
         dismiss()
     }
 
-    interface Callback {
+  interface Callback {
 
         fun showYearList(date: Date)
         fun onCancelled()

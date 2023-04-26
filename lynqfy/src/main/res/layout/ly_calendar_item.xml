@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:clickable="false"
-        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
         android:textColor="@color/ly_calendar_text_color"
         android:textStyle="bold" />
 

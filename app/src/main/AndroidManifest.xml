@@ -20,6 +20,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".EditTextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TabActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".ButtonActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".TabLayoutActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".TabLayoutActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".TabLayoutActivity3"
+            android:exported="false" />
     </application>
 
 </manifest>

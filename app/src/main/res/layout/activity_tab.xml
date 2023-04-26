@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/testPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/customTabs3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <net.lynqfy.offical.tablayout.SlidingLyTabLayout
+        android:id="@+id/customTabs3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/customTabs2"
+        app:ly_bar_color="@color/purple_700"
+        app:ly_bar_stroke_color="@color/white"
+        app:ly_bar_stroke_width="3dp"
+        app:ly_divider_color="#ff0000"
+        app:ly_divider_width="2dp"
+        app:ly_indicator_anim_duration="500"
+        app:ly_indicator_bounce_enable="true"
+        app:ly_indicator_color="@color/purple_700"
+        app:ly_indicator_corner_radius="30dp"
+        app:ly_textBold="SELECT"
+        app:ly_textSelectColor="@color/purple_500"
+        app:ly_textUnselectColor="@color/teal_200"
+        app:ly_textSize="13sp"
+        app:ly_underline_color="@color/black" />
+
+    <net.lynqfy.offical.tablayout.SegmentLyTabLayout
+        android:id="@+id/customTabs2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/customTabs"
+        app:ly_bar_color="@color/purple_700"
+        app:ly_bar_stroke_color="@color/white"
+        app:ly_bar_stroke_width="3dp"
+        app:ly_divider_color="#ff0000"
+        app:ly_divider_width="2dp"
+        app:ly_indicator_anim_duration="500"
+        app:ly_indicator_bounce_enable="true"
+        app:ly_indicator_color="@color/purple_700"
+        app:ly_indicator_corner_radius="30dp"
+        app:ly_textBold="SELECT"
+        app:ly_textSelectColor="@color/purple_500"
+        app:ly_textUnselectColor="@color/teal_200"
+        app:ly_textSize="13sp"
+        app:ly_underline_color="@color/black" />
+
+    <net.lynqfy.offical.tablayout.CommonLyTabLayout
+        android:id="@+id/customTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:ly_divider_width="1dp"
+        app:ly_indicator_color="@color/purple_700"
+        app:ly_indicator_corner_radius="10dp"
+        app:ly_textSelectColor="@color/purple_500"
+        app:ly_textUnselectColor="@color/teal_200"
+        app:ly_underline_color="@color/black" />
+</androidx.constraintlayout.widget.ConstraintLayout>

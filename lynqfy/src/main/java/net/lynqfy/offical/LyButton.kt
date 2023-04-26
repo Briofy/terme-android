@@ -11,34 +11,14 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.ContextCompat
-import net.lynqfy.offical.base.BaseWidget
+import net.lynqfy.offical.base.LyView
 
 
-class LyButton : BaseWidget {
+class LyButton : LyView {
     constructor(context: Context) : super(context)
     constructor(context: Context, attr: AttributeSet?) : super(context, attr)
     constructor(context: Context, attr: AttributeSet?, style: Int) : super(context, attr, style)
 
-    var onClickListener: OnClickListener? = null
-        set(value) {
-            if (value != null)
-                button.setOnClickListener {
-                    value.onButtonClick(button)
-                }
-            else
-                button.setOnClickListener(null)
-            field = value
-        }
-    var onLongClickListener: OnLongClickListener? = null
-        set(value) {
-            if (value != null)
-                button.setOnLongClickListener {
-                    value.onButtonLongClick(button)
-                }
-            else
-                button.setOnLongClickListener(null)
-            field = value
-        }
 
     override fun getLayoutId() = R.layout.button
 
@@ -114,6 +94,8 @@ class LyButton : BaseWidget {
 
 
     }
+
+    override fun getMainView() = button
 
     lateinit var button: AppCompatButton
 
@@ -212,11 +194,5 @@ class LyButton : BaseWidget {
         FILLED, BORDERED
     }
 
-    interface OnClickListener {
-        fun onButtonClick(button: View)
-    }
 
-    interface OnLongClickListener {
-        fun onButtonLongClick(button: View): Boolean
-    }
 }

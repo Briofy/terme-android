@@ -9,9 +9,11 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
+import androidx.annotation.ColorRes
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.ContextCompat
 import net.lynqfy.offical.base.LyView
+import kotlin.math.min
 
 
 class LyButton : LyView {
@@ -25,7 +27,7 @@ class LyButton : LyView {
     private var buttonText = "Ly Button"
 
     private var buttonEnable = true
-
+    private var equalHeightAndWidth = false
 
     private var buttonTextColorRes = R.color.white_black
 
@@ -66,6 +68,8 @@ class LyButton : LyView {
                 R.color.white_black
             )
             buttonEnable = typedArray.getBoolean(R.styleable.LyButton_buttonEnable, true)
+            equalHeightAndWidth =
+                typedArray.getBoolean(R.styleable.LyButton_equalHeightAndWidth, false)
             rightIcon = typedArray.getResourceId(R.styleable.LyButton_rightIcon, -1)
             //   val typeValue =
             backgroundType = when (typedArray.getInt(R.styleable.LyButton_backgroundType, 3)) {
@@ -99,7 +103,15 @@ class LyButton : LyView {
 
     lateinit var button: AppCompatButton
 
+
+    fun setTint(@ColorRes color: Int) {
+        bgColor = color
+        button.backgroundTintList = ContextCompat.getColorStateList(context, bgColor)
+    }
+
     private fun setValues() {
+        Log.i("TestTagLyButton", "$backgroundType  $buttonShape  ${buttonText}  $buttonType equalHeightAndWidth=$equalHeightAndWidth")
+
         when (backgroundType) {
             ButtonBackgroundType.FILLED -> {
                 when (buttonShape) {
@@ -108,15 +120,17 @@ class LyButton : LyView {
 
                     }
                     ButtonShape.Circle -> {
-                        button.viewTreeObserver
-                            .addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
-                                override fun onGlobalLayout() {
-                                    button.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                                    val size = maxOf(button.width, button.height)
-                                    button.layoutParams = LinearLayout.LayoutParams(size, size)
+                        if (equalHeightAndWidth)
+                            button.viewTreeObserver
+                                .addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
+                                    override fun onGlobalLayout() {
+                                        button.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                                        val size = maxOf(button.width, button.height)
+                                        button.layoutParams = LinearLayout.LayoutParams(size, size)
 
-                                }
-                            })
+                                    }
+                                })
+
                         button.setBackgroundResource(R.drawable.button_bg_circle)
 
                     }
@@ -129,15 +143,16 @@ class LyButton : LyView {
 
                     }
                     ButtonShape.Circle -> {
-                        button.viewTreeObserver
-                            .addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
-                                override fun onGlobalLayout() {
-                                    button.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                                    val size = maxOf(button.width, button.height)
-                                    button.layoutParams = LinearLayout.LayoutParams(size, size)
+                        if (equalHeightAndWidth)
+                            button.viewTreeObserver
+                                .addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
+                                    override fun onGlobalLayout() {
+                                        button.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                                        val size = maxOf(button.width, button.height)
+                                        button.layoutParams = LinearLayout.LayoutParams(size, size)
 
-                                }
-                            })
+                                    }
+                                })
                         button.setBackgroundResource(R.drawable.button_bordered_bg_circle)
 
                     }
@@ -153,7 +168,7 @@ class LyButton : LyView {
                     .addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
                         override fun onGlobalLayout() {
                             button.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                            val size = maxOf(button.width, button.height) / 2
+                            val size = (min(button.width, button.height)*2) / 3
                             val lp = FrameLayout.LayoutParams(size, size)
                             lp.gravity = Gravity.CENTER
                             image.layoutParams = lp
@@ -178,7 +193,7 @@ class LyButton : LyView {
 
         button.isEnabled = buttonEnable
         button.setTextColor(context.getColor(buttonTextColorRes))
-        button.backgroundTintList = ContextCompat.getColorStateList(context, bgColor);
+        button.backgroundTintList = ContextCompat.getColorStateList(context, bgColor)
     }
 
 

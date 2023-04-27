@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     val activityEditText by lazy { findViewById<LyButton>(R.id.tabEditText) }
     val activityTextView by lazy { findViewById<LyButton>(R.id.tabTextView) }
     val activityImageView by lazy { findViewById<LyButton>(R.id.tabImageView) }
+    val activityAlert by lazy { findViewById<LyButton>(R.id.tabAlert) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         activityButton.onClickListener = clickListener
         activityEditText.onClickListener = clickListener
         activityTextView.onClickListener = clickListener
+        activityAlert.onClickListener = clickListener
         activityImageView.onClickListener = clickListener
 
 
@@ -42,8 +45,9 @@ class MainActivity : AppCompatActivity() {
                         activityTabSliding.button -> TabLayoutActivity3::class.java
                         activityButton.button -> ButtonActivity::class.java
                         activityEditText.button -> EditTextActivity::class.java
-                        activityTextView.button -> TabLayoutActivity3::class.java
-                        activityImageView.button -> TabLayoutActivity3::class.java
+                        activityTextView.button -> TextViewActivity::class.java
+                        activityImageView.button -> ImageViewActivity::class.java
+                        activityAlert.button -> AlertActivity::class.java
                         else -> TabLayoutActivity3::class.java
                     },
                 )

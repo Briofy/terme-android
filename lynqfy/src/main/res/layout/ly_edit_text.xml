@@ -46,6 +46,19 @@
             app:layout_constraintEnd_toEndOf="@id/bg"
             app:layout_constraintTop_toTopOf="@+id/bg"
             app:layout_constraintWidth_percent="0.08" />
+        <View
+            android:id="@+id/not_seen"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:background="#a0a0a0"
+            android:rotation="45"
+            app:layout_constraintTop_toTopOf="@+id/bg"
+            app:layout_constraintBottom_toBottomOf="@+id/bg"
+            app:layout_constraintStart_toStartOf="@+id/img_seen"
+            app:layout_constraintEnd_toEndOf="@+id/img_seen"
+
+            />
+
 
         <EditText
             android:id="@+id/edit_text"

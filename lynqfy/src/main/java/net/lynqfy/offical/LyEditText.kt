@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.isVisible
 import net.lynqfy.offical.base.LyView
 
 class LyEditText : LyView {
@@ -18,9 +19,9 @@ class LyEditText : LyView {
     override fun getLayoutId() = R.layout.ly_edit_text
 
     lateinit var editText: EditText
-    lateinit var tvTitle:TextView
-    lateinit var imgSeen:ImageView
-
+    lateinit var tvTitle: TextView
+    lateinit var imgSeen: ImageView
+    lateinit var notSeen: View
     private var title = "Title"
     private var hint = "Enter Your Hint"
     private var isPassword = false
@@ -32,6 +33,7 @@ class LyEditText : LyView {
         editText = mView.findViewById(R.id.edit_text)
         tvTitle = mView.findViewById(R.id.tv_title)
         imgSeen = mView.findViewById(R.id.img_seen)
+        notSeen = mView.findViewById(R.id.not_seen)
 //        imgIcon = mView.findViewById(R.id.img_icon)
 //        line = mView.findViewById(R.id.line)
 
@@ -61,19 +63,25 @@ class LyEditText : LyView {
     private fun setValues() {
         tvTitle.text = title
         editText.hint = hint
+        notSeen.isVisible = false
 
         if (isPassword) {
             imgSeen.visibility = VISIBLE
             editText.inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
             editText.transformationMethod = PasswordTransformationMethod()
+            notSeen.isVisible = false
 
             imgSeen.setOnClickListener {
                 showPassword = !showPassword
-                if (showPassword)
+                if (showPassword) {
                     editText.transformationMethod = PasswordTransformationMethod()
-                else
-                    editText.transformationMethod = null
+                    notSeen.isVisible = false
 
+                } else {
+                    editText.transformationMethod = null
+                    notSeen.isVisible = true
+
+                }
             }
 
         } else {
@@ -82,7 +90,6 @@ class LyEditText : LyView {
             editText.transformationMethod = null
 
         }
-
 
 
     }

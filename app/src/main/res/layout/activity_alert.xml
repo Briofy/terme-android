@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AlertActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <net.lynqfy.offical.LyButton
+        android:id="@+id/ly_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:buttonText="Success Alert"
+        app:buttonShape="rect"
+        app:buttonType="text"
+        app:ButtonBackground="@color/alert_button_success"
+        app:backgroundType="bordered"
+        app:buttonTextColorRes="@color/alert_button_success"
+        android:layout_margin="10dp"
+        />
+    <net.lynqfy.offical.LyButton
+        android:id="@+id/ly_error"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:buttonText="Error Alert"
+        app:buttonShape="rect"
+        app:buttonType="text"
+        app:backgroundType="bordered"
+        app:ButtonBackground="@color/alert_text_error"
+        app:buttonTextColorRes="@color/alert_text_error"
+        android:layout_margin="10dp"
+        />
+    <net.lynqfy.offical.LyButton
+        android:id="@+id/ly_warning"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:buttonText="Warning Alert"
+        app:buttonShape="rect"
+        app:buttonType="text"
+        app:backgroundType="bordered"
+        app:ButtonBackground="@color/alert_button_warning"
+        app:buttonTextColorRes="@color/alert_button_warning"
+        android:layout_margin="10dp"
+        />
+    <net.lynqfy.offical.LyButton
+        android:id="@+id/ly_info"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:buttonText="Info Alert"
+        app:buttonShape="rect"
+        app:buttonType="text"
+        app:backgroundType="bordered"
+        app:ButtonBackground="@color/alert_text_info"
+        app:buttonTextColorRes="@color/alert_text_info"   
+        android:layout_margin="10dp"
+        />
+    <net.lynqfy.offical.LyButton
+        android:id="@+id/ly_message"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:buttonText="Message Alert"
+        app:buttonShape="rect"
+        app:buttonType="text"
+        app:backgroundType="bordered"
+        app:ButtonBackground="@color/alert_button_message"
+        app:buttonTextColorRes="@color/alert_button_message"   
+        android:layout_margin="10dp"
+        />
+</LinearLayout>

@@ -7,23 +7,29 @@
         <import type="android.view.View" />
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:id="@+id/root"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:paddingHorizontal="10dp"
             android:paddingVertical="4dp"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        </androidx.appcompat.widget.AppCompatButton>
-    </LinearLayout>
+<!--        <ImageView-->
+<!--            android:id="@+id/img"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/btn"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/btn"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/btn"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

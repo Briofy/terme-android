@@ -131,6 +131,26 @@
             android:layout_margin="8dp"
             app:buttonText="Ly Image View"
             app:layout_constraintTop_toTopOf="parent" />
-
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:text="6-Alert"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:ly_backgroundColor="@color/purple_700"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:ly_strokeWidth="1dp"
+            app:ly_cornerRadius="10dp"
+            app:ly_strokeColor="@color/purple_200"
+            android:padding="10dp"
+            android:layout_height="wrap_content"/>
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Ly Alert "
+            app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 </ScrollView>

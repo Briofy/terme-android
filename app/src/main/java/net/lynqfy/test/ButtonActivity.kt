@@ -11,12 +11,6 @@ class ButtonActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_button)
-        val btn1 = findViewById<LyButton>(R.id.btn1)
-        btn1.onClickListener = object : LyView.OnClickListener {
-            override fun onButtonClick(button: View) {
-                startActivity(Intent(this@ButtonActivity, EditTextActivity::class.java))
-            }
 
-        }
     }
 }

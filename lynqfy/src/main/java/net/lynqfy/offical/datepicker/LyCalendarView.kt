@@ -15,7 +15,7 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
-class LyCalendarView : FrameLayout, DateSelectListener {
+internal class LyCalendarView : FrameLayout, DateSelectListener {
     private var slyCalendarData: LyCalendarData? = null
     private var callback: LyCalendarDialog.Callback? = null
     private var completeListener: DialogCompleteListener? = null
@@ -95,9 +95,10 @@ class LyCalendarView : FrameLayout, DateSelectListener {
                     ContextCompat.getColor(context, R.color.ly_calendar_selected_text_color)
                 )
             }
+
             val vpager = findViewById<ViewPager>(R.id.content)
             val mAdapter = MonthPagerAdapter(this, this@LyCalendarView) {
-              callback?.showYearList(it)
+                callback?.showYearList(it)
             }
             vpager.adapter = mAdapter
             vpager.currentItem = mAdapter.count / 2
@@ -136,7 +137,6 @@ class LyCalendarView : FrameLayout, DateSelectListener {
 
         val calendarStart = Calendar.getInstance()
         var calendarEnd: Calendar? = null
-        // if (slyCalendarData)
 
         if (slyCalendarData!!.selectedStartDate != null) {
             calendarStart.time = slyCalendarData!!.selectedStartDate
@@ -175,51 +175,47 @@ class LyCalendarView : FrameLayout, DateSelectListener {
             val vpager = findViewById<ViewPager>(R.id.content)
             vpager.currentItem = vpager.currentItem + 1
         }
-//        findViewById<View>(R.id.txtTime).setOnClickListener {
-//            var style = R.style.SlyCalendarTimeDialogTheme
-//            if (slyCalendarData!!.timeTheme != null) {
-//                style = slyCalendarData!!.timeTheme!!
-//            }
-//            val tpd = TimePickerDialog(context, style, { view, hourOfDay, minute ->
-//                slyCalendarData!!.selectedHour = hourOfDay
-//                slyCalendarData!!.selectedMinutes = minute
-//                showTime()
-//            }, slyCalendarData!!.selectedHour, slyCalendarData!!.selectedMinutes, true)
-//            tpd.show()
-//        }
         val vpager = findViewById<ViewPager>(R.id.content)
         vpager.adapter?.notifyDataSetChanged()
         vpager.invalidate()
     }
 
     override fun dateSelect(selectedDate: Date?) {
-        if (slyCalendarData!!.selectedStartDate == null || slyCalendarData!!.isSingle) {
-            slyCalendarData!!.selectedStartDate = selectedDate
-            showCalendar()
-            return
-        }
-        if (slyCalendarData!!.selectedEndDate == null) {
-            if (selectedDate!!.time < slyCalendarData!!.selectedStartDate.time) {
-                slyCalendarData!!.selectedEndDate = slyCalendarData!!.selectedStartDate
-                slyCalendarData!!.selectedStartDate = selectedDate
-                showCalendar()
-                return
-            } else if (selectedDate.time == slyCalendarData!!.selectedStartDate.time) {
-                slyCalendarData!!.selectedEndDate = null
-                slyCalendarData!!.selectedStartDate = selectedDate
-                showCalendar()
-                return
-            } else if (selectedDate.time > slyCalendarData!!.selectedStartDate.time) {
-                slyCalendarData!!.selectedEndDate = selectedDate
+        slyCalendarData?.let {
+            if (it.selectedStartDate == null || it.isSingle) {
+                it.selectedStartDate = selectedDate
                 showCalendar()
                 return
             }
+
+            if (it.selectedEndDate == null) {
+                if (selectedDate!!.time < it.selectedStartDate.time) {
+                    it.selectedEndDate = it.selectedStartDate
+                    it.selectedStartDate = selectedDate
+                    showCalendar()
+                    return
+                } else if (selectedDate.time == it.selectedStartDate.time) {
+                    it.selectedEndDate = null
+                    it.selectedStartDate = selectedDate
+                    showCalendar()
+                    return
+                } else if (selectedDate.time > it.selectedStartDate.time) {
+                    it.selectedEndDate = selectedDate
+                    showCalendar()
+                    return
+                }
+            }
+            if (it.selectedEndDate != null) {
+                it.selectedEndDate = null
+                it.selectedStartDate = selectedDate
+                showCalendar()
+            }
         }
-        if (slyCalendarData!!.selectedEndDate != null) {
-            slyCalendarData!!.selectedEndDate = null
-            slyCalendarData!!.selectedStartDate = selectedDate
-            showCalendar()
-        }
+
+        /*val vpager = findViewById<ViewPager>(R.id.content)
+        vpager.currentItem +=1
+        vpager.adapter?.notifyDataSetChanged()
+        vpager.invalidate()*/
     }
 
     override fun dateLongSelect(selectedDate: Date?) {

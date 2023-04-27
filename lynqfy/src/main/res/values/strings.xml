@@ -24,5 +24,6 @@
     <string name="ly_calendar_save">Save</string>
     <string name="ly_calendar_next">Next</string>
     <string name="ly_calendar_prev">Prev</string>
+    <string name="reply">Reply</string>
 
 </resources>

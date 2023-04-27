@@ -6,6 +6,7 @@
     <color name="ly_card_title">#FDFDFD</color>
     <color name="ly_card_content">#99A2AD</color>
     <color name="ly_button_stroke_color">#68717E</color>
+    <color name="ly_calendar_selected_item">#485461</color>
 
     <color name="alert_bg_success">#1F2A37</color>
     <color name="alert_bg_error">#1F2A37</color>

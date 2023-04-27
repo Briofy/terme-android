@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cacaca"
+    tools:context=".CardViewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:text="1: Image CardView"
+            android:textColor="@color/purple_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:ly_cornerRadius="20dp"
+            app:ly_isRadiusHalfHeight="true"
+            app:ly_strokeColor="@color/purple_700"
+            app:ly_strokeWidth="2dp" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:id="@+id/card_image_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:actionButtonText="Read more"
+            app:authorAvatar="@drawable/tt"
+            app:authorName="@string/author_name"
+            app:authorText="@string/author_text"
+            app:body="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+            app:header="Image - LyCardView"
+            app:type="card_image" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:text="2: Horizontal CardView"
+            android:textColor="@color/purple_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:ly_cornerRadius="20dp"
+            app:ly_isRadiusHalfHeight="true"
+            app:ly_strokeColor="@color/purple_700"
+            app:ly_strokeWidth="2dp" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:id="@+id/card_horizontal_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:actionButtonText="Read more"
+            app:authorAvatar="@drawable/tt"
+            app:authorName="@string/author_name"
+            app:authorText="@string/author_text"
+            app:body="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+            app:header="horizontal - LyCardView"
+            app:type="horizontal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:text="3: Link CardView"
+            android:textColor="@color/purple_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:ly_cornerRadius="20dp"
+            app:ly_isRadiusHalfHeight="true"
+            app:ly_strokeColor="@color/purple_700"
+            app:ly_strokeWidth="2dp" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:id="@+id/card_link_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:authorAvatar="@drawable/tt"
+            app:authorName="@string/author_name"
+            app:authorText="@string/author_text"
+            app:body="Go to this step by step guideline process on how to certify for your weekly benefits:"
+            app:externalLinkText="See our guideline"
+            app:header="Link - LyCardView"
+            app:type="card_link" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white" />
+
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:text="4: CTA CardView"
+            android:textColor="@color/purple_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:ly_cornerRadius="20dp"
+            app:ly_isRadiusHalfHeight="true"
+            app:ly_strokeColor="@color/purple_700"
+            app:ly_strokeWidth="2dp" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:id="@+id/cta_card_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:authorAvatar="@drawable/tt"
+            app:authorName="@string/author_name"
+            app:authorText="@string/author_text"
+            app:body="Stay up to date and move work forward with Flowbite on iOS and Android. Download the app today."
+            app:externalLinkText="See our guideline"
+            app:header="CTA - LyCardView"
+            app:type="cta_card" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:text="5: User Profile CardView"
+            android:textColor="@color/purple_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:ly_cornerRadius="20dp"
+            app:ly_isRadiusHalfHeight="true"
+            app:ly_strokeColor="@color/purple_700"
+            app:ly_strokeWidth="2dp" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:id="@+id/user_profile_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:type="user_profile"
+            app:userImage="@drawable/tt"
+            app:userName="@string/author_name"
+            app:userWork="@string/author_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:text="6: Ecommerce CardView"
+            android:textColor="@color/purple_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:ly_cornerRadius="20dp"
+            app:ly_isRadiusHalfHeight="true"
+            app:ly_strokeColor="@color/purple_700"
+            app:ly_strokeWidth="2dp" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:id="@+id/ecommerce_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ecommerceCast="600"
+            app:ecommerceImage="@drawable/card_header"
+            app:ecommerceName="Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport"
+            app:ecommerceRating="2.5"
+            app:type="ecommerce" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:text="7: Crypto CardView"
+            android:textColor="@color/purple_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:ly_cornerRadius="20dp"
+            app:ly_isRadiusHalfHeight="true"
+            app:ly_strokeColor="@color/purple_700"
+            app:ly_strokeWidth="2dp" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:id="@+id/crypto_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:body="@string/body"
+            app:header="Crypto - LyCardView"
+            app:helperText="@string/helper"
+            app:type="crypto" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:text="9: Testimonial CardView"
+            android:textColor="@color/purple_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:ly_cornerRadius="20dp"
+            app:ly_isRadiusHalfHeight="true"
+            app:ly_strokeColor="@color/purple_700"
+            app:ly_strokeWidth="2dp" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:authorAvatar="@drawable/tt"
+            app:authorName="@string/author_name"
+            app:authorText="@string/author_text"
+            app:body="@string/body"
+            app:header="Testimonial - LyCardView"
+            app:type="testimonial" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:text="10: Button CardView"
+            android:textColor="@color/purple_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:ly_cornerRadius="20dp"
+            app:ly_isRadiusHalfHeight="true"
+            app:ly_strokeColor="@color/purple_700"
+            app:ly_strokeWidth="2dp" />
+
+        <net.lynqfy.offical.card.LyCardView
+            android:id="@+id/card_button_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:actionButtonText="Read more"
+            app:authorAvatar="@drawable/tt"
+            app:authorName="@string/author_name"
+            app:authorText="@string/author_text"
+            app:body="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+            app:header="Button - LyCardView"
+            app:type="card_button" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,10 +1,18 @@
 <resources>
-    <string name="app_name">Lynqfy</string>
+    <string name="app_name">Lynqfy Example</string>
     <string name="title">Connect wallet</string>
     <string name="helper">Why do I need to connect with my wallet?</string>
     <string name="body">Connect with one of our available wallet providers or create a new one.</string>
     <string name="author_text">Android developer</string>
     <string name="author_name">Tom</string>
     <string name="testimonial">testimonial</string>
+    <string name="title_activity_date_picker">DatePickerActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 </resources>

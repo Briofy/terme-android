@@ -7,119 +7,94 @@
     android:padding="16dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
+
         tools:context=".MainActivity">
 
-        <Button
-            android:id="@+id/datePicker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Show DatePicker" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/popular" />
 
-        <net.lynqfy.offical.card.LyCardView
-            android:id="@+id/crypto_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:body="@string/body"
-            app:header="@string/title"
-            app:helperText="@string/helper"
-            app:type="crypto" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/testimonial" />
-
-        <net.lynqfy.offical.card.LyCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:authorAvatar="@drawable/tt"
-            app:authorName="@string/author_name"
-            app:authorText="@string/author_text"
-            app:body="@string/body"
-            app:header="@string/title"
-            app:type="testimonial" />
-
-    <net.lynqfy.offical.LyTextView
-        android:layout_width="wrap_content"
-        android:text="1-Tab Layouts"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        app:ly_backgroundColor="@color/purple_700"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:ly_strokeWidth="1dp"
-        app:ly_cornerRadius="10dp"
-        app:ly_strokeColor="@color/purple_200"
-        android:padding="10dp"
-        android:layout_height="wrap_content"/>
-    <net.lynqfy.offical.LyButton
-        android:id="@+id/tabActitivy1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:buttonText="Common Ly Tab Layout"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <net.lynqfy.offical.LyButton
-        android:id="@+id/tabActitivy2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:buttonText="Segment Ly Tab Layout"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <net.lynqfy.offical.LyButton
-        android:id="@+id/tabActitivy3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-
-        app:buttonText="Sliding Ly Tab Layout"
-        app:layout_constraintTop_toTopOf="parent" />
-    <net.lynqfy.offical.LyTextView
-        android:layout_width="wrap_content"
-        android:text="2-Button"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        app:ly_backgroundColor="@color/purple_700"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:ly_strokeWidth="1dp"
-        app:ly_cornerRadius="10dp"
-        app:ly_strokeColor="@color/purple_200"
-        android:padding="10dp"
-        android:layout_height="wrap_content"/>
-    <net.lynqfy.offical.LyButton
-        android:id="@+id/tabButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:buttonText="Ly Button"
-        app:layout_constraintTop_toTopOf="parent" />
         <net.lynqfy.offical.LyTextView
             android:layout_width="wrap_content"
-            android:text="3-Edit Text"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            app:ly_backgroundColor="@color/purple_700"
+            android:padding="10dp"
+            android:text="1-Tab Layouts"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_strokeWidth="1dp"
+            app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
+            app:ly_strokeWidth="1dp" />
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabActitivy1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Common Ly Tab Layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabActitivy2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Segment Ly Tab Layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabActitivy3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+
+            app:buttonText="Sliding Ly Tab Layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:padding="10dp"
-            android:layout_height="wrap_content"/>
+            android:text="2-Button"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:ly_backgroundColor="@color/purple_700"
+            app:ly_cornerRadius="10dp"
+            app:ly_strokeColor="@color/purple_200"
+            app:ly_strokeWidth="1dp" />
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Ly Button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="3-Edit Text"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:ly_backgroundColor="@color/purple_700"
+            app:ly_cornerRadius="10dp"
+            app:ly_strokeColor="@color/purple_200"
+            app:ly_strokeWidth="1dp" />
+
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabEditText"
             android:layout_width="match_parent"
@@ -127,20 +102,22 @@
             android:layout_margin="8dp"
             app:buttonText="Ly Edit Text"
             app:layout_constraintTop_toTopOf="parent" />
+
         <net.lynqfy.offical.LyTextView
             android:layout_width="wrap_content"
-            android:text="4-Text View"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            app:ly_backgroundColor="@color/purple_700"
+            android:padding="10dp"
+            android:text="4-Text View"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_strokeWidth="1dp"
+            app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            android:padding="10dp"
-            android:layout_height="wrap_content"/>
+            app:ly_strokeWidth="1dp" />
+
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabTextView"
             android:layout_width="match_parent"
@@ -148,20 +125,22 @@
             android:layout_margin="8dp"
             app:buttonText="Ly Text View"
             app:layout_constraintTop_toTopOf="parent" />
+
         <net.lynqfy.offical.LyTextView
             android:layout_width="wrap_content"
-            android:text="5-Image View"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            app:ly_backgroundColor="@color/purple_700"
+            android:padding="10dp"
+            android:text="5-Image View"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_strokeWidth="1dp"
+            app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            android:padding="10dp"
-            android:layout_height="wrap_content"/>
+            app:ly_strokeWidth="1dp" />
+
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabImageView"
             android:layout_width="match_parent"
@@ -169,20 +148,22 @@
             android:layout_margin="8dp"
             app:buttonText="Ly Image View"
             app:layout_constraintTop_toTopOf="parent" />
+
         <net.lynqfy.offical.LyTextView
             android:layout_width="wrap_content"
-            android:text="6-Alert"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            app:ly_backgroundColor="@color/purple_700"
+            android:padding="10dp"
+            android:text="6-Alert"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_strokeWidth="1dp"
+            app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            android:padding="10dp"
-            android:layout_height="wrap_content"/>
+            app:ly_strokeWidth="1dp" />
+
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabAlert"
             android:layout_width="match_parent"
@@ -190,5 +171,195 @@
             android:layout_margin="8dp"
             app:buttonText="Ly Alert "
             app:layout_constraintTop_toTopOf="parent" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="7-Card View"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:ly_backgroundColor="@color/purple_700"
+            app:ly_cornerRadius="10dp"
+            app:ly_strokeColor="@color/purple_200"
+            app:ly_strokeWidth="1dp" />
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Ly CardView "
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="8-DatePicker "
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:ly_backgroundColor="@color/purple_700"
+            app:ly_cornerRadius="10dp"
+            app:ly_strokeColor="@color/purple_200"
+            app:ly_strokeWidth="1dp" />
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Ly Date Picker "
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="9-Tag View"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:ly_backgroundColor="@color/purple_700"
+            app:ly_cornerRadius="10dp"
+            app:ly_strokeColor="@color/purple_200"
+            app:ly_strokeWidth="1dp" />
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabTag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Ly Tag "
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="10-Progress Bar"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:ly_backgroundColor="@color/purple_700"
+            app:ly_cornerRadius="10dp"
+            app:ly_strokeColor="@color/purple_200"
+            app:ly_strokeWidth="1dp" />
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Ly Progress Bar "
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="11-Radio Button"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:ly_backgroundColor="@color/purple_700"
+            app:ly_cornerRadius="10dp"
+            app:ly_strokeColor="@color/purple_200"
+            app:ly_strokeWidth="1dp" />
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Ly Radio Button "
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="12-Spinner"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:ly_backgroundColor="@color/purple_700"
+            app:ly_cornerRadius="10dp"
+            app:ly_strokeColor="@color/purple_200"
+            app:ly_strokeWidth="1dp" />
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Ly Spinner "
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="13-Toast"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:ly_backgroundColor="@color/purple_700"
+            app:ly_cornerRadius="10dp"
+            app:ly_strokeColor="@color/purple_200"
+            app:ly_strokeWidth="1dp" />
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabToast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Ly Toast "
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="14-Check Box"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:ly_backgroundColor="@color/purple_700"
+            app:ly_cornerRadius="10dp"
+            app:ly_strokeColor="@color/purple_200"
+            app:ly_strokeWidth="1dp" />
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Ly Check Box "
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
     </LinearLayout>
 </ScrollView>

@@ -201,4 +201,15 @@ class TabLayoutActivity1 : AppCompatActivity() {
         return (dp * scale + 0.5f).toInt()
     }
 
+
+    class TabEntity(val title: String, var selectedIcon: Int, var unselectedIcon: Int) :
+        CustomTabEntity {
+        override fun getTabTitle() = title
+
+        override fun getTabSelectedIcon() = selectedIcon
+
+        override fun getTabUnselectedIcon() = unselectedIcon
+
+    }
+
 }

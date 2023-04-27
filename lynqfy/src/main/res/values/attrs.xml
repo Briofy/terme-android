@@ -84,9 +84,9 @@
     </declare-styleable>
 
     <declare-styleable name="LyRadio">
-<!--        <attr name="tag" format="string" localization="suggested" />-->
+        <!--        <attr name="tag" format="string" localization="suggested" />-->
     </declare-styleable>
-    <declare-styleable name="LySpinner" >
+    <declare-styleable name="LySpinner">
         <attr name="spinner_mode" format="boolean" localization="suggested" />
         <attr name="spinnerColorName" format="enum">
             <enum name="Indigo" value="1" />
@@ -101,12 +101,12 @@
     </declare-styleable>
 
     <declare-styleable name="LyCalendarView">
-        <attr name="backgroundColor" format="color"/>
-        <attr name="headerColor" format="color"/>
-        <attr name="headerTextColor" format="color"/>
-        <attr name="textColor" format="color"/>
-        <attr name="selectedColor" format="color"/>
-        <attr name="selectedTextColor" format="color"/>
-        <attr name="firstMonday" format="boolean"/>
+        <attr name="backgroundColor" format="color" />
+        <attr name="headerColor" format="color" />
+        <attr name="headerTextColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="selectedColor" format="color" />
+        <attr name="selectedTextColor" format="color" />
+        <attr name="firstMonday" format="boolean" />
     </declare-styleable>
 </resources>

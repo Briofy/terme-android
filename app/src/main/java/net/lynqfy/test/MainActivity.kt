@@ -3,25 +3,32 @@ package net.lynqfy.test
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
-import net.lynqfy.offical.callbacks.OnItemClickListener
-import net.lynqfy.offical.card.LyCardView
+import net.lynqfy.offical.LyButton
+import net.lynqfy.offical.base.LyView
 import net.lynqfy.offical.datepicker.LyDatePicker
-import net.lynqfy.offical.model.Item
 import net.lynqfy.offical.toast.LyToast
 import java.util.Calendar
 
 class MainActivity : AppCompatActivity() {
-    val activityTabCommon by lazy { findViewById<LyButton>(R.id.tabActitivy1) }
-    val activityTabSegment by lazy { findViewById<LyButton>(R.id.tabActitivy2) }
-    val activityTabSliding by lazy { findViewById<LyButton>(R.id.tabActitivy3) }
-    val activityButton by lazy { findViewById<LyButton>(R.id.tabButton) }
-    val activityEditText by lazy { findViewById<LyButton>(R.id.tabEditText) }
-    val activityTextView by lazy { findViewById<LyButton>(R.id.tabTextView) }
-    val activityImageView by lazy { findViewById<LyButton>(R.id.tabImageView) }
-    val activityAlert by lazy { findViewById<LyButton>(R.id.tabAlert) }
+    private val activityTabCommon by lazy { findViewById<LyButton>(R.id.tabActitivy1) }
+    private val activityTabSegment by lazy { findViewById<LyButton>(R.id.tabActitivy2) }
+    private val activityTabSliding by lazy { findViewById<LyButton>(R.id.tabActitivy3) }
+    private val activityButton by lazy { findViewById<LyButton>(R.id.tabButton) }
+    private val activityEditText by lazy { findViewById<LyButton>(R.id.tabEditText) }
+    private val activityTextView by lazy { findViewById<LyButton>(R.id.tabTextView) }
+    private val activityImageView by lazy { findViewById<LyButton>(R.id.tabImageView) }
+    private val activityAlert by lazy { findViewById<LyButton>(R.id.tabAlert) }
+    private val activityCardView by lazy { findViewById<LyButton>(R.id.tabCardView) }
+    private val activityDatePicker by lazy { findViewById<LyButton>(R.id.tabDatePicker) }
+    private val activityTag by lazy { findViewById<LyButton>(R.id.tabTag) }
+    private val activityProgressBar by lazy { findViewById<LyButton>(R.id.tabProgress) }
+    private val activitySpinner by lazy { findViewById<LyButton>(R.id.tabSpinner) }
+    private val activityRadioButton by lazy { findViewById<LyButton>(R.id.tabRadioButton) }
+    private val activityToast by lazy { findViewById<LyButton>(R.id.tabToast) }
+    private val activityCheckBox by lazy { findViewById<LyButton>(R.id.tabCheckBox) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,43 +42,14 @@ class MainActivity : AppCompatActivity() {
         activityTextView.onClickListener = clickListener
         activityAlert.onClickListener = clickListener
         activityImageView.onClickListener = clickListener
-        val tt = findViewById<LyCardView>(R.id.card_button_card)
-        val cc = findViewById<LyCardView>(R.id.crypto_card)
-        findViewById<Button>(R.id.datePicker).setOnClickListener {
-            val ly =
-                LyDatePicker(this@MainActivity) { first: Calendar?, end: Calendar?, hours: Int, minutes: Int ->
-                    val toast = LyToast(
-                        this,getDrawable(R.drawable.tt) ,"onDataSelected " ,
-                        "${first?.get(Calendar.YEAR)} , " +
-                                "${first?.get(Calendar.MONTH)?.plus(1)} ," +
-                                "${first?.get(Calendar.DAY_OF_MONTH)}"
-                    ) {
-                        Toast.makeText(this, "replay", Toast.LENGTH_LONG).show()
-                    }
-                    toast.show()
-                }
-            ly.showCalender()
-        }
-
-        cc.getLyAction().onBadgeClicked {
-            Toast.makeText(this, "BadgeClicked", Toast.LENGTH_LONG).show()
-        }
-        tt.getLyAction().onButtonClicked {
-            Toast.makeText(this, "ButtonClicked", Toast.LENGTH_LONG).show()
-        }
-        cc.getLyAction().onOnItemClickListener(object : OnItemClickListener {
-            override fun onItemClicked(index: Int, item: Item) {
-                val toast = LyToast(
-                    this@MainActivity,item.logo ,"ItemClicked " ,
-                    "ItemClicked Index $index , ${item.name}"
-                ) {
-                    Toast.makeText(this@MainActivity, "replay", Toast.LENGTH_LONG).show()
-                }
-                toast.show()
-
-            }
-        })
-
+        activityCardView.onClickListener = clickListener
+        activityDatePicker.onClickListener = clickListener
+        activityTag.onClickListener = clickListener
+        activityProgressBar.onClickListener = clickListener
+        activityRadioButton.onClickListener = clickListener
+        activitySpinner.onClickListener = clickListener
+        activityToast.onClickListener = clickListener
+        activityCheckBox.onClickListener = clickListener
     }
 
     val clickListener = object : LyView.OnClickListener {
@@ -89,6 +67,14 @@ class MainActivity : AppCompatActivity() {
                         activityTextView.button -> TextViewActivity::class.java
                         activityImageView.button -> ImageViewActivity::class.java
                         activityAlert.button -> AlertActivity::class.java
+                        activityCardView.button -> CardViewActivity::class.java
+                        activityDatePicker.button -> DatePickerActivity::class.java
+                        activityTag.button -> TagActivity::class.java
+                        activityProgressBar.button -> ProgressBarActivity::class.java
+                        activitySpinner.button -> SpinnerActivity::class.java
+                        activityRadioButton.button -> RadioButtonActivity::class.java
+                        activityToast.button -> ToastActivity::class.java
+                        activityCheckBox.button -> CheckBoxActivity::class.java
                         else -> TabLayoutActivity3::class.java
                     },
                 )

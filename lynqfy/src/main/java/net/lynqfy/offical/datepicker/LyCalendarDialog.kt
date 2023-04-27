@@ -22,17 +22,6 @@ internal class LyCalendarDialog : DialogFragment(), DialogCompleteListener {
         return this
     }
 
-   /* fun setDate(date: Date): LyCalendarDialog{
-        slyCalendarData.selectedStartDate = date
-        calendarView?.let {
-            it.post {
-                it.setSlyCalendarData(slyCalendarData)
-                Timber.e("setDate $date ")
-                Toast.makeText(context , "setDate $date ", Toast.LENGTH_LONG).show()
-            }
-        }
-        return this
-    }*/
     fun setEndDate(endDate: Date?): LyCalendarDialog {
         slyCalendarData.selectedEndDate = endDate
         return this

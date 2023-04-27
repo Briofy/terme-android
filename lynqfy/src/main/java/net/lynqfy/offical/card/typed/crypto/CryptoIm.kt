@@ -82,7 +82,7 @@ internal class CryptoIm(
         for (i in 0 until 5) {
             createItemsUi(Item(
                 AppCompatResources
-                    .getDrawable(parent.context, R.drawable.ic_help),"Sample Text $i", badge = Badge("Popular")
+                    .getDrawable(parent.context, if (i%2==0) R.drawable.ic_help else R.drawable.external_link),"Sample Text $i", badge = Badge("Popular")
             ))
         }
     }

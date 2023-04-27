@@ -2,6 +2,7 @@ package net.lynqfy.offical.datepicker;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -234,14 +235,17 @@ public class MonthYearPickerDialog extends DialogFragment {
             }
             String item = items.get(position);
 
-            ((TextView) v.findViewById(R.id.txtDate)).setText(item);
+            TextView tv = v.findViewById(R.id.txtDate);
+            tv.setText(item);
 
             FrameLayout sV = v.findViewById(R.id.frameSelected);
 
             if (Objects.equals(item, mSelectedItem)) {
                 sV.setBackground(shape);
+                tv.setTextColor(Color.WHITE);
             } else {
                 sV.setBackground(null);
+                tv.setTextColor(getContext().getColor(R.color.ly_card_content));
             }
             sV.setOnClickListener(v1 -> {
                 mSelectedItem = item;
@@ -277,12 +281,20 @@ public class MonthYearPickerDialog extends DialogFragment {
     public interface MonthYearPickerCallback {
         void onSelectedDate(DialogFragment dialog, int year, int month);
     }
+
     private static WeakReference<MonthYearPickerDialog> mInstance = null;
 
     public static MonthYearPickerDialog createDialogWithoutDateField(Date date, MonthYearPickerCallback callback) {
-        if (mInstance == null){
+        if (mInstance == null) {
             mInstance = new WeakReference<>(new MonthYearPickerDialog(date, callback));
         }
         return mInstance.get();
+    }
+
+    public static void released() {
+        if (mInstance != null) {
+            mInstance.clear();
+        }
+        mInstance = null;
     }
 }

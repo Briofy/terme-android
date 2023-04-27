@@ -20,50 +20,39 @@ import net.lynqfy.offical.R
 import net.lynqfy.offical.databinding.LyToastUiBinding
 
 class LyToast(
-    private val context: Context,
+    private val ctx: Context,
     private val image: Drawable? = null,
     private val title: String? = null,
     private val msg: String? = null,
     private val action: () -> Unit
-)  {
+) : Dialog(ctx) {
 
-     fun show() {
+    init {
 
-         val dialog = Dialog(context)
-         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-         dialog.setCancelable(false)
-         dialog.setContentView(R.layout.ly_toast_ui)
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        setCancelable(false)
+        setContentView(R.layout.ly_toast_ui)
 
-         dialog.findViewById<TextView>(R.id.title).text = title
-         dialog.findViewById<TextView>(R.id.content).text = msg
+        findViewById<TextView>(R.id.title).text = title
+        findViewById<TextView>(R.id.content).text = msg
 
         image?.let {
-            dialog.findViewById<ShapeableImageView>(R.id.icon).setImageDrawable(it)
+            findViewById<ShapeableImageView>(R.id.icon).setImageDrawable(it)
         }
-         dialog.findViewById<MaterialButton>(R.id.actionButton).setOnClickListener {
+        findViewById<MaterialButton>(R.id.actionButton).setOnClickListener {
             action.invoke()
-            dialog.dismiss()
+            dismiss()
         }
 
-         dialog.findViewById<ShapeableImageView>(R.id.close).setOnClickListener {
-             dialog.dismiss()
-         }
-         dialog.window?.apply {
-             setLayout(
-                 ViewGroup.LayoutParams.MATCH_PARENT,
-                 ViewGroup.LayoutParams.WRAP_CONTENT)
-             setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-         }
-//         val body = dialog.findViewById(R.id.body) as TextView
-//         body.text = title
-//         val yesBtn = dialog.findViewById(R.id.yesBtn) as Button
-//         val noBtn = dialog.findViewById(R.id.noBtn) as Button
-//         yesBtn.setOnClickListener {
-//             dialog.dismiss()
-//         }
-//         noBtn.setOnClickListener {
-//             dialog.dismiss()
-//         }
-         dialog.show()
+        findViewById<ShapeableImageView>(R.id.close).setOnClickListener {
+            dismiss()
+        }
+        window?.apply {
+            setLayout(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+            setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        }
     }
 }

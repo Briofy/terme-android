@@ -15,11 +15,21 @@ class LyDatePicker(
 ) : LyCalendarDialog.Callback {
 
     private val fmTag = "TAG_LY_CALENDAR"
-    private fun getCalendarDialog(date: Date? = null): LyCalendarDialog = LyCalendarDialog()
-        .setSingle(false)
-        .setFirstMonday(false)
-        .setCallback(this)
-        .setStartDate(date)
+    private fun getCalendarDialog(d: Date? = null , isSingle : Boolean = true): LyCalendarDialog {
+        var date = d
+        if (date == null){
+            val cal = Calendar.getInstance()
+            date = cal.time
+        }
+
+        return LyCalendarDialog()
+            .setSingle(isSingle)
+            .setFirstMonday(false)
+            .setCallback(this)
+            .setStartDate(date)
+    }
+
+
 
     private fun hideCalender() {
         (ctx.supportFragmentManager.findFragmentByTag(fmTag) as DialogFragment?)?.dismissAllowingStateLoss()
@@ -27,7 +37,7 @@ class LyDatePicker(
 
     fun showCalender() {
         Timber.plant(Timber.DebugTree())
-        getCalendarDialog().show(ctx.supportFragmentManager, fmTag)
+        getCalendarDialog(isSingle = false).show(ctx.supportFragmentManager, fmTag)
     }
 
 
@@ -38,10 +48,10 @@ class LyDatePicker(
         ) { dialog, year, month ->
             Timber.e("MonthYearPickerDialog $year , $month")
             val cal = Calendar.getInstance()
-
-            cal.set(year /*+ 1900*/, month, 10)
+            cal.set(year, month, cal.get(Calendar.DAY_OF_MONTH))
             getCalendarDialog(cal.time).show(ctx.supportFragmentManager, fmTag)
             dialog.dismissAllowingStateLoss()
+            MonthYearPickerDialog.released()
         }.show(ctx.supportFragmentManager, "YearLis")
     }
 

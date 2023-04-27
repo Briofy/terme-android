@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/dateShapeItem" >
         <shape >
-            <solid android:color="@color/ly_calendar_selected_color"/>
+            <solid android:color="@color/ly_calendar_selected_item"/>
         </shape>
     </item>
 </layer-list>

@@ -30,7 +30,6 @@
             app:body="@string/body"
             app:header="@string/title"
             app:helperText="@string/helper"
-
             app:type="crypto" />
 
         <TextView

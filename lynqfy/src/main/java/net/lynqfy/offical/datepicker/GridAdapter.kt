@@ -89,39 +89,39 @@ class GridAdapter(
             gridListener.gridChanged()
             true
         }
-        view.findViewById<View>(R.id.cellView).setBackgroundColor(calendarData.backgroundColor!!)
+        view.findViewById<View>(R.id.frameSelected).setBackgroundColor(calendarData.backgroundColor!!)
         if (calendarStart != null && calendarEnd != null) {
             if (dateCal[Calendar.DAY_OF_YEAR] == calendarStart[Calendar.DAY_OF_YEAR] && dateCal[Calendar.YEAR] == calendarStart[Calendar.YEAR]) {
                 val shape = (ContextCompat.getDrawable(
                     context,
                     R.drawable.slycalendar_start_day
                 ) as LayerDrawable?)!!
-                (shape.findDrawableByLayerId(R.id.dateShapeItem) as GradientDrawable).setColor(
-                    calendarData.selectedColor!!
-                )
-                shape.findDrawableByLayerId(R.id.dateShapeItem).alpha = 25
-                view.findViewById<View>(R.id.cellView).background = shape
+//                (shape.findDrawableByLayerId(R.id.dateShapeItem) as GradientDrawable).setColor(
+//                    calendarData.selectedColor!!
+//                )
+//                shape.findDrawableByLayerId(R.id.dateShapeItem).alpha = 25
+                view.findViewById<View>(R.id.frameSelected).background = shape
             } else if (dateCal.timeInMillis > calendarStart.timeInMillis && dateCal.timeInMillis < calendarEnd.timeInMillis) {
                 var shape = (ContextCompat.getDrawable(
                     context,
                     R.drawable.slycalendar_middle_day
                 ) as LayerDrawable?)!!
-                (shape.findDrawableByLayerId(R.id.dateShapeItem) as GradientDrawable).setColor(
-                    calendarData.selectedColor!!
-                )
-                shape.findDrawableByLayerId(R.id.dateShapeItem).alpha = 25
-                view.findViewById<View>(R.id.cellView).background = shape
+//                (shape.findDrawableByLayerId(R.id.dateShapeItem) as GradientDrawable).setColor(
+//                    calendarData.selectedColor!!
+//                )
+//                shape.findDrawableByLayerId(R.id.dateShapeItem).alpha = 25
+                view.findViewById<View>(R.id.frameSelected).background = shape
                 if (position % 7 == 0) {
                     shape = (ContextCompat.getDrawable(
                         context,
                         R.drawable.slycalendar_start_day
                     ) as LayerDrawable?)!!
 
-                    (shape.findDrawableByLayerId(R.id.dateShapeItem) as GradientDrawable).setColor(
-                        calendarData.selectedColor!!
-                    )
-                    shape.findDrawableByLayerId(R.id.dateShapeItem).alpha = 25
-                    view.findViewById<View>(R.id.cellView).background = shape
+//                    (shape.findDrawableByLayerId(R.id.dateShapeItem) as GradientDrawable).setColor(
+//                        calendarData.selectedColor!!
+//                    )
+//                    shape.findDrawableByLayerId(R.id.dateShapeItem).alpha = 25
+                    view.findViewById<View>(R.id.frameSelected).background = shape
                 }
                 if ((position + 1) % 7 == 0) {
                     shape = (ContextCompat.getDrawable(
@@ -129,37 +129,45 @@ class GridAdapter(
                         R.drawable.slycalendar_end_day
                     ) as LayerDrawable?)!!
 
-                    (shape.findDrawableByLayerId(R.id.dateShapeItem) as GradientDrawable).setColor(
-                        calendarData.selectedColor!!
-                    )
-                    shape.findDrawableByLayerId(R.id.dateShapeItem).alpha = 25
-                    view.findViewById<View>(R.id.cellView).background = shape
+//                    (shape.findDrawableByLayerId(R.id.dateShapeItem) as GradientDrawable).setColor(
+//                        calendarData.selectedColor!!
+//                    )
+//                    shape.findDrawableByLayerId(R.id.dateShapeItem).alpha = 25
+                    view.findViewById<View>(R.id.frameSelected).background = shape
                 }
             } else if (dateCal[Calendar.DAY_OF_YEAR] == calendarEnd[Calendar.DAY_OF_YEAR] && dateCal[Calendar.YEAR] == calendarEnd[Calendar.YEAR]) {
                 val shape = (ContextCompat.getDrawable(
                     context,
                     R.drawable.slycalendar_end_day
                 ) as LayerDrawable?)!!
-                (shape.findDrawableByLayerId(R.id.dateShapeItem) as GradientDrawable).setColor(
-                    calendarData.selectedColor!!
-                )
-                shape.findDrawableByLayerId(R.id.dateShapeItem).alpha = 25
-                view.findViewById<View>(R.id.cellView).background = shape
+//                (shape.findDrawableByLayerId(R.id.dateShapeItem) as GradientDrawable).setColor(
+//                    calendarData.selectedColor!!
+//                )
+//                shape.findDrawableByLayerId(R.id.dateShapeItem).alpha = 25
+                view.findViewById<View>(R.id.frameSelected).background = shape
             }
         }
         val currentDate = Calendar.getInstance()
         currentDate.time = calendarData.showDate
         currentDate.add(Calendar.MONTH, shiftMonth)
-        view.findViewById<View>(R.id.frameSelected).setBackgroundResource(0)
+//        view.findViewById<View>(R.id.frameSelected).setBackgroundResource(0)
+
         (view.findViewById<View>(R.id.txtDate) as TextView).setTextColor(calendarData.textColor!!)
 
         if (calendarStart != null && dateCal[Calendar.DAY_OF_YEAR] == calendarStart[Calendar.DAY_OF_YEAR] && currentDate[Calendar.MONTH] == dateCal[Calendar.MONTH] && dateCal[Calendar.YEAR] == calendarStart[Calendar.YEAR]) {
-            val shape = (ContextCompat.getDrawable(
-                context,R.drawable.calendar_selected_day_left
-            ) as LayerDrawable?)!!
-            (shape.findDrawableByLayerId(R.id.selectedDateShapeItem) as GradientDrawable).setColor(
-                calendarData.selectedColor!!
-            )
+            val shape: LayerDrawable?
+            if (calendarEnd != null) {
+                shape = ContextCompat.getDrawable(context, R.drawable.calendar_selected_day_left) as LayerDrawable?
+                (shape?.findDrawableByLayerId(R.id.selectedDateShapeItem) as GradientDrawable).setColor(
+                    calendarData.selectedColor!!
+                )
+            } else {
+                shape = ContextCompat.getDrawable(context, R.drawable.calender_selected_item) as LayerDrawable?
+                (shape?.findDrawableByLayerId(R.id.selectedDateShapeItem) as GradientDrawable).setColor(
+                    calendarData.selectedColor!!
+                )
+            }
+
             view.findViewById<View>(R.id.frameSelected).background = shape
             (view.findViewById<View>(R.id.txtDate) as TextView).setTextColor(
                 calendarData.selectedTextColor!!

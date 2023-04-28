@@ -4,13 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.Toast
 import net.lynqfy.offical.LyButton
 import net.lynqfy.offical.base.LyView
-import net.lynqfy.offical.datepicker.LyDatePicker
-import net.lynqfy.offical.toast.LyToast
-import java.util.Calendar
+
 
 class MainActivity : AppCompatActivity() {
     private val activityTabCommon by lazy { findViewById<LyButton>(R.id.tabActitivy1) }
@@ -29,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private val activityRadioButton by lazy { findViewById<LyButton>(R.id.tabRadioButton) }
     private val activityToast by lazy { findViewById<LyButton>(R.id.tabToast) }
     private val activityCheckBox by lazy { findViewById<LyButton>(R.id.tabCheckBox) }
+    private val activitySeekArc by lazy { findViewById<LyButton>(R.id.tabSeekArc) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,9 +47,10 @@ class MainActivity : AppCompatActivity() {
         activitySpinner.onClickListener = clickListener
         activityToast.onClickListener = clickListener
         activityCheckBox.onClickListener = clickListener
+        activitySeekArc.onClickListener = clickListener
     }
 
-    val clickListener = object : LyView.OnClickListener {
+   private val clickListener = object : LyView.OnClickListener {
         override fun onButtonClick(button: View) {
 
             startActivity(
@@ -75,6 +73,8 @@ class MainActivity : AppCompatActivity() {
                         activityRadioButton.button -> RadioButtonActivity::class.java
                         activityToast.button -> ToastActivity::class.java
                         activityCheckBox.button -> CheckBoxActivity::class.java
+                        activitySeekArc.button -> SeekArcActivity::class.java
+
                         else -> TabLayoutActivity3::class.java
                     },
                 )

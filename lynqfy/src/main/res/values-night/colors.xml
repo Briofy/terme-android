@@ -13,6 +13,7 @@
     <color name="alert_bg_message">#1F2A37</color>
     <color name="alert_bg_warning">#1F2A37</color>
     <color name="alert_bg_info">#1F2A37</color>
+    <color name="defualt_button_color">#1A56DB</color>
 
     <color name="alert_text_success">#31C48D</color>
     <color name="alert_text_error">#F98080</color>
@@ -34,7 +35,6 @@
     <color name="alert_button_warning">#FACA15</color>
     <color name="alert_button_info">#4B5563</color>
 
-    <color name="defualt_button_color">#1F2A37</color>
     <color name="white_black">#000000</color>
     <color name="black_white">#ffffff</color>
 </resources>

@@ -9,7 +9,6 @@
         android:id="@+id/radioBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:buttonTint="@color/ly_card_title"
         android:text="@string/popular"
         android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
         android:textColor="@color/ly_card_title"

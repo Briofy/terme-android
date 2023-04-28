@@ -17,6 +17,7 @@
             app:buttonText="Date Picker - Range Pick"
             android:layout_width="match_parent"
             android:layout_margin="10dp"
+            app:buttonTextColorRes="@color/white"
             android:layout_height="wrap_content"/>
 
 
@@ -25,7 +26,7 @@
             app:buttonText="Date Picker - Single Pick"
             android:layout_width="match_parent"
             android:layout_margin="10dp"
-
+            app:buttonTextColorRes="@color/white"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 </ScrollView>

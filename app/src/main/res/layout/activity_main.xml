@@ -38,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Common Ly Tab Layout"
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
         <net.lynqfy.offical.LyButton
@@ -46,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Segment Ly Tab Layout"
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
         <net.lynqfy.offical.LyButton
@@ -53,8 +55,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-
             app:buttonText="Sliding Ly Tab Layout"
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
         <net.lynqfy.offical.LyTextView
@@ -78,6 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly Button"
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
         <net.lynqfy.offical.LyTextView
@@ -101,6 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly Edit Text"
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
         <net.lynqfy.offical.LyTextView
@@ -124,6 +128,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly Text View"
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
         <net.lynqfy.offical.LyTextView
@@ -147,6 +152,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly Image View"
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
         <net.lynqfy.offical.LyTextView
@@ -170,6 +176,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly Alert "
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
         <net.lynqfy.offical.LyTextView
@@ -193,6 +200,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly CardView "
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
         <net.lynqfy.offical.LyTextView
@@ -216,6 +224,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly Date Picker "
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -240,6 +249,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly Tag "
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -264,6 +274,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly Progress Bar "
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -288,6 +299,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly Radio Button "
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
         <net.lynqfy.offical.LyTextView
@@ -311,6 +323,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly Spinner "
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
         <net.lynqfy.offical.LyTextView
@@ -334,6 +347,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly Toast "
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
         <net.lynqfy.offical.LyTextView
@@ -357,8 +371,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly Check Box "
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
-
 
 
     </LinearLayout>

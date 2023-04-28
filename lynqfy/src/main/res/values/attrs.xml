@@ -84,7 +84,9 @@
     </declare-styleable>
 
     <declare-styleable name="LyRadio">
-                <attr name="rTag" format="string" localization="suggested" />
+                <attr name="radioName" format="string" localization="suggested" />
+                <attr name="radioHelper" format="string" localization="suggested" />
+                <attr name="radioDisable" format="boolean" localization="suggested" />
     </declare-styleable>
     <declare-styleable name="LySpinner">
         <attr name="spinner_mode" format="boolean" localization="suggested" />

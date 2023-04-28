@@ -30,7 +30,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabActitivy1"
@@ -72,7 +72,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabButton"
@@ -96,7 +96,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabEditText"
@@ -120,7 +120,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabTextView"
@@ -144,7 +144,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabImageView"
@@ -168,7 +168,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabAlert"
@@ -192,7 +192,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabCardView"
@@ -216,7 +216,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabDatePicker"
@@ -241,7 +241,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabTag"
@@ -266,7 +266,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabProgress"
@@ -291,7 +291,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabRadioButton"
@@ -315,7 +315,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabSpinner"
@@ -339,7 +339,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabToast"
@@ -363,7 +363,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabCheckBox"
@@ -387,7 +387,7 @@
             app:ly_backgroundColor="@color/purple_700"
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="1dp" />
+            app:ly_strokeWidth="2dp" />
 
         <net.lynqfy.offical.LyButton
             android:id="@+id/tabSeekArc"

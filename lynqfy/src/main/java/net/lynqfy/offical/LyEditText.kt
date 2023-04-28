@@ -8,8 +8,10 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import net.lynqfy.offical.base.LyView
+
 
 class LyEditText : LyView {
     constructor(context: Context) : super(context)
@@ -20,13 +22,18 @@ class LyEditText : LyView {
 
     lateinit var editText: EditText
     lateinit var tvTitle: TextView
+    lateinit var searchButton: LyButton
     lateinit var imgSeen: ImageView
     lateinit var notSeen: View
     private var title = "Title"
     private var hint = "Enter Your Hint"
-    private var isPassword = false
     private var error = "Error"
     private var iconResId = R.drawable.ic_deaful_icon
+    private var type = EditTextType.NORMAL
+
+    enum class EditTextType {
+        NORMAL, PASSWORD, SEARCH
+    }
 
     override fun init(mContext: Context, attr: AttributeSet?, defStyleAttr: Int) {
         super.init(mContext, attr, defStyleAttr)
@@ -34,6 +41,7 @@ class LyEditText : LyView {
         tvTitle = mView.findViewById(R.id.tv_title)
         imgSeen = mView.findViewById(R.id.img_seen)
         notSeen = mView.findViewById(R.id.not_seen)
+        searchButton = mView.findViewById(R.id.searchBtn)
 //        imgIcon = mView.findViewById(R.id.img_icon)
 //        line = mView.findViewById(R.id.line)
 
@@ -47,7 +55,12 @@ class LyEditText : LyView {
 
             title = typedArray.getString(R.styleable.LyEditText_title) ?: "Title"
             hint = typedArray.getString(R.styleable.LyEditText_hint) ?: "Enter Your Hint"
-            isPassword = typedArray.getBoolean(R.styleable.LyEditText_isPassword, false)
+            type = when (typedArray.getInt(R.styleable.LyEditText_ly_type, 1)) {
+                1 -> EditTextType.NORMAL
+                2 -> EditTextType.PASSWORD
+                3 -> EditTextType.SEARCH
+                else -> EditTextType.NORMAL
+            }
             error = typedArray.getString(R.styleable.LyEditText_error) ?: "Error"
             iconResId = typedArray.getResourceId(R.styleable.LyEditText_EditTextIcon, 0)
             typedArray.recycle()
@@ -65,30 +78,40 @@ class LyEditText : LyView {
         editText.hint = hint
         notSeen.isVisible = false
 
-        if (isPassword) {
-            imgSeen.visibility = VISIBLE
-            editText.inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
-            editText.transformationMethod = PasswordTransformationMethod()
-            notSeen.isVisible = false
+        when (type) {
+            EditTextType.NORMAL -> {
+                imgSeen.visibility = GONE
+                editText.inputType = InputType.TYPE_CLASS_TEXT
+                editText.transformationMethod = null
+                searchButton.isGone = true
 
-            imgSeen.setOnClickListener {
-                showPassword = !showPassword
-                if (showPassword) {
-                    editText.transformationMethod = PasswordTransformationMethod()
-                    notSeen.isVisible = false
+            }
+            EditTextType.SEARCH -> {
+                searchButton.isVisible = true
+                val img = context.resources.getDrawable(R.drawable.ic_search)
+                editText.setCompoundDrawablesWithIntrinsicBounds(img, null, null, null)
+            }
+            EditTextType.PASSWORD -> {
+                searchButton.isGone = true
 
-                } else {
-                    editText.transformationMethod = null
-                    notSeen.isVisible = true
+                imgSeen.visibility = VISIBLE
+                editText.inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
+                editText.transformationMethod = PasswordTransformationMethod()
+                notSeen.isVisible = false
 
+                imgSeen.setOnClickListener {
+                    showPassword = !showPassword
+                    if (showPassword) {
+                        editText.transformationMethod = PasswordTransformationMethod()
+                        notSeen.isVisible = false
+
+                    } else {
+                        editText.transformationMethod = null
+                        notSeen.isVisible = true
+
+                    }
                 }
             }
-
-        } else {
-            imgSeen.visibility = GONE
-            editText.inputType = InputType.TYPE_CLASS_TEXT
-            editText.transformationMethod = null
-
         }
 
 

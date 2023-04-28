@@ -11,9 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:hint="Enter Your Password"
-        app:isPassword="true"
+        app:ly_type="password"
         android:layout_margin="8dp"
-
         app:layout_constraintTop_toTopOf="parent"
         app:title="Password Edit Text" />
 
@@ -22,7 +21,16 @@
         android:layout_height="wrap_content"
         app:hint="Enter User name"
         android:layout_margin="8dp"
-        app:isPassword="false"
+        app:ly_type="text"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Normal Edit Text" />
+
+    <net.lynqfy.offical.LyEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hint="search"
+        android:layout_margin="8dp"
+        app:ly_type="search"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Search Edit Text" />
 </LinearLayout>

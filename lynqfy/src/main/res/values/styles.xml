@@ -232,7 +232,7 @@
             <enum name="rect" value="1" />
             <enum name="circular" value="2" />
         </attr>
-        <attr name="equalHeightAndWidth" format="boolean"/>
+        <attr name="equalHeightAndWidth" format="boolean" />
         <attr name="buttonType" format="enum">
             <enum name="text" value="1" />
             <enum name="image" value="2" />
@@ -253,7 +253,12 @@
     <declare-styleable name="LyEditText">
         <attr name="title" format="string" />
         <attr name="hint" format="string" />
-        <attr name="isPassword" format="boolean" />
+        <attr name="ly_type" format="enum">
+            <enum name="text" value="1" />
+            <enum name="password" value="2" />
+            <enum name="search" value="3" />
+
+        </attr>
         <attr name="error" format="string"></attr>
         <attr name="EditTextIcon" format="reference" />
     </declare-styleable>
@@ -362,6 +367,7 @@
     <declare-styleable name="LySeekArcTheme">
         <attr name="LySeekArcStyle" format="reference"></attr>
     </declare-styleable>
+
     <style name="LySeekArc">
         <item name="arcColor">@color/progress_gray_dark</item>
     </style>

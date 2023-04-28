@@ -395,6 +395,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly Seek Arc "
+            app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>

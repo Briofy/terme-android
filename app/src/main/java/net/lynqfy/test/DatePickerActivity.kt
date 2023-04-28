@@ -40,12 +40,23 @@ class DatePickerActivity : AppCompatActivity() {
         }
         singleSelect.onClickListener = object : LyView.OnClickListener {
             override fun onButtonClick(button: View) {
-            // TODO:: MORTEZA MAKE A SINGLE DAY PICKER HERE
+                val ly =
+                    LyDatePicker(this@DatePickerActivity) { first: Calendar?, end: Calendar?, hours: Int, minutes: Int ->
+                        val toast = LyToast(
+                            this@DatePickerActivity, getDrawable(R.drawable.tt), "onDataSelected ",
+                            "${first?.get(Calendar.YEAR)} , " +
+                                    "${first?.get(Calendar.MONTH)?.plus(1)} ," +
+                                    "${first?.get(Calendar.DAY_OF_MONTH)}"
+                        ) {
+                            Toast.makeText(this@DatePickerActivity, "replay", Toast.LENGTH_LONG)
+                                .show()
+                        }
+                        toast.show()
+                    }
+                ly.showCalender(true)
             }
-
         }
 
     }
-
 
 }

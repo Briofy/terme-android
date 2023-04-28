@@ -35,9 +35,9 @@ class LyDatePicker(
         (ctx.supportFragmentManager.findFragmentByTag(fmTag) as DialogFragment?)?.dismissAllowingStateLoss()
     }
 
-    fun showCalender() {
+    fun showCalender(isSingle : Boolean = false) {
         Timber.plant(Timber.DebugTree())
-        getCalendarDialog(isSingle = false).show(ctx.supportFragmentManager, fmTag)
+        getCalendarDialog(isSingle = isSingle).show(ctx.supportFragmentManager, fmTag)
     }
 
 

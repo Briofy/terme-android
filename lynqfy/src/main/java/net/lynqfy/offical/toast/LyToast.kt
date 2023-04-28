@@ -20,13 +20,12 @@ import net.lynqfy.offical.R
 import net.lynqfy.offical.databinding.LyToastUiBinding
 
 class LyToast(
-    private val ctx: Context,
-    private val image: Drawable? = null,
-    private val title: String? = null,
-    private val msg: String? = null,
+    ctx: Context,
+    image: Drawable? = null,
+    title: String? = null,
+    msg: String? = null,
     private val action: () -> Unit
 ) : Dialog(ctx) {
-
     init {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE)

@@ -78,10 +78,10 @@ internal class LyCalendarView : FrameLayout, DateSelectListener {
                 )
             }
             if (textColor == null) {
-                textColor = typedArray.getColor(
+                textColor = ContextCompat.getColor(context, R.color.ly_calendar_text_color)/*typedArray.getColor(
                     R.styleable.LyCalendarView_textColor,
                     ContextCompat.getColor(context, R.color.ly_calendar_text_color)
-                )
+                )*/
             }
             if (selectedColor == null) {
                 selectedColor = typedArray.getColor(

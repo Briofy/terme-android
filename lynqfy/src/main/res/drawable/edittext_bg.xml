@@ -6,5 +6,5 @@
         android:color="#D1D5DB" />
     <solid android:color="#F9FAFB" />
 <!--   F9FAFB  D1D5DB  6B7280 -->
-    <corners android:radius="5dp"/>
+    <corners android:radius="8dp"/>
 </shape>

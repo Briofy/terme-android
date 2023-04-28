@@ -374,6 +374,28 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="15-Seek Arc"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:ly_backgroundColor="@color/purple_700"
+            app:ly_cornerRadius="10dp"
+            app:ly_strokeColor="@color/purple_200"
+            app:ly_strokeWidth="1dp" />
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/tabSeekArc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Ly Seek Arc "
+            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
 </ScrollView>

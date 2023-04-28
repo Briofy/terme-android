@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Lynqfy"
         tools:targetApi="31">
         <activity
+            android:name=".SeekArcActivity"
+            android:exported="false" />
+        <activity
             android:name=".CheckBoxActivity"
             android:exported="false" />
         <activity

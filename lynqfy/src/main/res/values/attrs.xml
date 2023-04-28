@@ -84,7 +84,7 @@
     </declare-styleable>
 
     <declare-styleable name="LyRadio">
-        <!--        <attr name="tag" format="string" localization="suggested" />-->
+                <attr name="rTag" format="string" localization="suggested" />
     </declare-styleable>
     <declare-styleable name="LySpinner">
         <attr name="spinner_mode" format="boolean" localization="suggested" />
@@ -104,9 +104,43 @@
         <attr name="backgroundColor" format="color" />
         <attr name="headerColor" format="color" />
         <attr name="headerTextColor" format="color" />
-        <attr name="textColor" format="color" />
+<!--        <attr name="textColor" format="color" />-->
         <attr name="selectedColor" format="color" />
         <attr name="selectedTextColor" format="color" />
         <attr name="firstMonday" format="boolean" />
     </declare-styleable>
+
+
+    <declare-styleable name="LyCheckBox">
+        <!-- The label to be displayed to the right of the checkbox. The label is part of the clickable element to select the checkbox.-->
+        <attr name="label" format="string" />
+        <!-- The name of the submitted field in a checkbox.-->
+        <attr name="name" format="string" />
+
+        <!-- Marks the field as invalid. Changes style of unchecked component. -->
+        <attr name="isInvalid" format="boolean" />
+        <attr name="textColor" format="color" />
+        <attr name="tintColor" format="color" />
+
+        <!-- Sets whether the checkbox is disabled.    -->
+        <attr name="isDisabled" format="boolean" />
+        <!-- Marks the field as required & changes the label style. -->
+        <attr name="isRequired" format="boolean" />
+        <!-- Sets whether the checkbox is indeterminate. This only affects the style and does not modify the isChecked property. -->
+        <attr name="isIndeterminate" format="boolean" />
+
+        <!-- The value to be used in the checkbox input. This is the value that will be returned on form submission.-->
+        <attr name="value">
+            <enum name="number" value="1" />
+            <enum name="string" value="2" />
+        </attr>
+        <attr name="size"> <!--The size of the Checkbox-->
+            <enum name="small" value="1" />
+            <enum name="medium" value="2" />
+            <enum name="large" value="3" />
+            <enum name="xlarge" value="4" />
+        </attr>
+
+    </declare-styleable>
+
 </resources>

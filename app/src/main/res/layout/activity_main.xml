@@ -365,7 +365,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:padding="10dp"
-            android:text="15-Seec Arc"
+            android:text="15-Seek Arc"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -379,7 +379,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Seec Arc "
+            app:buttonText="Ly Seek Arc "
             app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>

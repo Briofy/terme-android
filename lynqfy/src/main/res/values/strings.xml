@@ -25,5 +25,13 @@
     <string name="ly_calendar_next">Next</string>
     <string name="ly_calendar_prev">Prev</string>
     <string name="reply">Reply</string>
+    <string name="flow_bite">FlowBite</string>
+    <string name="login">Login</string>
+    <string name="sing_up_free">Sing Up Free</string>
+    <string name="company">Company</string>
+    <string name="marketplace">Marketplace</string>
+    <string name="features">Features</string>
+    <string name="team">Team</string>
+    <string name="contact">Contact</string>
 
 </resources>

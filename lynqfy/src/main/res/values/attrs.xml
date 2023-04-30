@@ -29,38 +29,33 @@
         </attr>
 
     </declare-styleable>
-
     <declare-styleable name="LyCrypto">
         <attr name="helperText" format="string" localization="suggested" />
     </declare-styleable>
-
     <declare-styleable name="LyTestimonial">
         <attr name="authorName" format="string" localization="suggested" />
         <attr name="authorAvatar" format="reference" />
         <attr name="authorText" format="string" localization="suggested" />
     </declare-styleable>
-
     <declare-styleable name="LyCardButton">
         <attr name="actionButtonText" format="string" localization="suggested" />
         <attr name="actionButtonIconStart" format="reference" />
     </declare-styleable>
-
     <declare-styleable name="LyCardLink">
         <attr name="externalLinkText" format="string" localization="suggested" />
     </declare-styleable>
-
     <declare-styleable name="LyUserProfile">
         <attr name="userName" format="string" localization="suggested" />
         <attr name="userWork" format="string" localization="suggested" />
         <attr name="userImage" format="reference" />
     </declare-styleable>
-
     <declare-styleable name="LyEcommerce">
         <attr name="ecommerceName" format="string" localization="suggested" />
         <attr name="ecommerceCast" format="float" localization="suggested" />
         <attr name="ecommerceRating" format="float" localization="suggested" />
         <attr name="ecommerceImage" format="reference" />
     </declare-styleable>
+
 
     <declare-styleable name="LyProgressBar">
         <attr name="mode" format="boolean" localization="suggested" />
@@ -78,15 +73,13 @@
             <enum name="Primary" value="8" />
         </attr>
     </declare-styleable>
-
     <declare-styleable name="LyTag">
         <attr name="tag" format="string" localization="suggested" />
     </declare-styleable>
-
     <declare-styleable name="LyRadio">
-                <attr name="radioName" format="string" localization="suggested" />
-                <attr name="radioHelper" format="string" localization="suggested" />
-                <attr name="radioDisable" format="boolean" localization="suggested" />
+        <attr name="radioName" format="string" localization="suggested" />
+        <attr name="radioHelper" format="string" localization="suggested" />
+        <attr name="radioDisable" format="boolean" localization="suggested" />
     </declare-styleable>
     <declare-styleable name="LySpinner">
         <attr name="spinner_mode" format="boolean" localization="suggested" />
@@ -101,18 +94,15 @@
             <enum name="Primary" value="8" />
         </attr>
     </declare-styleable>
-
     <declare-styleable name="LyCalendarView">
         <attr name="backgroundColor" format="color" />
         <attr name="headerColor" format="color" />
         <attr name="headerTextColor" format="color" />
-<!--        <attr name="textColor" format="color" />-->
+        <!--        <attr name="textColor" format="color" />-->
         <attr name="selectedColor" format="color" />
         <attr name="selectedTextColor" format="color" />
         <attr name="firstMonday" format="boolean" />
     </declare-styleable>
-
-
     <declare-styleable name="LyCheckBox">
         <!-- The label to be displayed to the right of the checkbox. The label is part of the clickable element to select the checkbox.-->
         <attr name="label" format="string" />
@@ -143,6 +133,31 @@
             <enum name="xlarge" value="4" />
         </attr>
 
+    </declare-styleable>
+
+    <declare-styleable name="LyNavBar">
+
+        <attr name="navBarIcon" format="reference" />
+        <attr name="navBarTitle" format="string" localization="suggested" />
+        <attr name="navBarLink" format="string" localization="suggested" />
+
+        <attr name="NavBarType" format="enum">
+            <enum name="SimpleMegaMenu" value="1" />
+            <enum name="MegaMenuWithIcons" value="2" />
+            <enum name="SearchLinksUser" value="3" />
+            <enum name="CTADropdown" value="4" />
+            <enum name="TwoLevelMegaMenu" value="5" />
+            <enum name="LogoCTA" value="6" />
+            <enum name="LanguageSearch" value="7" />
+            <enum name="CenteredLinks" value="8" />
+            <enum name="LinksUser" value="9" />
+            <enum name="WithCTAButton" value="10" />
+            <enum name="BottomLevel" value="11" />
+            <enum name="ThreeLevels" value="12" />
+            <enum name="FullWidthDescription" value="13" />
+            <enum name="DoubleDropdown" value="14" />
+
+        </attr>
     </declare-styleable>
 
 </resources>

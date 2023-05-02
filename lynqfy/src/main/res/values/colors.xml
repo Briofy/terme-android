@@ -6,6 +6,7 @@
     <color name="ly_card_title">#0F1927</color>
     <color name="ly_card_content">#68717E</color>
     <color name="ly_button_stroke_color">#E3E5E9</color>
+    <color name="ly_card_shadow">#aaaaaa</color>
 
 
     <color name="ly_cta_button_background">#0F1927</color>
@@ -74,7 +75,10 @@
     <color name="black">#000000</color>
     <color name="test_color">#ff0000</color>
     <color name="error_color">#D50000</color>
+
+    <color name="colorBackground">#FF4081</color>
     <color name="background_color">#ffffff</color>
+
     <color name="text_color">#202020</color>
     <color name="light_color">#F1F5F9</color>
     <color name="text_color_2">#2C3959</color>

@@ -33,5 +33,6 @@
     <string name="features">Features</string>
     <string name="team">Team</string>
     <string name="contact">Contact</string>
+    <string name="get_started">Get started</string>
 
 </resources>

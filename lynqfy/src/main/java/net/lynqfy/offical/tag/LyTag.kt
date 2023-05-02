@@ -46,6 +46,9 @@ class LyTag : MaterialCardView {
         useCompatPadding = true
     }
 
+    fun getTagView() = ui.tagTv
+    fun getParentView() = ui.root
+
     fun setClearAction(action : ()->Unit){
         ui.clear.setOnClickListener { action.invoke() }
     }

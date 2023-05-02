@@ -5,21 +5,43 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import androidx.appcompat.widget.LinearLayoutCompat
 import net.lynqfy.offical.R
+import net.lynqfy.offical.navbar.type.LyNavBarAction
+import net.lynqfy.offical.navbar.type.LyNavBarType
+import net.lynqfy.offical.navbar.type.cta.CTAButtonIm
 import net.lynqfy.offical.navbar.type.simple.SimpleMegaMenu
 
+typealias ButtonCallback = () -> Unit
+typealias MenuCallback  =   () -> Unit
 
-class LyNavBar : LinearLayoutCompat{
+class LyNavBar : LinearLayoutCompat {
     constructor(ctx: Context) : super(ctx, null) {
-        initTheme(null)
-    }
-    constructor(mContext: Context, attr: AttributeSet?) : super(mContext, attr) {
-        initTheme(attr)
-    }
-    constructor(ctx: Context, attr: AttributeSet, defStyleAttr: Int) : super(ctx,attr,defStyleAttr) {
-        initTheme(attr, defStyleAttr)
+        initNavBarTheme(null)
     }
 
-    private fun initTheme(attrs: AttributeSet?, defStyleAttr: Int = 0) {
+    constructor(mContext: Context, attr: AttributeSet?) : super(mContext, attr) {
+        initNavBarTheme(attr)
+    }
+
+    constructor(ctx: Context, attr: AttributeSet, defStyleAttr: Int) : super(
+        ctx,
+        attr,
+        defStyleAttr
+    ) {
+        initNavBarTheme(attr, defStyleAttr)
+    }
+
+    fun onButtonAction(callback: ButtonCallback) {
+        if (::mLyNavBarAction.isInitialized) {
+            mLyNavBarAction.onButtonAction = callback
+        }
+    }
+    fun onMenuAction(callback: MenuCallback) {
+        if (::mLyNavBarAction.isInitialized) {
+            mLyNavBarAction.onMenuAction = callback
+        }
+    }
+
+    private fun initNavBarTheme(attrs: AttributeSet?, defStyleAttr: Int = 0) {
 
         // Ensure we are using the correctly themed context rather than the context that was passed in.
         attrs?.also { att ->
@@ -29,11 +51,10 @@ class LyNavBar : LinearLayoutCompat{
                 defStyleAttr,
                 com.google.android.material.R.style.Widget_MaterialComponents_Toolbar
             )
-            val cardType = TypedValue()
-            if (attributes.getValue(R.styleable.LyNavBar_NavBarType, cardType)) {
-                mLyCardUiType = cardType.data
-
-                when (cardType.data) {
+            val navBarType = TypedValue()
+            if (attributes.getValue(R.styleable.LyNavBar_NavBarType, navBarType)) {
+                mLyNavBarUiType = navBarType.data
+                when (mLyNavBarUiType) {
                     /*"SimpleMegaMenu" */      1 -> {
                     SimpleMegaMenu(this, attributes, attrs, defStyleAttr)
                 }
@@ -44,27 +65,50 @@ class LyNavBar : LinearLayoutCompat{
                     //SearchLinksUser(this, attributes, attrs, defStyleAttr)
                 }
                     /*"CTADropdown"*/    4 -> {
-                    //CTADropdown(this, attributes, attrs, defStyleAttr)
+                    mLyNavBarAction = CTAButtonIm(
+                        this, attributes, attrs, defStyleAttr,
+                        LyNavBarType.CTADropdown
+                    ).apply {
+                        initUI()
+                    }
                 }
                     /*"TwoLevelMegaMenu"*/  5 -> {
                     //TwoLevelMegaMenu(this, attributes, attrs, defStyleAttr)
                 }
                     /*"LogoCTA"*/ 6 -> {
-//                     LogoCTA(this, attrs, defStyleAttr)
+                    mLyNavBarAction = CTAButtonIm(
+                        this, attributes, attrs, defStyleAttr,
+                        LyNavBarType.LogoCTA
+                    ).apply {
+                        initUI()
+                    }
                 }
                     /*"LanguageSearch"*/    7 -> {
-//                     LanguageSearch(this, attributes, attrs, defStyleAttr)
+                    mLyNavBarAction = CTAButtonIm(
+                        this, attributes, attrs, defStyleAttr,
+                        LyNavBarType.LanguageSearch
+                    ).apply {
+                        initUI()
+                    }
                 }
                     /*"CenteredLinks"*/   8 -> {
-//                     CenteredLinks(this, attributes, attrs, defStyleAttr).apply {
-//                        disableButton()
-//                    }
+                    mLyNavBarAction = CTAButtonIm(
+                        this, attributes, attrs, defStyleAttr,
+                        LyNavBarType.CenteredLinks
+                    ).apply {
+                        initUI()
+                    }
                 }
                     /*"LinksUser"*/    9 -> {
 //                     EcommerceIm(this, attrs, defStyleAttr)
                 }
                     /*"WithCTAButton"*/  10 -> {
-//                     WithCTAButton(this, attributes, attrs, defStyleAttr)
+                    mLyNavBarAction = CTAButtonIm(
+                        this, attributes, attrs, defStyleAttr,
+                        LyNavBarType.WithCTAButton
+                    ).apply {
+                        initUI()
+                    }
                 }
                     /*"BottomLevel"*/      11 -> {
                     //BottomLevel(this, attributes, attrs, defStyleAttr)
@@ -79,11 +123,11 @@ class LyNavBar : LinearLayoutCompat{
 //                    DoubleDropdown(this, attributes, attrs, defStyleAttr)
                 }
                 }
-                invalidate()
             }
             attributes.recycle()
         }
     }
 
-    private var mLyCardUiType: Int = 1
+    private var mLyNavBarUiType: Int = 1
+    private lateinit var mLyNavBarAction: LyNavBarAction
 }

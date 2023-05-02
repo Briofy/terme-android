@@ -18,6 +18,7 @@
             android:layout_height="match_parent"
             android:paddingHorizontal="10dp"
             android:paddingVertical="4dp"
+            android:textAllCaps="false"
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

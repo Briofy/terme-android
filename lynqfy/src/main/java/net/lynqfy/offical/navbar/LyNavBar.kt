@@ -8,10 +8,11 @@ import net.lynqfy.offical.R
 import net.lynqfy.offical.navbar.type.LyNavBarAction
 import net.lynqfy.offical.navbar.type.LyNavBarType
 import net.lynqfy.offical.navbar.type.cta.CTAButtonIm
+import net.lynqfy.offical.navbar.type.dropdown.DoubleDropdownIm
 import net.lynqfy.offical.navbar.type.simple.SimpleMegaMenu
 
 typealias ButtonCallback = () -> Unit
-typealias MenuCallback  =   () -> Unit
+typealias MenuCallback = () -> Unit
 
 class LyNavBar : LinearLayoutCompat {
     constructor(ctx: Context) : super(ctx, null) {
@@ -35,6 +36,7 @@ class LyNavBar : LinearLayoutCompat {
             mLyNavBarAction.onButtonAction = callback
         }
     }
+
     fun onMenuAction(callback: MenuCallback) {
         if (::mLyNavBarAction.isInitialized) {
             mLyNavBarAction.onMenuAction = callback
@@ -120,12 +122,15 @@ class LyNavBar : LinearLayoutCompat {
 //                     FullWidthDescription(this, attributes, attrs, defStyleAttr)
                 }
                     /*"DoubleDropdown"*/ 14 -> {
-//                    DoubleDropdown(this, attributes, attrs, defStyleAttr)
+                    DoubleDropdownIm(this, attributes, attrs, defStyleAttr).apply {
+                        initUI()
+                    }
                 }
                 }
             }
             attributes.recycle()
         }
+        orientation = VERTICAL
     }
 
     private var mLyNavBarUiType: Int = 1

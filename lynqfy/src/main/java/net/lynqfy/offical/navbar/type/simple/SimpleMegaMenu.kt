@@ -26,4 +26,12 @@ internal class SimpleMegaMenu(
         //Ly.inflate(LayoutInflater.from(parent.context), parent, true)
     }
 
+    override fun initTheme(attrs: AttributeSet?, defStyleAttr: Int) {
+        TODO("Not yet implemented")
+    }
+
+    override fun initUI() {
+        TODO("Not yet implemented")
+    }
+
 }

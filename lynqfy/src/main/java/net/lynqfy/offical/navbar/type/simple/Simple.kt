@@ -1,4 +1,5 @@
 package net.lynqfy.offical.navbar.type.simple
 
-interface Simple {
-}
+import net.lynqfy.offical.navbar.type.BaseNavBarInterface
+
+interface Simple : BaseNavBarInterface

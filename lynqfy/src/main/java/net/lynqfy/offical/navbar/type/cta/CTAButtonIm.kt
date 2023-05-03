@@ -65,7 +65,7 @@ class CTAButtonIm(
 
     override fun initTheme(attrs: AttributeSet?, defStyleAttr: Int) {
         // Ensure we are using the correctly themed context rather than the context that was passed in.
-        attrs?.also { att ->
+//        attrs?.also { att ->
 //            val attributes = parent.context.obtainStyledAttributes(
 //                att, R.styleable.LyCrypto, defStyleAttr, com.google.android.material.R.style.Widget_MaterialComponents_CardView
 //            )
@@ -79,6 +79,6 @@ class CTAButtonIm(
 //                ui.helper.text = it
 //            }
 //            attributes.recycle()
-        }
+//        }
     }
 }

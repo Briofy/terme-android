@@ -35,5 +35,7 @@
     <string name="contact">Contact</string>
     <string name="get_started">Get started</string>
     <string name="menu">Menu</string>
+    <string name="create_post">Create post</string>
+    <string name="search">Search</string>
 
 </resources>

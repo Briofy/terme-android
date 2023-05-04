@@ -7,6 +7,7 @@ import androidx.appcompat.widget.LinearLayoutCompat
 import net.lynqfy.offical.R
 import net.lynqfy.offical.navbar.type.LyNavBarAction
 import net.lynqfy.offical.navbar.type.LyNavBarType
+import net.lynqfy.offical.navbar.type.SearchLinksUserIm
 import net.lynqfy.offical.navbar.type.cta.CTAButtonIm
 import net.lynqfy.offical.navbar.type.dropdown.DoubleDropdownIm
 import net.lynqfy.offical.navbar.type.simple.SimpleMegaMenu
@@ -64,7 +65,9 @@ class LyNavBar : LinearLayoutCompat {
 //                    MegaMenuWithIcons(this, attributes, attrs, defStyleAttr)
                 }
                     /*"SearchLinksUser" */     3 -> {
-                    //SearchLinksUser(this, attributes, attrs, defStyleAttr)
+                    SearchLinksUserIm(this, attributes, attrs, defStyleAttr).apply {
+                        initUI()
+                    }
                 }
                     /*"CTADropdown"*/    4 -> {
                     mLyNavBarAction = CTAButtonIm(

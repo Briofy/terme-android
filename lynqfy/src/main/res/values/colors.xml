@@ -8,6 +8,9 @@
     <color name="ly_button_stroke_color">#E3E5E9</color>
     <color name="ly_card_shadow">#aaaaaa</color>
 
+    <color name="ly_search_stroke_color">#CED3D9</color>
+    <color name="ly_search_background_color">#FDFDFD</color>
+
 
     <color name="ly_cta_button_background">#0F1927</color>
     <color name="ly_card_button">#0067E8</color>

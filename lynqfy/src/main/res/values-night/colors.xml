@@ -9,6 +9,9 @@
     <color name="ly_calendar_selected_item">#485461</color>
     <color name="ly_card_shadow">#1E2A34</color>
 
+    <color name="ly_search_stroke_color">#68717E</color>
+    <color name="ly_search_background_color">#485461</color>
+
     <color name="alert_bg_success">#1F2A37</color>
     <color name="alert_bg_error">#1F2A37</color>
     <color name="alert_bg_message">#1F2A37</color>

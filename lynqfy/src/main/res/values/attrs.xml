@@ -156,6 +156,7 @@
             <enum name="ThreeLevels" value="12" />
             <enum name="FullWidthDescription" value="13" />
             <enum name="DoubleDropdown" value="14" />
+            <enum name="TopLevel" value="15" />
 
         </attr>
     </declare-styleable>

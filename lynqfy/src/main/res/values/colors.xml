@@ -17,6 +17,9 @@
     <color name="ly_link_action">#0067E8</color>
 
 
+    <color name="ly_txt_green">#00A071</color>
+    <color name="ly_txt_rea_400">#FD7980</color>
+
     <color name="ly_progress_primary">#0067E8</color>
     <color name="ly_progress_green">#00A071</color>
     <color name="ly_progress_dark">#68717E</color>

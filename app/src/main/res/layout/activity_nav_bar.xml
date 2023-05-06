@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NavBarActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content" >
+        <net.lynqfy.offical.navbar.LyNavBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:NavBarType="SearchLinksUser" />
+
+        <net.lynqfy.offical.navbar.LyNavBar
+            android:id="@+id/navbar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:NavBarType="WithCTAButton" />
+
+        <net.lynqfy.offical.navbar.LyNavBar
+            android:id="@+id/navbar0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:NavBarType="DoubleDropdown" />
+
+
+        <net.lynqfy.offical.navbar.LyNavBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:NavBarType="TopLevel" />
+
+        <net.lynqfy.offical.navbar.LyNavBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:NavBarType="ThreeLevels" />
+
+        <net.lynqfy.offical.navbar.LyNavBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:NavBarType="LinksUser" />
+
+        <net.lynqfy.offical.navbar.LyNavBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:NavBarType="BottomLevel" />
+
+        <net.lynqfy.offical.navbar.LyNavBar
+            android:id="@+id/navbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:NavBarType="LogoCTA" />
+
+        <net.lynqfy.offical.navbar.LyNavBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:NavBarType="CenteredLinks" />
+
+        <net.lynqfy.offical.navbar.LyNavBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:NavBarType="CTADropdown" />
+
+        <net.lynqfy.offical.navbar.LyNavBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:NavBarType="LanguageSearch" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

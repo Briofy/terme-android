@@ -10,6 +10,10 @@ import net.lynqfy.offical.navbar.type.LyNavBarType
 import net.lynqfy.offical.navbar.type.SearchLinksUserIm
 import net.lynqfy.offical.navbar.type.cta.CTAButtonIm
 import net.lynqfy.offical.navbar.type.dropdown.DoubleDropdownIm
+import net.lynqfy.offical.navbar.type.level.BottomLevelIm
+import net.lynqfy.offical.navbar.type.level.three.ThreeLevelIm
+import net.lynqfy.offical.navbar.type.level.top.TopLevelIm
+import net.lynqfy.offical.navbar.type.links.LinksUserIm
 import net.lynqfy.offical.navbar.type.simple.SimpleMegaMenu
 
 typealias ButtonCallback = () -> Unit
@@ -105,7 +109,9 @@ class LyNavBar : LinearLayoutCompat {
                     }
                 }
                     /*"LinksUser"*/    9 -> {
-//                     EcommerceIm(this, attrs, defStyleAttr)
+                    LinksUserIm(this, attributes, attrs, defStyleAttr).apply {
+                        initUI()
+                    }
                 }
                     /*"WithCTAButton"*/  10 -> {
                     mLyNavBarAction = CTAButtonIm(
@@ -116,10 +122,14 @@ class LyNavBar : LinearLayoutCompat {
                     }
                 }
                     /*"BottomLevel"*/      11 -> {
-                    //BottomLevel(this, attributes, attrs, defStyleAttr)
+                    BottomLevelIm(this, attributes, attrs, defStyleAttr).apply {
+                        initUI()
+                    }
                 }
                     /*"ThreeLevels"*/    12 -> {
-                    //ThreeLevels(this, attributes, attrs, defStyleAttr)
+                    ThreeLevelIm(this, attributes, attrs, defStyleAttr).apply {
+                        initUI()
+                    }
                 }
                     /*"FullWidthDescription"*/    13 -> {
 //                     FullWidthDescription(this, attributes, attrs, defStyleAttr)
@@ -129,11 +139,17 @@ class LyNavBar : LinearLayoutCompat {
                         initUI()
                     }
                 }
+                    /*TopLevel*/  15 -> {
+                    TopLevelIm(this, attributes, attrs, defStyleAttr).apply {
+                        initUI()
+                    }
                 }
+
+                }
+                attributes.recycle()
             }
-            attributes.recycle()
+            orientation = VERTICAL
         }
-        orientation = VERTICAL
     }
 
     private var mLyNavBarUiType: Int = 1

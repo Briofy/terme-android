@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private val activityToast by lazy { findViewById<LyButton>(R.id.tabToast) }
     private val activityCheckBox by lazy { findViewById<LyButton>(R.id.tabCheckBox) }
     private val activitySeekArc by lazy { findViewById<LyButton>(R.id.tabSeekArc) }
+    private val activityNavBar by lazy { findViewById<LyButton>(R.id.NavBar) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         activityToast.onClickListener = clickListener
         activityCheckBox.onClickListener = clickListener
         activitySeekArc.onClickListener = clickListener
+        activityNavBar.onClickListener = clickListener
     }
 
    private val clickListener = object : LyView.OnClickListener {
@@ -74,6 +76,7 @@ class MainActivity : AppCompatActivity() {
                         activityToast.button -> ToastActivity::class.java
                         activityCheckBox.button -> CheckBoxActivity::class.java
                         activitySeekArc.button -> SeekArcActivity::class.java
+                        activityNavBar.button -> NavBarActivity::class.java
 
                         else -> TabLayoutActivity3::class.java
                     },

@@ -37,5 +37,11 @@
     <string name="menu">Menu</string>
     <string name="create_post">Create post</string>
     <string name="search">Search</string>
+    <string name="cryptos">Cryptos:</string>
+    <string name="exchanges">Exchanges:</string>
+    <string name="carousel_nav">carousel nav</string>
+    <string name="sp_500"><![CDATA[S&P 500]]></string>
+    <string name="nasdaq">Nasdaq</string>
+    <string name="logout">Logout</string>
 
 </resources>

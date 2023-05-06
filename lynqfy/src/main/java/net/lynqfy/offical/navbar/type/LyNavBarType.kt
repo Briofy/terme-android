@@ -1,7 +1,6 @@
 package net.lynqfy.offical.navbar.type
 
 enum class LyNavBarType {
-
     SimpleMegaMenu,
     MegaMenuWithIcons,
     SearchLinksUser,
@@ -15,5 +14,6 @@ enum class LyNavBarType {
     BottomLevel,
     ThreeLevels,
     FullWidthDescription,
-    DoubleDropdown
+    DoubleDropdown,
+    TopLevel
 }

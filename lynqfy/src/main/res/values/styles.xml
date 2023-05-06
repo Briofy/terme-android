@@ -186,9 +186,6 @@
         <attr name="ly_isWidthHeightEqual" format="boolean" />
     </declare-styleable>
 
-
-    ///////////////
-
     <style name="TextStyle.Title">
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
@@ -212,7 +209,6 @@
         <item name="android:includeFontPadding">false</item>
         <item name="android:lineSpacingMultiplier">1.5</item>
     </style>
-
 
     <style name="Widget">
 
@@ -263,7 +259,6 @@
         <attr name="EditTextIcon" format="reference" />
     </declare-styleable>
 
-
     <style name="CircularShapeAppearance" parent="ShapeAppearance.Material3.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
@@ -296,7 +291,6 @@
         <!--        <item name="android:backgroundDimEnabled">true</item>-->
     </style>
 
-
     <style name="SlyCalendarTimeDialogTheme" parent="Theme.Material3.DayNight.Dialog">
         <item name="colorAccent">@color/slycalendar_defHeaderColor</item>
         <item name="colorControlNormal">@color/slycalendar_defHeaderColor</item>
@@ -308,7 +302,6 @@
         <item name="android:textColorPrimary">#FF4081</item>
         // you can change the color of the yearPiker dialog
     </style>
-
 
     <declare-styleable name="LyImageView">
         <!-- BORDER -->

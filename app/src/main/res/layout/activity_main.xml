@@ -14,7 +14,6 @@
         android:gravity="center"
         android:orientation="vertical"
         tools:context=".MainActivity">
-
         <net.lynqfy.offical.LyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -410,13 +409,36 @@
             app:ly_cornerRadius="10dp"
             app:ly_strokeColor="@color/purple_200"
             app:ly_strokeWidth="2dp" />
-
         <net.lynqfy.offical.LyButton
             android:id="@+id/NavBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonText="Ly NavBar"
+            app:buttonTextColorRes="@color/white"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <net.lynqfy.offical.LyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="17-TimeLine"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:ly_backgroundColor="@color/purple_700"
+            app:ly_cornerRadius="10dp"
+            app:ly_strokeColor="@color/purple_200"
+            app:ly_strokeWidth="2dp" />
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/timeLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Ly TimeLine"
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 

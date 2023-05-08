@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="LyKeyboard">
+        <attr name="android:keyTextColor" format="color" />
+        <attr name="keyText" format="string" />
+        <attr name="android:keyBackground" format="color" />
+        <attr name="keyType" format="enum">
+            <enum name="arrowLeft"  value="1" />
+            <enum name="arrowRight" value="2" />
+            <enum name="arrowUp"    value="3" />
+            <enum name="arrowDown"  value="4" />
+            <enum name="text"  value="5" />
+        </attr>
+    </declare-styleable>
 
     <declare-styleable name="LyCardView">
         <attr name="header" format="string" localization="suggested" />
         <attr name="body" format="string" localization="suggested" />
-
         <attr name="type" format="enum">
             <enum name="crypto" value="1" />
 
@@ -27,7 +38,6 @@
             <enum name="type11" value="11" />
             <enum name="nav_tabs" value="12" />
         </attr>
-
     </declare-styleable>
     <declare-styleable name="LyCrypto">
         <attr name="helperText" format="string" localization="suggested" />

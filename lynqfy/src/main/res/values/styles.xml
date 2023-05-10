@@ -369,61 +369,37 @@
         <item name="arcColor">@color/progress_gray</item>
     </style>
 
-    <declare-styleable name="LyTimelineView" >
-<!--        <attr name="marker" format="color|reference"/>-->
-<!--        <attr name="markerSize" format="dimension"/>-->
-<!--        <attr name="markerPaddingLeft" format="dimension"/>-->
-<!--        <attr name="markerPaddingTop" format="dimension"/>-->
-<!--        <attr name="markerPaddingRight" format="dimension"/>-->
-<!--        <attr name="markerPaddingBottom" format="dimension"/>-->
-<!--        <attr name="markerInCenter" format="boolean"/>-->
-<!--        <attr name="startLineColor" format="color"/>-->
-<!--        <attr name="endLineColor" format="color"/>-->
-<!--        <attr name="lineWidth" format="dimension"/>-->
-<!--        <attr name="lineStyle" format="enum">-->
-<!--            <enum name="normal" value="0" />-->
-<!--            <enum name="dash" value="1" />-->
-<!--        </attr>-->
-<!--        <attr name="lineStyleDashGap" format="dimension" />-->
-<!--        <attr name="lineStyleDashLength" format="dimension" />-->
-<!--        <attr name="lineOrientation" format="enum">-->
-<!--            <enum name="horizontal" value="0"/>-->
-<!--            <enum name="vertical" value="1"/>-->
-<!--        </attr>-->
-<!--        <attr name="linePadding" format="dimension"/>-->
+    <style name="Theme.LyDrawerView" parent="ThemeOverlay.Material3.NavigationView">
+        <item name="colorControlHighlight">@android:color/transparent</item>
+        <item name="colorNavigationItemNormal">@color/ly_card_content</item>
+        <item name="colorNavigationItemSelected">@color/ly_card_title</item>
+        <item name="colorNavigationItemBackgroundSelected">@color/ly_card_item_background</item>
+        <item name="colorNavigationItemBackgroundPressed">@color/ly_card_title</item>
+        <item name="drawableNavigationItemBackground">@drawable/menu_item_background_color_state</item>
+        <item name="colorStateNavigationItem">@drawable/menu_item_color_state</item>
+        <item name="colorControlNormal">@color/ly_card_content</item>
+        <item name="android:windowBackground">@color/shark_light</item>
+        <item name="android:statusBarColor">@color/shark_light</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:textColor">@color/ly_card_content</item>
+        <item name="navigationViewStyle">@style/Widget.Ly.NavigationView</item>
 
+    </style>
 
+    <style name="Widget.Ly.NavigationView" parent="Widget.Design.NavigationView">
+        <item name="android:listDivider">@color/shuttle_gray</item>
+        <item name="itemIconTint">@drawable/menu_item_color_state</item>
+        <item name="itemTextAppearance">@style/TextAppearance.Ly.Navigation.Item</item>
+<!--        <item name="itemTextColor">@drawable/menu_item_color_state</item>-->
+        <item name="itemTextColor">@color/ly_card_title</item>
+        <item name="itemBackground">@drawable/menu_item_background_color_state</item>
+        <item name="android:background">@color/ly_card_background</item>
+    </style>
 
-        <attr name="timeline_item_type" format="enum">
-            <enum name="first" value="0"/>
-            <enum name="middle" value="1"/>
-            <enum name="last" value="2"/>
-            <enum name="spacer" value="3"/>
-        </attr>
-
-        <attr name="indicator_style" format="enum">
-            <enum name="filled" value="0"/>
-            <enum name="empty" value="1"/>
-            <enum name="checked" value="2"/>
-        </attr>
-        <attr name="indicator_drawable" format="reference"/>
-        <attr name="indicator_size" format="dimension"/>
-        <attr name="indicator_color" format="color"/>
-        <attr name="indicator_y_position" format="float"/>
-
-        <attr name="checked_indicator_size" format="dimension"/>
-        <attr name="checked_indicator_stroke_width" format="dimension"/>
-
-        <attr name="line_style" format="enum">
-            <enum name="normal" value="0"/>
-            <enum name="dashed" value="1"/>
-        </attr>
-        <attr name="line_width" format="dimension"/>
-        <attr name="line_color" format="color"/>
-
-        <attr name="line_dash_length" format="dimension"/>
-        <attr name="line_dash_gap" format="dimension"/>
-        <attr name="line_padding" format="dimension"/>
-    </declare-styleable>
+    <style name="TextAppearance.Ly.Navigation.Item" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+<!--        <item name="android:fontFamily">@font/google_sans_medium</item>-->
+        <item name="android:textSize">14sp</item>
+    </style>
 
 </resources>

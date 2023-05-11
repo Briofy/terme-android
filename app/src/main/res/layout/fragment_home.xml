@@ -36,4 +36,28 @@
         android:layout_height="wrap_content"
         app:keyText="Shift"
         app:keyType="text" />
+
+    <net.lynqfy.offical.badge.LyBadge
+        app:badgeType="text"
+        app:bText="test"
+        app:bTintColor="@color/ly_progress_yellow"
+        app:bBackgroundColor="@color/ly_progress_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <net.lynqfy.offical.badge.LyBadge
+        app:badgeType="icon"
+        app:bText="1"
+        app:bTintColor="@color/ly_progress_black"
+        app:bBackgroundColor="@color/ly_progress_pink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <net.lynqfy.offical.badge.LyBadge
+        app:badgeType="number"
+        app:bText="55"
+        app:bTintColor="@color/ly_progress_orange"
+        app:bBackgroundColor="@color/ly_progress_indigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </androidx.appcompat.widget.LinearLayoutCompat>

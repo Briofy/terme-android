@@ -39,6 +39,17 @@
             <enum name="nav_tabs" value="12" />
         </attr>
     </declare-styleable>
+    <declare-styleable name="LyBadge">
+        <attr name="bTintColor" format="color" />
+        <attr name="bBackgroundColor" format="color" />
+        <attr name="bText" format="string" />
+        <attr name="badgeType" format="enum">
+            <enum name="number" value="1" />
+            <enum name="icon" value="2" />
+            <enum name="text" value="3" />
+        </attr>
+    </declare-styleable>
+
     <declare-styleable name="LyCrypto">
         <attr name="helperText" format="string" localization="suggested" />
     </declare-styleable>

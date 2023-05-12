@@ -1,0 +1,598 @@
+[
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_switch_thumb_unchecked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_switch_thumb_unchecked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_star_black_48dp.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_star_black_48dp.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/avd_show_password.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/avd_show_password.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_checkbox_button_checked_unchecked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_checkbox_button_checked_unchecked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ic_search_api_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_seen.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/ic_seen.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/apple.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/apple.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_text_cursor_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/material_ic_calendar_black_24dp.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/material_ic_calendar_black_24dp.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_mtrl_chip_checked_black.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/ic_mtrl_chip_checked_black.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_m3_chip_close.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/ic_m3_chip_close.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/material_ic_menu_arrow_down_black_24dp.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/material_ic_menu_arrow_down_black_24dp.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_checkbox_button_icon_indeterminate_unchecked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_checkbox_button_icon_indeterminate_unchecked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ratingbar_small_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/popular_background.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/popular_background.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_clock_black_24dp.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/ic_clock_black_24dp.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/google_play.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/google_play.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_switch_thumb_pressed_unchecked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_switch_thumb_pressed_unchecked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/material_ic_keyboard_arrow_left_black_24dp.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/material_ic_keyboard_arrow_left_black_24dp.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_checkbox_button_icon_indeterminate_checked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_checkbox_button_icon_indeterminate_checked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_mtrl_chip_checked_circle.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/ic_mtrl_chip_checked_circle.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/material_ic_edit_black_24dp.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/material_ic_edit_black_24dp.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_switch_thumb.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_switch_thumb.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/round_add_24.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/round_add_24.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_switch_thumb_unchecked_pressed.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_switch_thumb_unchecked_pressed.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_btn_radio_material_anim.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_btn_radio_material_anim.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/navigation_empty_icon.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/navigation_empty_icon.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/button_bordered_bg_rect.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/button_bordered_bg_rect.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_btn_check_material_anim.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_btn_check_material_anim.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_switch_thumb_pressed_checked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_switch_thumb_pressed_checked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_search_black_24.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/ic_search_black_24.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_switch_track_decoration.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_switch_track_decoration.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_seekbar_thumb_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/notification_tile_bg.xml",
+        "source": "net.lynqfy.offical.lynqfy-core-1.9.0-22:/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_ic_checkbox_checked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_ic_checkbox_checked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_item_background_holo_dark.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/notification_icon_background.xml",
+        "source": "net.lynqfy.offical.lynqfy-core-1.9.0-22:/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_checkbox_button_icon.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_checkbox_button_icon.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ratingbar_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_ic_arrow_drop_up.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_ic_arrow_drop_up.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_switch_thumb_unchecked_checked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_switch_thumb_unchecked_checked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_seekbar_track_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_btn_radio_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_vector_test.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-resources-1.6.1-9:/drawable/abc_vector_test.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_switch_thumb_checked_unchecked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_switch_thumb_checked_unchecked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/btn_checkbox_checked_mtrl.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/btn_checkbox_checked_mtrl.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_mtrl_chip_close_circle.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/ic_mtrl_chip_close_circle.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/dots_horizontal.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/dots_horizontal.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/avd_hide_password.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/avd_hide_password.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_tabs_default_indicator.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_tabs_default_indicator.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/design_ic_visibility.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/design_ic_visibility.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_m3_chip_check.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/ic_m3_chip_check.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/design_snackbar_background.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/design_snackbar_background.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/btn_radio_on_to_off_mtrl_animation.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/btn_radio_on_to_off_mtrl_animation.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/notification_bg.xml",
+        "source": "net.lynqfy.offical.lynqfy-core-1.9.0-22:/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_popupmenu_background.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_popupmenu_background.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_cab_background_internal_bg.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_cab_background_top_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/external_link.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/external_link.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_m3_chip_checked_circle.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/ic_m3_chip_checked_circle.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_switch_thumb_checked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_switch_thumb_checked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ic_ab_back_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/calendar_selected_day_left.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/calendar_selected_day_left.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ic_voice_search_api_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ic_clear_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/m3_tabs_rounded_line_indicator.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/m3_tabs_rounded_line_indicator.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/m3_password_eye.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/m3_password_eye.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_switch_thumb_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_star_half_black_48dp.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_star_half_black_48dp.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_mtrl_checked_circle.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/ic_mtrl_checked_circle.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/notification_bg_low.xml",
+        "source": "net.lynqfy.offical.lynqfy-core-1.9.0-22:/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/material_ic_menu_arrow_up_black_24dp.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/material_ic_menu_arrow_up_black_24dp.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_switch_thumb_pressed.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_switch_thumb_pressed.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/round_arrow_forward.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/round_arrow_forward.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/arrow_narrow_right.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/arrow_narrow_right.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_arrow_back_black_24.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/ic_arrow_back_black_24.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/test_level_drawable.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/test_level_drawable.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/m3_avd_hide_password.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/m3_avd_hide_password.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/tooltip_frame_light.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/tooltip_frame_light.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/button_bg_rect.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/button_bg_rect.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/material_ic_clear_black_24dp.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/material_ic_clear_black_24dp.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/button_bg_circle.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/button_bg_circle.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/btn_radio_on_mtrl.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/btn_radio_on_mtrl.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_ic_cancel.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_ic_cancel.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_checkbox_button_icon_unchecked_checked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_checkbox_button_icon_unchecked_checked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_dialog_background.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_dialog_background.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/material_ic_keyboard_arrow_right_black_24dp.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/material_ic_keyboard_arrow_right_black_24dp.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_btn_borderless_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ic_menu_overflow_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ic_menu_selectall_mtrl_alpha.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ic_menu_selectall_mtrl_alpha.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/tooltip_frame_dark.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_checkbox_button_icon_checked_unchecked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_checkbox_button_icon_checked_unchecked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_ic_indeterminate.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_ic_indeterminate.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/design_password_eye.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/design_password_eye.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_list_selector_holo_light.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/btn_checkbox_unchecked_mtrl.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/btn_checkbox_unchecked_mtrl.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/rating_value_background.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/rating_value_background.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_item_background_holo_light.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_keyboard_black_24dp.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/ic_keyboard_black_24dp.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/edittext_bg.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/edittext_bg.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ic_go_search_api_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_error.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/ic_error.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/gift.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/gift.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_textfield_search_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/design_fab_background.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/design_fab_background.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_btn_check_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/m3_avd_show_password.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/m3_avd_show_password.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_switch_track.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_switch_track.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/calendar_selected_day_right.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/calendar_selected_day_right.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_help.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/ic_help.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ic_menu_share_mtrl_alpha.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ic_menu_share_mtrl_alpha.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_ic_error.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_ic_error.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/btn_radio_off_mtrl.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/btn_radio_off_mtrl.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_ic_arrow_drop_down.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_ic_arrow_drop_down.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ic_menu_cut_mtrl_alpha.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ic_menu_cut_mtrl_alpha.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_checkbox_button_icon_checked_indeterminate.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_checkbox_button_icon_checked_indeterminate.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_checkbox_button_icon_unchecked_indeterminate.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_checkbox_button_icon_unchecked_indeterminate.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/sample.png",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/sample.png"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_deaful_icon.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/ic_deaful_icon.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/item_background.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/item_background.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/clear.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/clear.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_ic_check_mark.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_ic_check_mark.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/m3_tabs_line_indicator.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/m3_tabs_line_indicator.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_clear_black_24.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/ic_clear_black_24.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/ic_cart.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/ic_cart.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/arrow_narrow_left.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/arrow_narrow_left.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/btn_radio_off_to_on_mtrl_animation.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/btn_radio_off_to_on_mtrl_animation.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_switch_thumb_checked_pressed.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_switch_thumb_checked_pressed.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_checkbox_button.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_checkbox_button.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_bottomsheet_drag_handle.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_bottomsheet_drag_handle.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/button_bordered_bg_circle.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/button_bordered_bg_circle.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_ic_checkbox_unchecked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_ic_checkbox_unchecked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_dropdown_arrow.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_dropdown_arrow.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_tab_indicator_material.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/abc_list_selector_holo_dark.xml",
+        "source": "net.lynqfy.offical.lynqfy-appcompat-1.6.1-14:/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/design_ic_visibility_off.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/mtrl_checkbox_button_unchecked_checked.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/drawable/mtrl_checkbox_button_unchecked_checked.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/drawable/user_add.xml",
+        "source": "net.lynqfy.offical.lynqfy-main-34:/drawable/user_add.xml"
+    }
+]

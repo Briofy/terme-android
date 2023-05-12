@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="color" name="ly_divider_color"/>
+    <attr format="dimension" name="ly_divider_padding"/>
+    <attr format="dimension" name="ly_divider_width"/>
+    <attr format="integer" name="ly_indicator_anim_duration"/>
+    <attr format="boolean" name="ly_indicator_anim_enable"/>
+    <attr format="boolean" name="ly_indicator_bounce_enable"/>
+    <attr format="color" name="ly_indicator_color"/>
+    <attr format="dimension" name="ly_indicator_corner_radius"/>
+    <attr format="enum" name="ly_indicator_gravity">
+        <enum name="TOP" value="48"/>
+        <enum name="BOTTOM" value="80"/>
+    </attr>
+    <attr format="dimension" name="ly_indicator_height"/>
+    <attr format="dimension" name="ly_indicator_margin_bottom"/>
+    <attr format="dimension" name="ly_indicator_margin_left"/>
+    <attr format="dimension" name="ly_indicator_margin_right"/>
+    <attr format="dimension" name="ly_indicator_margin_top"/>
+    <attr format="enum" name="ly_indicator_style">
+        <enum name="NORMAL" value="0"/>
+        <enum name="TRIANGLE" value="1"/>
+        <enum name="BLOCK" value="2"/>
+    </attr>
+    <attr format="dimension" name="ly_indicator_width"/>
+    <attr format="boolean" name="ly_indicator_width_equal_title"/>
+    <attr format="dimension" name="ly_tab_padding"/>
+    <attr format="boolean" name="ly_tab_space_equal"/>
+    <attr format="dimension" name="ly_tab_width"/>
+    <attr format="boolean" name="ly_textAllCaps"/>
+    <attr format="enum" name="ly_textBold">
+        <enum name="NONE" value="0"/>
+        <enum name="SELECT" value="1"/>
+        <enum name="BOTH" value="2"/>
+    </attr>
+    <attr format="color" name="ly_textSelectColor"/>
+    <attr format="dimension" name="ly_textSize"/>
+    <attr format="color" name="ly_textUnselectColor"/>
+    <attr format="color" name="ly_underline_color"/>
+    <attr format="enum" name="ly_underline_gravity">
+        <enum name="TOP" value="48"/>
+        <enum name="BOTTOM" value="80"/>
+    </attr>
+    <attr format="dimension" name="ly_underline_height"/>
+    <color name="alert_bg_error">#FDF2F2</color>
+    <color name="alert_bg_info">#F9FAFB</color>
+    <color name="alert_bg_message">#EBF5FF</color>
+    <color name="alert_bg_success">#F3FAF7</color>
+    <color name="alert_bg_warning">#FDFDEA</color>
+    <color name="alert_button_error">#C81E1E</color>
+    <color name="alert_button_info">#1F2A37</color>
+    <color name="alert_button_message">#1A56DB</color>
+    <color name="alert_button_success">#046C4E</color>
+    <color name="alert_button_warning">#8E4B10</color>
+    <color name="alert_text_error">#9B1C1C</color>
+    <color name="alert_text_info">#1F2A37</color>
+    <color name="alert_text_message">#1E429F</color>
+    <color name="alert_text_success">#03543F</color>
+    <color name="alert_text_warning">#723B13</color>
+    <color name="alert_title_error">#C81E1E</color>
+    <color name="alert_title_info">#1F2A37</color>
+    <color name="alert_title_message">#1A56DB</color>
+    <color name="alert_title_success">#046C4E</color>
+    <color name="alert_title_warning">#8E4B10</color>
+    <color name="background_color">#ffffff</color>
+    <color name="battleship_button_activated_ripple">#f0f0f0</color>
+    <color name="black">#000000</color>
+    <color name="black_white">#000000</color>
+    <color name="colorBackground">#FF4081</color>
+    <color name="default_blue_light">#ff33b5e5</color>
+    <color name="defualt_button_color">#1A56DB</color>
+    <color name="disable_color">#a0a0a0</color>
+    <color name="error_color">#D50000</color>
+    <color name="hint_color">#646363</color>
+    <color name="light_color">#F1F5F9</color>
+    <color name="ly_button_stroke_color">#E3E5E9</color>
+    <color name="ly_calendar_background_color">@color/ly_card_background</color>
+    <color name="ly_calendar_selected_color">#0067E8</color>
+    <color name="ly_calendar_selected_item">#F1F2F4</color>
+    <color name="ly_calendar_selected_text_color">#F1F2F4</color>
+    <color name="ly_calendar_text_color">@color/ly_card_title</color>
+    <color name="ly_card_background">#FDFDFD</color>
+    <color name="ly_card_button">#0067E8</color>
+    <color name="ly_card_content">#68717E</color>
+    <color name="ly_card_item_background">#F7F8F9</color>
+    <color name="ly_card_shadow">#aaaaaa</color>
+    <color name="ly_card_title">#0F1927</color>
+    <color name="ly_cta_button_background">#0F1927</color>
+    <color name="ly_link_action">#0067E8</color>
+    <color name="ly_popular_background">#E3E5E9</color>
+    <color name="ly_progress_black">#4F5966</color>
+    <color name="ly_progress_dark">#68717E</color>
+    <color name="ly_progress_green">#00A071</color>
+    <color name="ly_progress_indigo">#5352E2</color>
+    <color name="ly_progress_orange">#FD8354</color>
+    <color name="ly_progress_pink">#F63A90</color>
+    <color name="ly_progress_primary">#0067E8</color>
+    <color name="ly_progress_purple">#823CE8</color>
+    <color name="ly_progress_yellow">#FDC642</color>
+    <color name="ly_search_background_color">#FDFDFD</color>
+    <color name="ly_search_stroke_color">#CED3D9</color>
+    <color name="ly_txt_green">#00A071</color>
+    <color name="ly_txt_rea_400">#FD7980</color>
+    <color name="progress_gray">#FFD8D8D8</color>
+    <color name="progress_gray_dark">#FF383838</color>
+    <color name="slycalendar_defHeaderColor">#2962ff</color>
+    <color name="slycalendar_defHeaderTextColor">#ffffff</color>
+    <color name="test_color">#ff0000</color>
+    <color name="text_color">#202020</color>
+    <color name="text_color_2">#2C3959</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white_black">#ffffff</color>
+    <dimen name="ly_calendar_height">450sp</dimen>
+    <string name="add_friend">Add friend</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="app_store">AppStore</string>
+    <string name="apple">Apple</string>
+    <string name="carousel_nav">carousel nav</string>
+    <string name="company">Company</string>
+    <string name="contact">Contact</string>
+    <string name="create_post">Create post</string>
+    <string name="cryptos">Cryptos:</string>
+    <string name="download_on_the">Download on the</string>
+    <string name="exchanges">Exchanges:</string>
+    <string name="features">Features</string>
+    <string name="flow_bite">FlowBite</string>
+    <string name="get_started">Get started</string>
+    <string name="google_play">Google Play</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="ly_calendar_cancel">Cancel</string>
+    <string name="ly_calendar_clear">Clear</string>
+    <string name="ly_calendar_dates_period" translatable="false">%1$s – %2$s</string>
+    <string name="ly_calendar_next">Next</string>
+    <string name="ly_calendar_prev">Prev</string>
+    <string name="ly_calendar_save">Save</string>
+    <string name="ly_calendar_short" translatable="false">EE, dd</string>
+    <string name="ly_calendar_short_month" translatable="false">EE, dd MMM</string>
+    <string name="ly_calendar_single_date" translatable="false">EE, dd MMMM</string>
+    <string name="ly_calendar_today">Today</string>
+    <string name="marketplace">Marketplace</string>
+    <string name="menu">Menu</string>
+    <string name="message">Message</string>
+    <string name="nasdaq">Nasdaq</string>
+    <string name="popular">Popular</string>
+    <string name="read_more">Read more</string>
+    <string name="reply">Reply</string>
+    <string name="search">Search</string>
+    <string name="sing_up_free">Sing Up Free</string>
+    <string name="sp_500"><![CDATA[S&P 500]]></string>
+    <string name="team">Team</string>
+    <style name="BottomLeftShapeAppearance" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">50%</item>
+    </style>
+    <style name="CircularShapeAppearance" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="LyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">#FF4081</item>
+        // you can change the color of the yearPiker dialog
+        <item name="android:textColorPrimary">#FF4081</item>
+        // you can change the color of the yearPiker dialog
+    </style>
+    <style name="LySeekArc">
+        <item name="arcColor">@color/progress_gray_dark</item>
+    </style>
+    <style name="LySeekArcLight">
+        <item name="arcColor">@color/progress_gray</item>
+    </style>
+    <style name="RoundedShapeAppearance" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
+    <style name="SlyCalendarDialogStyle" parent="Theme.Material3.DayNight.Dialog">
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </style>
+    <style name="SlyCalendarTimeDialogTheme" parent="Theme.Material3.DayNight.Dialog">
+        <item name="colorAccent">@color/slycalendar_defHeaderColor</item>
+        <item name="colorControlNormal">@color/slycalendar_defHeaderColor</item>
+    </style>
+    <style name="TextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+    <style name="TextStyle.Small">
+        <item name="android:textSize">10sp</item>
+
+    </style>
+    <style name="TextStyle.Subtitle">
+        <item name="android:textSize">14sp</item>
+
+    </style>
+    <style name="TextStyle.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+    <style name="Widget">
+
+    </style>
+    <style name="Widget.LyButton">
+
+    </style>
+    <style name="Widget.LyEditText">
+
+    </style>
+    <style name="Widget.LyProgressButton">
+
+    </style>
+    <declare-styleable name="CommonLyTabLayout">
+        
+        <attr name="ly_indicator_color"/>
+        <attr name="ly_indicator_height"/>
+        <attr name="ly_indicator_width"/>
+        <attr name="ly_indicator_margin_left"/>
+        <attr name="ly_indicator_margin_top"/>
+        <attr name="ly_indicator_margin_right"/>
+        <attr name="ly_indicator_margin_bottom"/>
+        <attr name="ly_indicator_corner_radius"/>
+        <attr name="ly_indicator_gravity"/>
+        <attr name="ly_indicator_style"/>
+        <attr name="ly_indicator_anim_enable"/>
+        <attr name="ly_indicator_anim_duration"/>
+        <attr name="ly_indicator_bounce_enable"/>
+
+        
+        <attr name="ly_underline_color"/>
+        <attr name="ly_underline_height"/>
+        <attr name="ly_underline_gravity"/>
+
+        
+        <attr name="ly_divider_color"/>
+        <attr name="ly_divider_width"/>
+        <attr name="ly_divider_padding"/>
+
+        
+        <attr name="ly_tab_padding"/>
+        <attr name="ly_tab_space_equal"/>
+        <attr name="ly_tab_width"/>
+
+        
+        <attr name="ly_textSize"/>
+        <attr name="ly_textSelectColor"/>
+        <attr name="ly_textUnselectColor"/>
+        <attr name="ly_textBold"/>
+        <attr name="ly_textAllCaps"/>
+
+        
+        <attr format="dimension" name="ly_iconWidth"/>
+        <attr format="dimension" name="ly_iconHeight"/>
+        <attr format="boolean" name="ly_iconVisible"/>
+        <attr format="enum" name="ly_iconGravity">
+            <enum name="LEFT" value="3"/>
+            <enum name="TOP" value="48"/>
+            <enum name="RIGHT" value="5"/>
+            <enum name="BOTTOM" value="80"/>
+        </attr>
+        <attr format="dimension" name="ly_iconMargin"/>
+
+    </declare-styleable>
+    <declare-styleable name="LyButton">
+        <attr format="string" name="buttonText"/>
+        <attr format="enum" name="backgroundType">
+            <enum name="filled" value="1"/>
+            <enum name="bordered" value="2"/>
+        </attr>
+        <attr format="enum" name="buttonShape">
+            <enum name="rect" value="1"/>
+            <enum name="circular" value="2"/>
+        </attr>
+        <attr format="boolean" name="equalHeightAndWidth"/>
+        <attr format="enum" name="buttonType">
+            <enum name="text" value="1"/>
+            <enum name="image" value="2"/>
+        </attr>
+        <attr format="enum" name="buttonModel">
+            <enum name="standard" value="1"/>
+            <enum name="progress" value="2"/>
+            <enum name="lottie" value="3"/>
+
+        </attr>
+        <attr format="reference" name="buttonTextColorRes"/>
+        <attr format="boolean" name="buttonEnable"/>
+        <attr format="reference" name="icon"/>
+        <attr format="reference" name="leftIcon"/>
+        <attr format="reference" name="rightIcon"/>
+
+        <attr format="reference" name="ButtonBackground"/>
+        <attr format="reference" name="progressColorTint"/>
+
+    </declare-styleable>
+    <declare-styleable name="LyCalendarView">
+        <attr format="color" name="backgroundColor"/>
+        <attr format="color" name="headerColor"/>
+        <attr format="color" name="headerTextColor"/>
+        
+        <attr format="color" name="selectedColor"/>
+        <attr format="color" name="selectedTextColor"/>
+        <attr format="boolean" name="firstMonday"/>
+    </declare-styleable>
+    <declare-styleable name="LyCardButton">
+        <attr format="string" localization="suggested" name="actionButtonText"/>
+        <attr format="reference" name="actionButtonIconStart"/>
+    </declare-styleable>
+    <declare-styleable name="LyCardLink">
+        <attr format="string" localization="suggested" name="externalLinkText"/>
+    </declare-styleable>
+    <declare-styleable name="LyCardView">
+        <attr format="string" localization="suggested" name="header"/>
+        <attr format="string" localization="suggested" name="body"/>
+        <attr format="enum" name="type">
+            <enum name="crypto" value="1"/>
+
+            <enum name="testimonial" value="2"/>
+            <enum name="cta_card" value="13"/>
+
+            <enum name="ecommerce" value="9"/>
+
+            <enum name="pricing" value="3"/>
+            <enum name="with_list" value="4"/>
+            <enum name="form_inputs" value="5"/>
+            <enum name="user_profile" value="6"/>
+
+            <enum name="card_link" value="7"/>
+            <enum name="card_button" value="14"/>
+
+            <enum name="horizontal" value="8"/>
+            <enum name="card_image" value="10"/>
+
+            <enum name="type11" value="11"/>
+            <enum name="nav_tabs" value="12"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="LyCheckBox">
+        
+        <attr format="string" name="label"/>
+        
+        <attr format="string" name="name"/>
+
+        
+        <attr format="boolean" name="isInvalid"/>
+        <attr format="color" name="textColor"/>
+        <attr format="color" name="tintColor"/>
+
+        
+        <attr format="boolean" name="isDisabled"/>
+        
+        <attr format="boolean" name="isRequired"/>
+        
+        <attr format="boolean" name="isIndeterminate"/>
+
+        
+        <attr name="value">
+            <enum name="number" value="1"/>
+            <enum name="string" value="2"/>
+        </attr>
+        <attr name="size"> <!--The size of the Checkbox-->
+            <enum name="small" value="1"/>
+            <enum name="medium" value="2"/>
+            <enum name="large" value="3"/>
+            <enum name="xlarge" value="4"/>
+        </attr>
+
+    </declare-styleable>
+    <declare-styleable name="LyCrypto">
+        <attr format="string" localization="suggested" name="helperText"/>
+    </declare-styleable>
+    <declare-styleable name="LyEcommerce">
+        <attr format="string" localization="suggested" name="ecommerceName"/>
+        <attr format="float" localization="suggested" name="ecommerceCast"/>
+        <attr format="float" localization="suggested" name="ecommerceRating"/>
+        <attr format="reference" name="ecommerceImage"/>
+    </declare-styleable>
+    <declare-styleable name="LyEditText">
+        <attr format="string" name="title"/>
+        <attr format="string" name="hint"/>
+        <attr format="enum" name="ly_type">
+            <enum name="text" value="1"/>
+            <enum name="password" value="2"/>
+            <enum name="search" value="3"/>
+
+        </attr>
+        <attr format="string" name="error"/>
+        <attr format="reference" name="EditTextIcon"/>
+    </declare-styleable>
+    <declare-styleable name="LyImageView">
+        
+        <attr format="boolean" name="ly_border"/>
+        <attr format="dimension" name="ly_border_width"/>
+        <attr format="color" name="ly_border_color"/>
+        <attr format="color" name="ly_border_color_start"/>
+        <attr format="color" name="ly_border_color_end"/>
+        <attr name="ly_border_color_direction">
+            <flag name="left_to_right" value="1"/>
+            <flag name="right_to_left" value="2"/>
+            <flag name="top_to_bottom" value="3"/>
+            <flag name="bottom_to_top" value="4"/>
+        </attr>
+        
+        <attr format="color" name="ly_circle_color"/>
+        <attr format="color" name="ly_circle_color_start"/>
+        <attr format="color" name="ly_circle_color_end"/>
+        <attr name="ly_circle_color_direction">
+            <flag name="left_to_right" value="1"/>
+            <flag name="right_to_left" value="2"/>
+            <flag name="top_to_bottom" value="3"/>
+            <flag name="bottom_to_top" value="4"/>
+        </attr>
+        
+        <attr format="boolean" name="ly_shadow"/>
+        <attr format="color" name="ly_shadow_color"/>
+        <attr format="dimension" name="ly_shadow_radius"/>
+        <attr name="ly_shadow_gravity">
+            <flag name="center" value="1"/>
+            <flag name="top" value="2"/>
+            <flag name="bottom" value="3"/>
+            <flag name="start" value="4"/>
+            <flag name="end" value="5"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="LyKeyboard">
+        <attr format="color" name="android:keyTextColor"/>
+        <attr format="string" name="keyText"/>
+        <attr format="color" name="android:keyBackground"/>
+        <attr format="enum" name="keyType">
+            <enum name="arrowLeft" value="1"/>
+            <enum name="arrowRight" value="2"/>
+            <enum name="arrowUp" value="3"/>
+            <enum name="arrowDown" value="4"/>
+            <enum name="text" value="5"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="LyNavBar">
+
+        <attr format="reference" name="navBarIcon"/>
+        <attr format="string" localization="suggested" name="navBarTitle"/>
+        <attr format="string" localization="suggested" name="navBarLink"/>
+
+        <attr format="enum" name="NavBarType">
+            <enum name="SimpleMegaMenu" value="1"/>
+            <enum name="MegaMenuWithIcons" value="2"/>
+            <enum name="SearchLinksUser" value="3"/>
+            <enum name="CTADropdown" value="4"/>
+            <enum name="TwoLevelMegaMenu" value="5"/>
+            <enum name="LogoCTA" value="6"/>
+            <enum name="LanguageSearch" value="7"/>
+            <enum name="CenteredLinks" value="8"/>
+            <enum name="LinksUser" value="9"/>
+            <enum name="WithCTAButton" value="10"/>
+            <enum name="BottomLevel" value="11"/>
+            <enum name="ThreeLevels" value="12"/>
+            <enum name="FullWidthDescription" value="13"/>
+            <enum name="DoubleDropdown" value="14"/>
+            <enum name="TopLevel" value="15"/>
+
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="LyProgressBar">
+        <attr format="boolean" localization="suggested" name="mode"/>
+        <attr format="integer" localization="suggested" name="maxValue"/>
+        <attr format="integer" localization="suggested" name="progressValue"/>
+
+        <attr format="enum" name="colorName">
+            <enum name="Indigo" value="1"/>
+            <enum name="Pink" value="2"/>
+            <enum name="Yellow" value="3"/>
+            <enum name="Purple" value="4"/>
+            <enum name="Orange" value="5"/>
+            <enum name="Dark" value="6"/>
+            <enum name="Green" value="7"/>
+            <enum name="Primary" value="8"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="LyRadio">
+        <attr format="string" localization="suggested" name="radioName"/>
+        <attr format="string" localization="suggested" name="radioHelper"/>
+        <attr format="boolean" localization="suggested" name="radioDisable"/>
+    </declare-styleable>
+    <declare-styleable name="LySeekArc">
+        <attr format="reference" name="thumb"/>
+        <attr format="dimension" name="thumbOffset"/>
+        <attr format="integer" name="max"/>
+        <attr format="dimension" name="progressWidth"/>
+        <attr format="dimension" name="arcWidth"/>
+        <attr format="integer" name="progress"/>
+        <attr format="integer" name="rotation"/>
+        <attr format="integer" name="startAngle"/>
+        <attr format="integer" name="sweepAngle"/>
+        <attr format="color" name="arcColor"/>
+        <attr format="color" name="progressColor"/>
+        <attr format="boolean" name="roundEdges"/>
+        <attr format="boolean" name="touchInside"/>
+        <attr format="boolean" name="clockwise"/>
+        <attr format="boolean" name="enabled"/>
+    </declare-styleable>
+    <declare-styleable name="LySeekArcTheme">
+        <attr format="reference" name="LySeekArcStyle"/>
+    </declare-styleable>
+    <declare-styleable name="LySpinner">
+        <attr format="boolean" localization="suggested" name="spinner_mode"/>
+        <attr format="enum" name="spinnerColorName">
+            <enum name="Indigo" value="1"/>
+            <enum name="Pink" value="2"/>
+            <enum name="Yellow" value="3"/>
+            <enum name="Purple" value="4"/>
+            <enum name="Orange" value="5"/>
+            <enum name="Dark" value="6"/>
+            <enum name="Green" value="7"/>
+            <enum name="Primary" value="8"/>
+        </attr>
+        <attr format="reference" name="spinner_tint"/>
+    </declare-styleable>
+    <declare-styleable name="LyTag">
+        <attr format="string" localization="suggested" name="tag"/>
+    </declare-styleable>
+    <declare-styleable name="LyTestimonial">
+        <attr format="string" localization="suggested" name="authorName"/>
+        <attr format="reference" name="authorAvatar"/>
+        <attr format="string" localization="suggested" name="authorText"/>
+    </declare-styleable>
+    <declare-styleable name="LyTextView">
+        <attr format="color" name="ly_backgroundColor"/>
+        <attr format="dimension" name="ly_cornerRadius"/>
+        <attr format="dimension" name="ly_strokeWidth"/>
+        <attr format="color" name="ly_strokeColor"/>
+        <attr format="boolean" name="ly_isRadiusHalfHeight"/>
+        <attr format="boolean" name="ly_isWidthHeightEqual"/>
+    </declare-styleable>
+    <declare-styleable name="LyTimelineView">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <attr format="enum" name="timeline_item_type">
+            <enum name="first" value="0"/>
+            <enum name="middle" value="1"/>
+            <enum name="last" value="2"/>
+            <enum name="spacer" value="3"/>
+        </attr>
+
+        <attr format="enum" name="indicator_style">
+            <enum name="filled" value="0"/>
+            <enum name="empty" value="1"/>
+            <enum name="checked" value="2"/>
+        </attr>
+        <attr format="reference" name="indicator_drawable"/>
+        <attr format="dimension" name="indicator_size"/>
+        <attr format="color" name="indicator_color"/>
+        <attr format="float" name="indicator_y_position"/>
+
+        <attr format="dimension" name="checked_indicator_size"/>
+        <attr format="dimension" name="checked_indicator_stroke_width"/>
+
+        <attr format="enum" name="line_style">
+            <enum name="normal" value="0"/>
+            <enum name="dashed" value="1"/>
+        </attr>
+        <attr format="dimension" name="line_width"/>
+        <attr format="color" name="line_color"/>
+
+        <attr format="dimension" name="line_dash_length"/>
+        <attr format="dimension" name="line_dash_gap"/>
+        <attr format="dimension" name="line_padding"/>
+    </declare-styleable>
+    <declare-styleable name="LyUserProfile">
+        <attr format="string" localization="suggested" name="userName"/>
+        <attr format="string" localization="suggested" name="userWork"/>
+        <attr format="reference" name="userImage"/>
+    </declare-styleable>
+    <declare-styleable name="SegmentLyTabLayout">
+        
+        <attr name="ly_indicator_color"/>
+        <attr name="ly_indicator_height"/>
+        <attr name="ly_indicator_margin_left"/>
+        <attr name="ly_indicator_margin_top"/>
+        <attr name="ly_indicator_margin_right"/>
+        <attr name="ly_indicator_margin_bottom"/>
+        <attr name="ly_indicator_corner_radius"/>
+        <attr name="ly_indicator_anim_enable"/>
+        <attr name="ly_indicator_anim_duration"/>
+        <attr name="ly_indicator_bounce_enable"/>
+
+        
+        <attr name="ly_divider_color"/>
+        <attr name="ly_divider_width"/>
+        <attr name="ly_divider_padding"/>
+
+        
+        <attr name="ly_tab_padding"/>
+        <attr name="ly_tab_space_equal"/>
+        <attr name="ly_tab_width"/>
+
+        
+        <attr name="ly_textSize"/>
+        <attr name="ly_textSelectColor"/>
+        <attr name="ly_textUnselectColor"/>
+        <attr name="ly_textBold"/>
+        <attr name="ly_textAllCaps"/>
+
+        <attr format="color" name="ly_bar_color"/>
+        <attr format="color" name="ly_bar_stroke_color"/>
+        <attr format="dimension" name="ly_bar_stroke_width"/>
+
+    </declare-styleable>
+    <declare-styleable name="SlidingLyTabLayout">
+        
+        <attr name="ly_indicator_color"/>
+        <attr name="ly_indicator_height"/>
+        <attr name="ly_indicator_width"/>
+        <attr name="ly_indicator_margin_left"/>
+        <attr name="ly_indicator_margin_top"/>
+        <attr name="ly_indicator_margin_right"/>
+        <attr name="ly_indicator_margin_bottom"/>
+        <attr name="ly_indicator_corner_radius"/>
+        <attr name="ly_indicator_gravity"/>
+        <attr name="ly_indicator_style"/>
+        <attr name="ly_indicator_width_equal_title"/>
+
+        
+        <attr name="ly_underline_color"/>
+        <attr name="ly_underline_height"/>
+        <attr name="ly_underline_gravity"/>
+
+        
+        <attr name="ly_divider_color"/>
+        <attr name="ly_divider_width"/>
+        <attr name="ly_divider_padding"/>
+
+        
+        <attr name="ly_tab_padding"/>
+        <attr name="ly_tab_space_equal"/>
+        <attr name="ly_tab_width"/>
+
+        
+        <attr name="ly_textSize"/>
+        <attr name="ly_textSelectColor"/>
+        <attr name="ly_textUnselectColor"/>
+        <attr name="ly_textBold"/>
+        <attr name="ly_textAllCaps"/>
+
+    </declare-styleable>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+        
+
+    
+
+                                           
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color" android:tag="layout/ly_edit_text_0">
+
+        <View
+            android:id="@+id/bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/black_white"
+            app:layout_constraintBottom_toTopOf="@+id/edit_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Ly Edit Text" />
+
+
+        <ImageView
+            android:id="@+id/img_seen"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_seen"
+            app:layout_constraintBottom_toBottomOf="@+id/bg"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/bg"
+            app:layout_constraintTop_toTopOf="@+id/bg"
+            app:layout_constraintWidth_percent="0.08" />
+        <View
+            android:id="@+id/not_seen"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:background="#a0a0a0"
+            android:rotation="45"
+            app:layout_constraintTop_toTopOf="@+id/bg"
+            app:layout_constraintBottom_toBottomOf="@+id/bg"
+            app:layout_constraintStart_toStartOf="@+id/img_seen"
+            app:layout_constraintEnd_toEndOf="@+id/img_seen"
+
+            />
+
+
+        <EditText
+            android:id="@+id/edit_text"
+            style="@style/TextStyle.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:background="#00000000"
+            android:minHeight="40dp"
+            android:gravity="start|center"
+            android:hint="Hint Edit Text"
+            android:singleLine="true"
+            android:textColor="@color/black_white"
+            android:textColorHint="@color/hint_color"
+            android:textSize="14dp"
+
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@id/bg"
+            app:layout_constraintEnd_toStartOf="@+id/img_seen"
+            app:layout_constraintStart_toStartOf="@id/bg"
+            app:layout_constraintTop_toTopOf="@id/bg" />
+
+
+        <net.lynqfy.offical.LyButton
+            android:id="@+id/searchBtn"
+            android:visibility="gone"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/bg"
+            app:layout_constraintBottom_toBottomOf="@id/bg"
+            app:layout_constraintEnd_toEndOf="@id/bg"
+            app:buttonText="Search"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

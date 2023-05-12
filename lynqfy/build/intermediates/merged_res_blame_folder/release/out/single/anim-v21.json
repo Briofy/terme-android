@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/anim-v21/m3_side_sheet_slide_out.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/anim-v21/m3_side_sheet_slide_out.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/anim-v21/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/anim-v21/m3_side_sheet_slide_in.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/anim-v21/m3_side_sheet_slide_in.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/anim-v21/mtrl_bottom_sheet_slide_out.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/anim-v21/mtrl_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/anim-v21/m3_bottom_sheet_slide_out.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/anim-v21/m3_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/anim-v21/m3_bottom_sheet_slide_in.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/anim-v21/m3_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/anim-v21/mtrl_bottom_sheet_slide_in.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/anim-v21/mtrl_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/anim-v21/fragment_fast_out_extra_slow_in.xml",
+        "source": "net.lynqfy.offical.lynqfy-fragment-1.3.6-15:/anim-v21/fragment_fast_out_extra_slow_in.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/anim-v21/design_bottom_sheet_slide_out.xml"
+    }
+]

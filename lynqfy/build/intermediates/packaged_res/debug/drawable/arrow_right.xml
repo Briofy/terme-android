@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="30dp"
+    android:autoMirrored="true"
+    android:viewportWidth="32"
+    android:viewportHeight="30">
+    <path
+        android:fillColor="@color/ly_card_background"
+        android:pathData="M8,0.5L24,0.5A7.5,7.5 0,0 1,31.5 8L31.5,22A7.5,7.5 0,0 1,24 29.5L8,29.5A7.5,7.5 0,0 1,0.5 22L0.5,8A7.5,7.5 0,0 1,8 0.5z" />
+    <path
+        android:fillColor="@color/ly_card_title"
+        android:pathData="M20.11,15.942C20.63,15.421 20.63,14.576 20.11,14.055L14.778,8.724C14.395,8.341 13.825,8.228 13.325,8.436C12.825,8.645 12.5,9.128 12.5,9.669V20.332C12.5,20.869 12.825,21.356 13.325,21.565C13.825,21.773 14.395,21.656 14.778,21.277L20.11,15.946V15.942Z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M8,0.5L24,0.5A7.5,7.5 0,0 1,31.5 8L31.5,22A7.5,7.5 0,0 1,24 29.5L8,29.5A7.5,7.5 0,0 1,0.5 22L0.5,8A7.5,7.5 0,0 1,8 0.5z"
+        android:strokeWidth="1"
+        android:strokeColor="@color/ly_card_shadow" />
+</vector>

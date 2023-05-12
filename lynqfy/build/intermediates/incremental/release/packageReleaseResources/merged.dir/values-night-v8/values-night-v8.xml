@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_white">#ffffff</color>
+    <color name="defualt_button_color">#1F2A37</color>
+    <color name="ly_button_stroke_color">#68717E</color>
+    <color name="ly_card_background">#1C2A36</color>
+    <color name="ly_card_content">#99A2AD</color>
+    <color name="ly_card_item_background">#34404F</color>
+    <color name="ly_card_title">#FDFDFD</color>
+    <color name="ly_popular_background">#1C2A36</color>
+    <color name="white_black">#000000</color>
+</resources>

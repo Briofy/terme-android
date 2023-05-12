@@ -31,20 +31,45 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-                <net.terme.offical.spinner.TermeSpinner
-                    android:id="@+id/progress"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:visibility="gone"
-                    android:layout_gravity="center"
-                    app:layout_constraintBottom_toBottomOf="@+id/btn"
-                    app:layout_constraintEnd_toEndOf="@+id/btn"
-                    app:layout_constraintStart_toStartOf="@+id/btn"
-                    app:layout_constraintTop_toTopOf="@+id/btn"
-                    app:spinnerColorName="Indigo"
-                    android:elevation="20dp"
-                    android:translationZ="40dp"
-                    app:spinner_mode="true" />
+        <net.terme.offical.spinner.TermeSpinner
+            android:id="@+id/progress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:elevation="20dp"
+            android:translationZ="40dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/btn"
+            app:layout_constraintEnd_toEndOf="@+id/btn"
+            app:layout_constraintStart_toStartOf="@+id/btn"
+            app:layout_constraintTop_toTopOf="@+id/btn"
+            app:spinnerColorName="Indigo"
+            app:spinner_mode="true" />
+
+
+        <!--        <com.airbnb.lottie.LottieAnimationView-->
+        <!--            android:id="@+id/lav_actionBar"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="75dp"-->
+        <!--            android:layout_marginStart="0dp"-->
+        <!--            android:layout_marginTop="0dp"-->
+        <!--            android:layout_marginEnd="0dp"-->
+        <!--            android:scaleType="centerCrop"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:lottie_autoPlay="true"-->
+        <!--            app:lottie_fileName="gradient_bg.json"-->
+        <!--            app:lottie_loop="true" />-->
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/test_anim" />
 
     </FrameLayout>
 </layout>

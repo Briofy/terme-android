@@ -43,5 +43,7 @@
     <string name="sp_500"><![CDATA[S&P 500]]></string>
     <string name="nasdaq">Nasdaq</string>
     <string name="logout">Logout</string>
+    <string name="badge">Badge</string>
+    <string name="clock">Clock</string>
 
 </resources>

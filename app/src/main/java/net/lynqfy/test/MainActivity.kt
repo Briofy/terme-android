@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     private val activityNavBar by lazy { findViewById<LyButton>(R.id.NavBar) }
     private val activitytimeLine by lazy { findViewById<LyButton>(R.id.timeLine) }
     private val activityProgressButton by lazy { findViewById<LyButton>(R.id.progressButtoon) }
+    private val activityDrawer by lazy { findViewById<LyButton>(R.id.drawer) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +56,7 @@ class MainActivity : AppCompatActivity() {
         activitytimeLine.onClickListener = clickListener
         activityProgressButton.onClickListener = clickListener
 
+        activityDrawer.onClickListener = clickListener
     }
 
    private val clickListener = object : LyView.OnClickListener {
@@ -83,6 +85,7 @@ class MainActivity : AppCompatActivity() {
                         activitySeekArc.button -> SeekArcActivity::class.java
                         activityNavBar.button -> NavBarActivity::class.java
                         activitytimeLine.button -> TimelineActivity::class.java
+                        activityDrawer.button -> DrawerActivity::class.java
                         activityProgressButton.button -> ProgressButtonActivity::class.java
 
                         else -> TabLayoutActivity3::class.java

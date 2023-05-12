@@ -7,31 +7,44 @@
         <import type="android.view.View" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+    <FrameLayout
         android:id="@+id/root"
+
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/alert_button_warning"
+            android:elevation="0dp"
+            android:gravity="center"
             android:paddingHorizontal="10dp"
             android:paddingVertical="4dp"
             android:textAllCaps="false"
-            android:gravity="center"
+            android:translationZ="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
-<!--        <ImageView-->
-<!--            android:id="@+id/img"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/btn"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/btn"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/btn"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/btn"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"/>-->
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <net.lynqfy.offical.spinner.LySpinner
+                    android:id="@+id/progress"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/btn"
+                    app:layout_constraintEnd_toEndOf="@+id/btn"
+                    app:layout_constraintStart_toStartOf="@+id/btn"
+                    app:layout_constraintTop_toTopOf="@+id/btn"
+                    app:spinnerColorName="Indigo"
+                    android:elevation="20dp"
+                    android:translationZ="40dp"
+                    app:spinner_mode="true" />
+
+    </FrameLayout>
 </layout>

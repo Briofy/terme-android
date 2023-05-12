@@ -14,7 +14,7 @@
         app:ly_type="password"
         android:layout_margin="8dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Password Edit Text" />
+        app:title="Pas" />
 
     <net.lynqfy.offical.LyEditText
         android:layout_width="match_parent"

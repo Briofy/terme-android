@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ButtonActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <net.lynqfy.offical.LyButton
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:backgroundType="bordered"
+                app:buttonModel="progress"
+                app:buttonShape="rect"
+                app:buttonText="Rect, Text, Bordered : Button  "
+                app:buttonTextColorRes="@color/purple_700"
+                app:buttonType="text"
+                 />
+
+            <net.lynqfy.offical.LyButton
+                android:id="@+id/btn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:backgroundType="filled"
+                app:buttonModel="progress"
+                app:buttonShape="rect"
+
+                app:buttonText="Rect, Text, Filled : Button"
+                app:buttonTextColorRes="@color/white"
+                app:buttonType="text"
+                 />
+
+            <net.lynqfy.offical.LyButton
+                android:id="@+id/btn3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:backgroundType="filled"
+                app:buttonModel="progress"
+                app:buttonShape="rect"
+                app:buttonText="Rect, Text, Filled : Button\n with Left Image"
+                app:buttonTextColorRes="@color/white"
+                app:buttonType="text"
+                app:leftIcon="@drawable/ic_alert_icon"
+                 />
+
+            <net.lynqfy.offical.LyButton
+                android:id="@+id/btn4"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:backgroundType="filled"
+                app:buttonModel="progress"
+                app:buttonShape="rect"
+
+                app:buttonText="Rect, Text, Filled : Button\n with Right Image"
+                app:buttonTextColorRes="@color/white"
+                app:buttonType="text"
+                
+                app:rightIcon="@drawable/ic_alert_icon" />
+
+            <net.lynqfy.offical.LyButton
+                android:id="@+id/btn5"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:backgroundType="filled"
+                app:buttonModel="progress"
+                app:buttonShape="circular"
+                app:buttonText="circular, Text, Filled : Button  "
+
+                app:buttonTextColorRes="@color/white"
+                app:buttonType="text"
+                app:leftIcon="@drawable/ic_alert_icon"
+                
+                app:rightIcon="@drawable/ic_alert_icon" />
+
+            <net.lynqfy.offical.LyButton
+                android:id="@+id/btn6"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:backgroundType="bordered"
+
+                app:buttonModel="progress"
+                app:buttonShape="circular"
+                app:buttonText="circular, Text, Bordered : Button"
+                app:buttonTextColorRes="@color/purple_700"
+                app:buttonType="text"
+                 />
+
+            <net.lynqfy.offical.LyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image, circular, Bordered : Button"
+                android:textColor="@color/purple_700"
+
+                android:textStyle="bold"
+                app:buttonModel="progress"
+                 />
+
+            <net.lynqfy.offical.LyButton
+                android:id="@+id/btn7"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:backgroundType="bordered"
+                app:buttonModel="progress"
+                app:buttonShape="circular"
+
+                app:buttonTextColorRes="@color/purple_700"
+                app:buttonType="image"
+                 />
+
+            <net.lynqfy.offical.LyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image, Circular, Filled : Button"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold"
+
+                app:buttonModel="progress"
+                 />
+
+            <net.lynqfy.offical.LyButton
+                android:id="@+id/btn8"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:ButtonBackground="@color/teal_300"
+                app:backgroundType="filled"
+                app:buttonModel="progress"
+                app:buttonShape="circular"
+                app:buttonText="circular, Text, Bordered : Button"
+                app:buttonTextColorRes="@color/purple_700"
+                app:buttonType="image"
+                 />
+
+            <net.lynqfy.offical.LyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image, Circular, Filled : Button"
+
+                android:textColor="@color/purple_700"
+                android:textStyle="bold"
+                app:buttonModel="progress"
+                 />
+
+            <net.lynqfy.offical.LyButton
+                android:id="@+id/btn9"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+
+                app:backgroundType="filled"
+                app:buttonModel="progress"
+                app:buttonShape="circular"
+                app:buttonText="circular, Text, Bordered : Button"
+                app:buttonTextColorRes="@color/purple_700"
+                app:buttonType="image"
+                 />
+
+            <net.lynqfy.offical.LyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image, Rect, Filled : Button"
+                android:textColor="@color/purple_700"
+
+                android:textStyle="bold"
+                app:buttonModel="progress"
+                 />
+
+            <net.lynqfy.offical.LyButton
+                android:id="@+id/btn10"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+
+                app:backgroundType="filled"
+                app:buttonModel="progress"
+                app:buttonShape="rect"
+                app:buttonText="circular, Text, Bordered : Button"
+                app:buttonTextColorRes="@color/purple_700"
+                app:buttonType="image"
+                 />
+
+            <net.lynqfy.offical.LyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image, Rect, Filled : Button"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold"
+
+                app:buttonModel="progress"
+                 />
+
+            <net.lynqfy.offical.LyButton
+                android:id="@+id/btn11"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:backgroundType="bordered"
+
+                app:buttonModel="progress"
+                app:buttonShape="rect"
+                app:buttonText="circular, Text, Bordered : Button"
+                app:buttonTextColorRes="@color/purple_700"
+                app:buttonType="image"
+                 />
+
+            <net.lynqfy.offical.LyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image Circular bordered Button , Equal Width and Height"
+                android:textColor="@color/purple_700"
+
+                android:textStyle="bold"
+                app:buttonModel="progress"
+                 />
+
+            <net.lynqfy.offical.LyButton
+                android:id="@+id/btn12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:backgroundType="bordered"
+                app:buttonModel="progress"
+                app:buttonShape="circular"
+                app:buttonText="EQUAL"
+
+                app:buttonTextColorRes="@color/purple_700"
+                app:buttonType="image"
+                app:equalHeightAndWidth="true"
+                 />
+
+            <net.lynqfy.offical.LyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image Circular filled Button , Equal Width and Height"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold"
+
+                app:buttonModel="progress"
+                 />
+
+            <net.lynqfy.offical.LyButton
+                android:id="@+id/btn13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:backgroundType="filled"
+                app:buttonModel="progress"
+                app:buttonShape="circular"
+                app:buttonText="EQUAL"
+
+                app:buttonTextColorRes="@color/purple_700"
+                app:buttonType="image"
+                app:equalHeightAndWidth="true"
+                 />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,4 +3,7 @@
     android:id="@+id/progressBar"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:indeterminate="false" />
+    android:elevation="20dp"
+    android:background="@color/transparent"
+    android:indeterminate="false"
+    android:translationZ="40dp" />

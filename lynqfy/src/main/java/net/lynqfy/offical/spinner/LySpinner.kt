@@ -27,8 +27,14 @@ class LySpinner : MaterialCardView, LyBaseProgressBar.OnProgressBarChangeListene
         initTheme(attr, defStyleAttr)
     }
 
-    private fun initTheme(attrs: AttributeSet?, defStyleAttr: Int = 0) {
+    fun setTintColorRes(tiniColor: Int) {
+        this.tiniColor = tiniColor
+        refreshTintColor()
+    }
 
+    private var tiniColor: Int = 0
+    private fun initTheme(attrs: AttributeSet?, defStyleAttr: Int = 0) {
+        setCardBackgroundColor(context.getColor(R.color.transparent))
         ui.progressBar.setOnProgressBarChangeListener(this)
         // Ensure we are using the correctly themed context rather than the context that was passed in.
         attrs?.also { att ->
@@ -39,6 +45,11 @@ class LySpinner : MaterialCardView, LyBaseProgressBar.OnProgressBarChangeListene
                 com.google.android.material.R.style.Widget_MaterialComponents_CardView
             )
             val isMode = attributes.getBoolean(R.styleable.LySpinner_spinner_mode, false)
+
+            tiniColor = attributes.getResourceId(
+                R.styleable.LySpinner_spinner_tint,
+                0
+            )
             if (isMode) {
                 ui.progressBar.progressBackgroundTintList = ColorStateList.valueOf(
                     context.getColor(R.color.ly_progress_black)
@@ -79,6 +90,8 @@ class LySpinner : MaterialCardView, LyBaseProgressBar.OnProgressBarChangeListene
                 }
 //                ui.progressBarTxt.setTextColor(userColor)
                 ui.progressBar.indeterminateTintList = ColorStateList.valueOf(userColor)
+                refreshTintColor()
+
             }
 
 
@@ -86,6 +99,16 @@ class LySpinner : MaterialCardView, LyBaseProgressBar.OnProgressBarChangeListene
         }
         radius = 100f
         useCompatPadding = true
+    }
+
+
+    private fun refreshTintColor() {
+        if (tiniColor>0)
+        ui.progressBar.indeterminateDrawable.setColorFilter(
+            context.getColor(tiniColor),
+            android.graphics.PorterDuff.Mode.MULTIPLY
+        );
+
     }
 
     private val ui by lazy {

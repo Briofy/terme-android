@@ -103,6 +103,7 @@
             <enum name="Green" value="7" />
             <enum name="Primary" value="8" />
         </attr>
+        <attr name="spinner_tint" format="reference"/>
     </declare-styleable>
     <declare-styleable name="LyCalendarView">
         <attr name="backgroundColor" format="color" />

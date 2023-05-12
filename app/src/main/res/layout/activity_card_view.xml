@@ -13,7 +13,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -22,12 +22,12 @@
             android:textColor="@color/purple_700"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:ly_cornerRadius="20dp"
-            app:ly_isRadiusHalfHeight="true"
-            app:ly_strokeColor="@color/purple_700"
-            app:ly_strokeWidth="2dp" />
+            app:terme_cornerRadius="20dp"
+            app:terme_isRadiusHalfHeight="true"
+            app:terme_strokeColor="@color/purple_700"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.card.LyCardView
+        <net.terme.offical.card.TermeCardView
             android:id="@+id/card_image_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
             android:layout_height="2dp"
             android:background="@color/white" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -53,12 +53,12 @@
             android:textColor="@color/purple_700"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:ly_cornerRadius="20dp"
-            app:ly_isRadiusHalfHeight="true"
-            app:ly_strokeColor="@color/purple_700"
-            app:ly_strokeWidth="2dp" />
+            app:terme_cornerRadius="20dp"
+            app:terme_isRadiusHalfHeight="true"
+            app:terme_strokeColor="@color/purple_700"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.card.LyCardView
+        <net.terme.offical.card.TermeCardView
             android:id="@+id/card_horizontal_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             android:layout_height="2dp"
             android:background="@color/white" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -84,12 +84,12 @@
             android:textColor="@color/purple_700"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:ly_cornerRadius="20dp"
-            app:ly_isRadiusHalfHeight="true"
-            app:ly_strokeColor="@color/purple_700"
-            app:ly_strokeWidth="2dp" />
+            app:terme_cornerRadius="20dp"
+            app:terme_isRadiusHalfHeight="true"
+            app:terme_strokeColor="@color/purple_700"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.card.LyCardView
+        <net.terme.offical.card.TermeCardView
             android:id="@+id/card_link_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
             android:background="@color/white" />
 
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -116,12 +116,12 @@
             android:textColor="@color/purple_700"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:ly_cornerRadius="20dp"
-            app:ly_isRadiusHalfHeight="true"
-            app:ly_strokeColor="@color/purple_700"
-            app:ly_strokeWidth="2dp" />
+            app:terme_cornerRadius="20dp"
+            app:terme_isRadiusHalfHeight="true"
+            app:terme_strokeColor="@color/purple_700"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.card.LyCardView
+        <net.terme.offical.card.TermeCardView
             android:id="@+id/cta_card_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -138,7 +138,7 @@
             android:layout_height="2dp"
             android:background="@color/white" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -147,12 +147,12 @@
             android:textColor="@color/purple_700"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:ly_cornerRadius="20dp"
-            app:ly_isRadiusHalfHeight="true"
-            app:ly_strokeColor="@color/purple_700"
-            app:ly_strokeWidth="2dp" />
+            app:terme_cornerRadius="20dp"
+            app:terme_isRadiusHalfHeight="true"
+            app:terme_strokeColor="@color/purple_700"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.card.LyCardView
+        <net.terme.offical.card.TermeCardView
             android:id="@+id/user_profile_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -166,7 +166,7 @@
             android:layout_height="2dp"
             android:background="@color/white" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -175,12 +175,12 @@
             android:textColor="@color/purple_700"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:ly_cornerRadius="20dp"
-            app:ly_isRadiusHalfHeight="true"
-            app:ly_strokeColor="@color/purple_700"
-            app:ly_strokeWidth="2dp" />
+            app:terme_cornerRadius="20dp"
+            app:terme_isRadiusHalfHeight="true"
+            app:terme_strokeColor="@color/purple_700"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.card.LyCardView
+        <net.terme.offical.card.TermeCardView
             android:id="@+id/ecommerce_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -195,7 +195,7 @@
             android:layout_height="2dp"
             android:background="@color/white" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -204,12 +204,12 @@
             android:textColor="@color/purple_700"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:ly_cornerRadius="20dp"
-            app:ly_isRadiusHalfHeight="true"
-            app:ly_strokeColor="@color/purple_700"
-            app:ly_strokeWidth="2dp" />
+            app:terme_cornerRadius="20dp"
+            app:terme_isRadiusHalfHeight="true"
+            app:terme_strokeColor="@color/purple_700"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.card.LyCardView
+        <net.terme.offical.card.TermeCardView
             android:id="@+id/crypto_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -224,7 +224,7 @@
             android:layout_height="2dp"
             android:background="@color/white" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -233,12 +233,12 @@
             android:textColor="@color/purple_700"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:ly_cornerRadius="20dp"
-            app:ly_isRadiusHalfHeight="true"
-            app:ly_strokeColor="@color/purple_700"
-            app:ly_strokeWidth="2dp" />
+            app:terme_cornerRadius="20dp"
+            app:terme_isRadiusHalfHeight="true"
+            app:terme_strokeColor="@color/purple_700"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.card.LyCardView
+        <net.terme.offical.card.TermeCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:authorAvatar="@drawable/tt"
@@ -253,7 +253,7 @@
             android:layout_height="2dp"
             android:background="@color/white" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -262,12 +262,12 @@
             android:textColor="@color/purple_700"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:ly_cornerRadius="20dp"
-            app:ly_isRadiusHalfHeight="true"
-            app:ly_strokeColor="@color/purple_700"
-            app:ly_strokeWidth="2dp" />
+            app:terme_cornerRadius="20dp"
+            app:terme_isRadiusHalfHeight="true"
+            app:terme_strokeColor="@color/purple_700"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.card.LyCardView
+        <net.terme.offical.card.TermeCardView
             android:id="@+id/card_button_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

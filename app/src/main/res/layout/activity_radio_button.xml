@@ -12,20 +12,20 @@
         android:orientation="vertical">
 
 
-        <net.lynqfy.offical.radio.LyRadioGroup
+        <net.terme.offical.radio.TermeRadioGroup
             android:id="@+id/radioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
 
-            <net.lynqfy.offical.radio.LyRadio
+            <net.terme.offical.radio.TermeRadio
                 android:id="@+id/radio1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:radioHelper="Some helper text here 1"
                 app:radioName="Write label text here" />
 
-            <net.lynqfy.offical.radio.LyRadio
+            <net.terme.offical.radio.TermeRadio
                 android:id="@+id/radio2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -33,21 +33,21 @@
                 app:radioHelper="Some helper text here 2"
                 app:radioName="Write label text here" />
 
-            <net.lynqfy.offical.radio.LyRadio
+            <net.terme.offical.radio.TermeRadio
                 android:id="@+id/radio3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:radioHelper="Some helper text here"
                 app:radioName="" />
 
-            <net.lynqfy.offical.radio.LyRadio
+            <net.terme.offical.radio.TermeRadio
                 android:id="@+id/radio4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:radioHelper=""
                 app:radioName="Write label text here" />
 
-        </net.lynqfy.offical.radio.LyRadioGroup>
+        </net.terme.offical.radio.TermeRadioGroup>
 
 
     </LinearLayout>

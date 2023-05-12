@@ -11,7 +11,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <net.lynqfy.offical.tag.LyTag
+        <net.terme.offical.tag.TermeTag
             android:id="@+id/tag3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tag="Apple Watch Series 7 GPS" />
 
-        <net.lynqfy.offical.tag.LyTag
+        <net.terme.offical.tag.TermeTag
             android:id="@+id/tag2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             app:layout_constraintTop_toBottomOf="@id/tag3"
             app:tag="Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport" />
 
-        <net.lynqfy.offical.tag.LyTag
+        <net.terme.offical.tag.TermeTag
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

@@ -12,38 +12,38 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <net.lynqfy.offical.tablayout.CommonLyTabLayout
+        <net.terme.offical.tablayout.TermeTabLayoutCommon
             android:id="@+id/tl_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffff"
             android:paddingBottom="5dp"
             android:paddingTop="5dp"
-            tl:ly_indicator_color="#2C97DE"
-            tl:ly_textSelectColor="#2C97DE"
-            tl:ly_textUnselectColor="#66000000"
-            tl:ly_underline_color="#DDDDDD"
-            tl:ly_underline_height="1dp"/>
+            tl:terme_indicator_color="#2C97DE"
+            tl:terme_textSelectColor="#2C97DE"
+            tl:terme_textUnselectColor="#66000000"
+            tl:terme_underline_color="#DDDDDD"
+            tl:terme_underline_height="1dp"/>
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/vp_2"
             android:layout_width="match_parent"
             android:layout_height="84dp"/>
 
-        <net.lynqfy.offical.tablayout.CommonLyTabLayout
+        <net.terme.offical.tablayout.TermeTabLayoutCommon
             android:id="@+id/tl_2"
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:background="#ffffff"
-            tl:ly_iconHeight="23dp"
-            tl:ly_iconWidth="23dp"
-            tl:ly_indicator_color="#2C97DE"
-            tl:ly_indicator_height="0dp"
-            tl:ly_textSelectColor="#2C97DE"
-            tl:ly_textUnselectColor="#66000000"
-            tl:ly_textSize="12sp"
-            tl:ly_underline_color="#DDDDDD"
-            tl:ly_underline_height="1dp"/>
+            tl:terme_iconHeight="23dp"
+            tl:terme_iconWidth="23dp"
+            tl:terme_indicator_color="#2C97DE"
+            tl:terme_indicator_height="0dp"
+            tl:terme_textSelectColor="#2C97DE"
+            tl:terme_textUnselectColor="#66000000"
+            tl:terme_textSize="12sp"
+            tl:terme_underline_color="#DDDDDD"
+            tl:terme_underline_height="1dp"/>
 
         <FrameLayout
             android:id="@+id/fl_change"
@@ -51,82 +51,82 @@
             android:layout_height="84dp">
         </FrameLayout>
 
-        <net.lynqfy.offical.tablayout.CommonLyTabLayout
+        <net.terme.offical.tablayout.TermeTabLayoutCommon
             android:id="@+id/tl_3"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="#ffffff"
-            tl:ly_iconGravity="LEFT"
-            tl:ly_iconHeight="18dp"
-            tl:ly_iconMargin="5dp"
-            tl:ly_iconWidth="18dp"
-            tl:ly_indicator_bounce_enable="false"
-            tl:ly_indicator_color="#2C97DE"
-            tl:ly_indicator_gravity="TOP"
-            tl:ly_textSelectColor="#2C97DE"
-            tl:ly_textUnselectColor="#66000000"
-            tl:ly_textSize="15sp"
-            tl:ly_underline_color="#DDDDDD"
-            tl:ly_underline_gravity="TOP"
-            tl:ly_underline_height="1dp"/>
+            tl:terme_iconGravity="LEFT"
+            tl:terme_iconHeight="18dp"
+            tl:terme_iconMargin="5dp"
+            tl:terme_iconWidth="18dp"
+            tl:terme_indicator_bounce_enable="false"
+            tl:terme_indicator_color="#2C97DE"
+            tl:terme_indicator_gravity="TOP"
+            tl:terme_textSelectColor="#2C97DE"
+            tl:terme_textUnselectColor="#66000000"
+            tl:terme_textSize="15sp"
+            tl:terme_underline_color="#DDDDDD"
+            tl:terme_underline_gravity="TOP"
+            tl:terme_underline_height="1dp"/>
 
-        <net.lynqfy.offical.tablayout.CommonLyTabLayout
+        <net.terme.offical.tablayout.TermeTabLayoutCommon
             android:id="@+id/tl_4"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="#F6CE59"
-            tl:ly_iconVisible="false"
-            tl:ly_textBold="SELECT"
-            tl:ly_indicator_width="10dp"
-            tl:ly_textSize="14sp"/>
+            tl:terme_iconVisible="false"
+            tl:terme_textBold="SELECT"
+            tl:terme_indicator_width="10dp"
+            tl:terme_textSize="14sp"/>
 
-        <net.lynqfy.offical.tablayout.CommonLyTabLayout
-            tl:ly_textBold="BOTH"
+        <net.terme.offical.tablayout.TermeTabLayoutCommon
+            tl:terme_textBold="BOTH"
             android:id="@+id/tl_5"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="#EC7263"
-            tl:ly_iconVisible="false"
-            tl:ly_indicator_corner_radius="2dp"
-            tl:ly_indicator_height="4dp"
-            tl:ly_indicator_width="4dp"
-            tl:ly_textSize="14sp"/>
+            tl:terme_iconVisible="false"
+            tl:terme_indicator_corner_radius="2dp"
+            tl:terme_indicator_height="4dp"
+            tl:terme_indicator_width="4dp"
+            tl:terme_textSize="14sp"/>
 
-        <net.lynqfy.offical.tablayout.CommonLyTabLayout
+        <net.terme.offical.tablayout.TermeTabLayoutCommon
             android:id="@+id/tl_6"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="#57385C"
-            tl:ly_iconVisible="false"
-            tl:ly_indicator_corner_radius="1.5dp"
-            tl:ly_indicator_height="3dp"
-            tl:ly_indicator_width="10dp"
-            tl:ly_textSize="14sp"/>
+            tl:terme_iconVisible="false"
+            tl:terme_indicator_corner_radius="1.5dp"
+            tl:terme_indicator_height="3dp"
+            tl:terme_indicator_width="10dp"
+            tl:terme_textSize="14sp"/>
 
-        <net.lynqfy.offical.tablayout.CommonLyTabLayout
+        <net.terme.offical.tablayout.TermeTabLayoutCommon
             android:id="@+id/tl_7"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="#E45171"
-            tl:ly_iconVisible="false"
-            tl:ly_indicator_color="#eeeeee"
-            tl:ly_indicator_corner_radius="1.5dp"
-            tl:ly_indicator_height="3dp"
-            tl:ly_indicator_style="TRIANGLE"
-            tl:ly_indicator_width="10dp"
-            tl:ly_textSize="14sp"/>
+            tl:terme_iconVisible="false"
+            tl:terme_indicator_color="#eeeeee"
+            tl:terme_indicator_corner_radius="1.5dp"
+            tl:terme_indicator_height="3dp"
+            tl:terme_indicator_style="TRIANGLE"
+            tl:terme_indicator_width="10dp"
+            tl:terme_textSize="14sp"/>
 
-        <net.lynqfy.offical.tablayout.CommonLyTabLayout
+        <net.terme.offical.tablayout.TermeTabLayoutCommon
             android:id="@+id/tl_8"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="#6D8FB0"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            tl:ly_iconVisible="false"
-            tl:ly_indicator_margin_left="5dp"
-            tl:ly_indicator_margin_right="5dp"
-            tl:ly_indicator_style="BLOCK"
-            tl:ly_textSize="14sp"/>
+            tl:terme_iconVisible="false"
+            tl:terme_indicator_margin_left="5dp"
+            tl:terme_indicator_margin_right="5dp"
+            tl:terme_indicator_style="BLOCK"
+            tl:terme_textSize="14sp"/>
     </LinearLayout>
 </ScrollView>

@@ -7,30 +7,30 @@
     android:orientation="vertical"
     tools:ignore="MissingDefaultResource">
 
-    <net.lynqfy.offical.LyEditText
+    <net.terme.offical.TermeEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:hint="Enter Your Password"
-        app:ly_type="password"
+        app:terme_type="password"
         android:layout_margin="8dp"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Pas" />
 
-    <net.lynqfy.offical.LyEditText
+    <net.terme.offical.TermeEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:hint="Enter User name"
         android:layout_margin="8dp"
-        app:ly_type="text"
+        app:terme_type="text"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Normal Edit Text" />
 
-    <net.lynqfy.offical.LyEditText
+    <net.terme.offical.TermeEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:hint="search"
         android:layout_margin="8dp"
-        app:ly_type="search"
+        app:terme_type="search"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Search Edit Text" />
 </LinearLayout>

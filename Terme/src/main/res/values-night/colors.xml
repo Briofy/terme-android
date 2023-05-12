@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="terme_card_background">#1C2A36</color>
+    <color name="terme_card_item_background">#34404F</color>
+    <color name="terme_popular_background">#1C2A36</color>
+    <color name="terme_card_title">#FDFDFD</color>
+    <color name="terme_card_content">#99A2AD</color>
+    <color name="terme_button_stroke_color">#68717E</color>
+    <color name="terme_calendar_selected_item">#485461</color>
+    <color name="terme_card_shadow">#1E2A34</color>
+
+    <color name="terme_search_stroke_color">#68717E</color>
+    <color name="terme_search_background_color">#485461</color>
+
+    <color name="alert_bg_success">#1F2A37</color>
+    <color name="alert_bg_error">#1F2A37</color>
+    <color name="alert_bg_message">#1F2A37</color>
+    <color name="alert_bg_warning">#1F2A37</color>
+    <color name="alert_bg_info">#1F2A37</color>
+    <color name="defualt_button_color">#1A56DB</color>
+
+    <color name="alert_text_success">#31C48D</color>
+    <color name="alert_text_error">#F98080</color>
+    <color name="alert_text_message">#76A9FA</color>
+    <color name="alert_text_warning">#FACA15</color>
+    <color name="alert_text_info">#9CA3AF</color>
+
+
+    <color name="alert_title_success">#31C48D</color>
+    <color name="alert_title_error">#F98080</color>
+    <color name="alert_title_message">#76A9FA</color>
+    <color name="alert_title_warning">#FACA15</color>
+    <color name="alert_title_info">#9CA3AF</color>
+
+
+    <color name="alert_button_success">#057A55</color>
+    <color name="alert_button_error">#E02424</color>
+    <color name="alert_button_message">#1C64F2</color>
+    <color name="alert_button_warning">#FACA15</color>
+    <color name="alert_button_info">#4B5563</color>
+
+    <color name="white_black">#000000</color>
+    <color name="black_white">#ffffff</color>
+</resources>

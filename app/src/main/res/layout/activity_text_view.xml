@@ -17,157 +17,157 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:padding="10dp"
                 android:text="Normal Text View" />
 
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:ly_backgroundColor="@color/purple_700"
+                app:terme_backgroundColor="@color/purple_700"
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:text=" Text View with Background" />
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:ly_backgroundColor="@color/purple_700"
+                app:terme_backgroundColor="@color/purple_700"
                 android:padding="10dp"
                 android:textColor="@color/white"
-                app:ly_strokeColor="@color/teal_200"
-                app:ly_strokeWidth="4dp"
+                app:terme_strokeColor="@color/teal_200"
+                app:terme_strokeWidth="4dp"
                 android:text=" Text View with Background and Stroke" />
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:ly_backgroundColor="@color/purple_700"
+                app:terme_backgroundColor="@color/purple_700"
                 android:padding="10dp"
                 android:textColor="@color/white"
-                app:ly_strokeColor="@color/teal_200"
-                app:ly_strokeWidth="4dp"
+                app:terme_strokeColor="@color/teal_200"
+                app:terme_strokeWidth="4dp"
                 android:gravity="center"
-                app:ly_cornerRadius="8dp"
+                app:terme_cornerRadius="8dp"
                 android:text=" Text View with Background and Stroke and corner radius"/>
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:ly_backgroundColor="@color/purple_700"
+                app:terme_backgroundColor="@color/purple_700"
                 android:padding="10dp"
                 android:textColor="@color/white"
-                app:ly_strokeColor="@color/teal_200"
-                app:ly_strokeWidth="4dp"
+                app:terme_strokeColor="@color/teal_200"
+                app:terme_strokeWidth="4dp"
                 android:gravity="center"
-                app:ly_cornerRadius="30dp"
+                app:terme_cornerRadius="30dp"
                 android:text=" Text View with Background and Stroke Circular"
                 />
 
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:ly_backgroundColor="#00000000"
+                app:terme_backgroundColor="#00000000"
                 android:padding="10dp"
                 android:textColor="@color/purple_700"
-                app:ly_strokeColor="@color/purple_700"
-                app:ly_strokeWidth="4dp"
+                app:terme_strokeColor="@color/purple_700"
+                app:terme_strokeWidth="4dp"
                 android:text=" Text View just stroke" />
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:ly_backgroundColor="#00000000"
+                app:terme_backgroundColor="#00000000"
                 android:padding="10dp"
                 android:textColor="@color/purple_700"
-                app:ly_strokeColor="@color/purple_700"
-                app:ly_strokeWidth="4dp"
-                app:ly_cornerRadius="20dp"
+                app:terme_strokeColor="@color/purple_700"
+                app:terme_strokeWidth="4dp"
+                app:terme_cornerRadius="20dp"
                 android:text=" Text View just stroke" />
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:ly_backgroundColor="#00000000"
+                app:terme_backgroundColor="#00000000"
                 android:padding="10dp"
                 android:textColor="@color/purple_700"
-                app:ly_strokeColor="@color/purple_700"
-                app:ly_strokeWidth="4dp"
-                app:ly_cornerRadius="4dp"
-                app:ly_isWidthHeightEqual="true"
+                app:terme_strokeColor="@color/purple_700"
+                app:terme_strokeWidth="4dp"
+                app:terme_cornerRadius="4dp"
+                app:terme_isWidthHeightEqual="true"
                 android:text=" Text View just stroke" />
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:ly_backgroundColor="#00000000"
+                app:terme_backgroundColor="#00000000"
                 android:padding="10dp"
                 android:textColor="@color/purple_700"
-                app:ly_strokeColor="@color/purple_700"
-                app:ly_strokeWidth="4dp"
-                app:ly_cornerRadius="4dp"
-                app:ly_isRadiusHalfHeight="true"
+                app:terme_strokeColor="@color/purple_700"
+                app:terme_strokeWidth="4dp"
+                app:terme_cornerRadius="4dp"
+                app:terme_isRadiusHalfHeight="true"
                 android:text=" Text View just stroke" />
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:ly_backgroundColor="#00000000"
+                app:terme_backgroundColor="#00000000"
                 android:padding="10dp"
                 android:textColor="@color/purple_700"
-                app:ly_strokeColor="@color/purple_700"
-                app:ly_strokeWidth="4dp"
-                app:ly_cornerRadius="4dp"
+                app:terme_strokeColor="@color/purple_700"
+                app:terme_strokeWidth="4dp"
+                app:terme_cornerRadius="4dp"
                 android:drawableStart="@drawable/ic_alert_icon"
                 app:drawableTint="@color/purple_700"
-                app:ly_isRadiusHalfHeight="true"
+                app:terme_isRadiusHalfHeight="true"
                 android:text=" Text View just stroke and Start Image" />
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:ly_backgroundColor="#00000000"
+                app:terme_backgroundColor="#00000000"
                 android:padding="10dp"
                 android:textColor="@color/purple_700"
-                app:ly_strokeColor="@color/purple_700"
-                app:ly_strokeWidth="4dp"
-                app:ly_cornerRadius="4dp"
+                app:terme_strokeColor="@color/purple_700"
+                app:terme_strokeWidth="4dp"
+                app:terme_cornerRadius="4dp"
                 android:drawableEnd="@drawable/ic_alert_icon"
                 app:drawableTint="@color/purple_700"
-                app:ly_isRadiusHalfHeight="true"
+                app:terme_isRadiusHalfHeight="true"
                 android:text=" Text View just stroke and End Image" />
-              <net.lynqfy.offical.LyTextView
+              <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            app:ly_backgroundColor="#00000000"
+            app:terme_backgroundColor="#00000000"
             android:padding="10dp"
             android:textColor="@color/purple_700"
-            app:ly_strokeColor="@color/purple_700"
-            app:ly_strokeWidth="4dp"
-            app:ly_cornerRadius="4dp"
+            app:terme_strokeColor="@color/purple_700"
+            app:terme_strokeWidth="4dp"
+            app:terme_cornerRadius="4dp"
             android:drawableTop="@drawable/ic_alert_icon"
             app:drawableTint="@color/purple_700"
-            app:ly_isRadiusHalfHeight="true"
+            app:terme_isRadiusHalfHeight="true"
             android:text=" Text View just stroke and Top Image" />
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:ly_backgroundColor="#00000000"
+                app:terme_backgroundColor="#00000000"
                 android:padding="10dp"
                 android:textColor="@color/purple_700"
-                app:ly_strokeColor="@color/purple_700"
-                app:ly_strokeWidth="4dp"
-                app:ly_cornerRadius="4dp"
+                app:terme_strokeColor="@color/purple_700"
+                app:terme_strokeWidth="4dp"
+                app:terme_cornerRadius="4dp"
                 android:drawableBottom="@drawable/ic_alert_icon"
                 app:drawableTint="@color/purple_700"
-                app:ly_isRadiusHalfHeight="true"
+                app:terme_isRadiusHalfHeight="true"
                 android:text=" Text View just stroke and Bottom Image" />
         </LinearLayout>
     </ScrollView>

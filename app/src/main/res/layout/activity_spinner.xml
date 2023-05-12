@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
 
-        <net.lynqfy.offical.spinner.LySpinner
+        <net.terme.offical.spinner.TermeSpinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -21,43 +21,43 @@
             app:spinnerColorName="Indigo"
             app:spinner_tint="@color/purple_700"
             app:spinner_mode="true" />
-        <net.lynqfy.offical.spinner.LySpinner
+        <net.terme.offical.spinner.TermeSpinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             app:spinnerColorName="Pink"
             app:spinner_mode="false" />
-        <net.lynqfy.offical.spinner.LySpinner
+        <net.terme.offical.spinner.TermeSpinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             app:spinnerColorName="Yellow"
             app:spinner_mode="true" />
-        <net.lynqfy.offical.spinner.LySpinner
+        <net.terme.offical.spinner.TermeSpinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             app:spinnerColorName="Purple"
             app:spinner_mode="false" />
-        <net.lynqfy.offical.spinner.LySpinner
+        <net.terme.offical.spinner.TermeSpinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             app:spinnerColorName="Orange"
             app:spinner_mode="true" />
-        <net.lynqfy.offical.spinner.LySpinner
+        <net.terme.offical.spinner.TermeSpinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             app:spinnerColorName="Dark"
             app:spinner_mode="false" />
-        <net.lynqfy.offical.spinner.LySpinner
+        <net.terme.offical.spinner.TermeSpinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             app:spinnerColorName="Green"
             app:spinner_mode="true" />
-        <net.lynqfy.offical.spinner.LySpinner
+        <net.terme.offical.spinner.TermeSpinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

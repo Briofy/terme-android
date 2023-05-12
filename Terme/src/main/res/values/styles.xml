@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="terme_indicator_color" format="color" />
+    <attr name="terme_indicator_height" format="dimension" />
+    <attr name="terme_indicator_width" format="dimension" />
+    <attr name="terme_indicator_margin_left" format="dimension" />
+    <attr name="terme_indicator_margin_top" format="dimension" />
+    <attr name="terme_indicator_margin_right" format="dimension" />
+    <attr name="terme_indicator_margin_bottom" format="dimension" />
+    <attr name="terme_indicator_corner_radius" format="dimension" />
+    <attr name="terme_indicator_gravity" format="enum">
+        <enum name="TOP" value="48" />
+        <enum name="BOTTOM" value="80" />
+    </attr>
+    <attr name="terme_indicator_style" format="enum">
+        <enum name="NORMAL" value="0" />
+        <enum name="TRIANGLE" value="1" />
+        <enum name="BLOCK" value="2" />
+    </attr>
+    <attr name="terme_indicator_width_equal_title" format="boolean" />
+    <attr name="terme_indicator_anim_enable" format="boolean" />
+    <attr name="terme_indicator_anim_duration" format="integer" />
+    <attr name="terme_indicator_bounce_enable" format="boolean" />
+
+    <!-- underline -->
+    <attr name="terme_underline_color" format="color" />
+    <attr name="terme_underline_height" format="dimension" />
+    <attr name="terme_underline_gravity" format="enum">
+        <enum name="TOP" value="48" />
+        <enum name="BOTTOM" value="80" />
+    </attr>
+
+    <!-- divider -->
+    <attr name="terme_divider_color" format="color" />
+    <attr name="terme_divider_width" format="dimension" />
+    <attr name="terme_divider_padding" format="dimension" />
+
+    <!-- tab -->
+    <attr name="terme_tab_padding" format="dimension" />
+    <attr name="terme_tab_space_equal" format="boolean" />
+    <attr name="terme_tab_width" format="dimension" />
+
+    <!-- title -->
+    <attr name="terme_textSize" format="dimension" />
+    <attr name="terme_textSelectColor" format="color" />
+    <attr name="terme_textUnselectColor" format="color" />
+    <attr name="terme_textBold" format="enum">
+        <enum name="NONE" value="0" />
+        <enum name="SELECT" value="1" />
+        <enum name="BOTH" value="2" />
+    </attr>
+    <attr name="terme_textAllCaps" format="boolean" />
+
+    <declare-styleable name="TermeTabLayoutSliding">
+        <!-- indicator -->
+        <attr name="terme_indicator_color" />
+        <attr name="terme_indicator_height" />
+        <attr name="terme_indicator_width" />
+        <attr name="terme_indicator_margin_left" />
+        <attr name="terme_indicator_margin_top" />
+        <attr name="terme_indicator_margin_right" />
+        <attr name="terme_indicator_margin_bottom" />
+        <attr name="terme_indicator_corner_radius" />
+        <attr name="terme_indicator_gravity" />
+        <attr name="terme_indicator_style" />
+        <attr name="terme_indicator_width_equal_title" />
+
+        <!-- underline -->
+        <attr name="terme_underline_color" />
+        <attr name="terme_underline_height" />
+        <attr name="terme_underline_gravity" />
+
+        <!-- divider -->
+        <attr name="terme_divider_color" />
+        <attr name="terme_divider_width" />
+        <attr name="terme_divider_padding" />
+
+        <!-- tab -->
+        <attr name="terme_tab_padding" />
+        <attr name="terme_tab_space_equal" />
+        <attr name="terme_tab_width" />
+
+        <!-- title -->
+        <attr name="terme_textSize" />
+        <attr name="terme_textSelectColor" />
+        <attr name="terme_textUnselectColor" />
+        <attr name="terme_textBold" />
+        <attr name="terme_textAllCaps" />
+
+    </declare-styleable>
+
+    <declare-styleable name="TermeTabLayoutCommon">
+        <!-- indicator -->
+        <attr name="terme_indicator_color" />
+        <attr name="terme_indicator_height" />
+        <attr name="terme_indicator_width" />
+        <attr name="terme_indicator_margin_left" />
+        <attr name="terme_indicator_margin_top" />
+        <attr name="terme_indicator_margin_right" />
+        <attr name="terme_indicator_margin_bottom" />
+        <attr name="terme_indicator_corner_radius" />
+        <attr name="terme_indicator_gravity" />
+        <attr name="terme_indicator_style" />
+        <attr name="terme_indicator_anim_enable" />
+        <attr name="terme_indicator_anim_duration" />
+        <attr name="terme_indicator_bounce_enable" />
+
+        <!-- underline -->
+        <attr name="terme_underline_color" />
+        <attr name="terme_underline_height" />
+        <attr name="terme_underline_gravity" />
+
+        <!-- divider -->
+        <attr name="terme_divider_color" />
+        <attr name="terme_divider_width" />
+        <attr name="terme_divider_padding" />
+
+        <!-- tab -->
+        <attr name="terme_tab_padding" />
+        <attr name="terme_tab_space_equal" />
+        <attr name="terme_tab_width" />
+
+        <!-- title -->
+        <attr name="terme_textSize" />
+        <attr name="terme_textSelectColor" />
+        <attr name="terme_textUnselectColor" />
+        <attr name="terme_textBold" />
+        <attr name="terme_textAllCaps" />
+
+        <!-- icon -->
+        <attr name="terme_iconWidth" format="dimension" />
+        <attr name="terme_iconHeight" format="dimension" />
+        <attr name="terme_iconVisible" format="boolean" />
+        <attr name="terme_iconGravity" format="enum">
+            <enum name="LEFT" value="3" />
+            <enum name="TOP" value="48" />
+            <enum name="RIGHT" value="5" />
+            <enum name="BOTTOM" value="80" />
+        </attr>
+        <attr name="terme_iconMargin" format="dimension" />
+
+    </declare-styleable>
+
+    <declare-styleable name="TermeTabLayoutSegment">
+        <!-- indicator -->
+        <attr name="terme_indicator_color" />
+        <attr name="terme_indicator_height" />
+        <attr name="terme_indicator_margin_left" />
+        <attr name="terme_indicator_margin_top" />
+        <attr name="terme_indicator_margin_right" />
+        <attr name="terme_indicator_margin_bottom" />
+        <attr name="terme_indicator_corner_radius" />
+        <attr name="terme_indicator_anim_enable" />
+        <attr name="terme_indicator_anim_duration" />
+        <attr name="terme_indicator_bounce_enable" />
+
+        <!-- divider -->
+        <attr name="terme_divider_color" />
+        <attr name="terme_divider_width" />
+        <attr name="terme_divider_padding" />
+
+        <!-- tab -->
+        <attr name="terme_tab_padding" />
+        <attr name="terme_tab_space_equal" />
+        <attr name="terme_tab_width" />
+
+        <!-- title -->
+        <attr name="terme_textSize" />
+        <attr name="terme_textSelectColor" />
+        <attr name="terme_textUnselectColor" />
+        <attr name="terme_textBold" />
+        <attr name="terme_textAllCaps" />
+
+        <attr name="terme_bar_color" format="color" />
+        <attr name="terme_bar_stroke_color" format="color" />
+        <attr name="terme_bar_stroke_width" format="dimension" />
+
+    </declare-styleable>
+
+    <declare-styleable name="TermeTextView">
+        <attr name="terme_backgroundColor" format="color" />
+        <attr name="terme_cornerRadius" format="dimension" />
+        <attr name="terme_strokeWidth" format="dimension" />
+        <attr name="terme_strokeColor" format="color" />
+        <attr name="terme_isRadiusHalfHeight" format="boolean" />
+        <attr name="terme_isWidthHeightEqual" format="boolean" />
+    </declare-styleable>
+
+    <style name="TextStyle.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="TextStyle.Subtitle">
+        <item name="android:textSize">14sp</item>
+
+    </style>
+
+    <style name="TextStyle.Small">
+        <item name="android:textSize">10sp</item>
+
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+
+    <style name="Widget">
+
+    </style>
+
+    <style name="Widget.TermeButton">
+
+    </style>
+    <style name="Widget.TermeProgressButton">
+
+    </style>
+    <declare-styleable name="TermeButton">
+        <attr name="buttonText" format="string" />
+        <attr name="backgroundType" format="enum">
+            <enum name="filled" value="1" />
+            <enum name="bordered" value="2" />
+        </attr>
+        <attr name="buttonShape" format="enum">
+            <enum name="rect" value="1" />
+            <enum name="circular" value="2" />
+        </attr>
+        <attr name="equalHeightAndWidth" format="boolean" />
+        <attr name="buttonType" format="enum">
+            <enum name="text" value="1" />
+            <enum name="image" value="2" />
+        </attr>
+        <attr name="buttonModel" format="enum">
+            <enum name="standard" value="1" />
+            <enum name="progress" value="2" />
+            <enum name="lottie" value="3" />
+
+        </attr>
+        <attr name="buttonTextColorRes" format="reference" />
+        <attr name="buttonEnable" format="boolean" />
+        <attr name="icon" format="reference" />
+        <attr name="leftIcon" format="reference" />
+        <attr name="rightIcon" format="reference" />
+
+        <attr name="ButtonBackground" format="reference" />
+        <attr name="progressColorTint" format="reference" />
+
+    </declare-styleable>
+
+
+    <style name="Widget.TermeEditText">
+
+    </style>
+
+    <declare-styleable name="TermeEditText">
+        <attr name="title" format="string" />
+        <attr name="hint" format="string" />
+        <attr name="terme_type" format="enum">
+            <enum name="text" value="1" />
+            <enum name="password" value="2" />
+            <enum name="search" value="3" />
+
+        </attr>
+        <attr name="error" format="string"></attr>
+        <attr name="EditTextIcon" format="reference" />
+    </declare-styleable>
+
+    <style name="CircularShapeAppearance" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="BottomLeftShapeAppearance" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">50%</item>
+    </style>
+
+    <style name="RoundedShapeAppearance" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="SlyCalendarDialogStyle" parent="Theme.Material3.DayNight.Dialog">
+        <!--        <item name="android:windowMinWidthMajor">100%</item>-->
+        <!--        <item name="android:windowMinWidthMinor">100%</item>-->
+
+        <!--        <item name="android:windowFrame">@null</item>-->
+        <!--        <item name="android:windowBackground">@android:color/transparent</item>-->
+        <!--        <item name="android:windowIsFloating">true</item>-->
+        <!--        <item name="android:windowContentOverlay">@null</item>-->
+        <!--        <item name="android:windowTitleStyle">@null</item>-->
+        <!--        <item name="android:colorBackgroundCacheHint">@null</item>-->
+        <!--        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>-->
+        <!--        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>-->
+        <!--        <item name="android:gravity">center</item>-->
+        <!--  other attributes  -->
+        <!--        <item name="android:backgroundDimEnabled">true</item>-->
+    </style>
+
+    <style name="SlyCalendarTimeDialogTheme" parent="Theme.Material3.DayNight.Dialog">
+        <item name="colorAccent">@color/slycalendar_defHeaderColor</item>
+        <item name="colorControlNormal">@color/slycalendar_defHeaderColor</item>
+    </style>
+
+    <style name="TermeAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">#FF4081</item>
+        // you can change the color of the yearPiker dialog
+        <item name="android:textColorPrimary">#FF4081</item>
+        // you can change the color of the yearPiker dialog
+    </style>
+
+    <declare-styleable name="TermeImageView">
+        <!-- BORDER -->
+        <attr name="terme_border" format="boolean" />
+        <attr name="terme_border_width" format="dimension" />
+        <attr name="terme_border_color" format="color" />
+        <attr name="terme_border_color_start" format="color" />
+        <attr name="terme_border_color_end" format="color" />
+        <attr name="terme_border_color_direction">
+            <flag name="left_to_right" value="1" />
+            <flag name="right_to_left" value="2" />
+            <flag name="top_to_bottom" value="3" />
+            <flag name="bottom_to_top" value="4" />
+        </attr>
+        <!-- CIRCLE COLOR -->
+        <attr name="terme_circle_color" format="color" />
+        <attr name="terme_circle_color_start" format="color" />
+        <attr name="terme_circle_color_end" format="color" />
+        <attr name="terme_circle_color_direction">
+            <flag name="left_to_right" value="1" />
+            <flag name="right_to_left" value="2" />
+            <flag name="top_to_bottom" value="3" />
+            <flag name="bottom_to_top" value="4" />
+        </attr>
+        <!-- SHADOW -->
+        <attr name="terme_shadow" format="boolean" />
+        <attr name="terme_shadow_color" format="color" />
+        <attr name="terme_shadow_radius" format="dimension" />
+        <attr name="terme_shadow_gravity">
+            <flag name="center" value="1" />
+            <flag name="top" value="2" />
+            <flag name="bottom" value="3" />
+            <flag name="start" value="4" />
+            <flag name="end" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TermeSeekArc">
+        <attr name="thumb" format="reference" />
+        <attr name="thumbOffset" format="dimension" />
+        <attr name="max" format="integer" />
+        <attr name="progressWidth" format="dimension" />
+        <attr name="arcWidth" format="dimension" />
+        <attr name="progress" format="integer" />
+        <attr name="rotation" format="integer" />
+        <attr name="startAngle" format="integer" />
+        <attr name="sweepAngle" format="integer" />
+        <attr name="arcColor" format="color" />
+        <attr name="progressColor" format="color" />
+        <attr name="roundEdges" format="boolean" />
+        <attr name="touchInside" format="boolean" />
+        <attr name="clockwise" format="boolean" />
+        <attr name="enabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TermeSeekArcTheme">
+        <attr name="TermeSeekArcStyle" format="reference"></attr>
+    </declare-styleable>
+
+    <style name="TermeSeekArc">
+        <item name="arcColor">@color/progress_gray_dark</item>
+    </style>
+
+    <style name="TermeSeekArcLight">
+        <item name="arcColor">@color/progress_gray</item>
+    </style>
+
+    <style name="Theme.TermeDrawerView" parent="ThemeOverlay.Material3.NavigationView">
+        <item name="colorControlHighlight">@android:color/transparent</item>
+        <item name="colorNavigationItemNormal">@color/terme_card_content</item>
+        <item name="colorNavigationItemSelected">@color/terme_card_title</item>
+        <item name="colorNavigationItemBackgroundSelected">@color/terme_card_item_background</item>
+        <item name="colorNavigationItemBackgroundPressed">@color/terme_card_title</item>
+        <item name="drawableNavigationItemBackground">@drawable/menu_item_background_color_state</item>
+        <item name="colorStateNavigationItem">@drawable/menu_item_color_state</item>
+        <item name="colorControlNormal">@color/terme_card_content</item>
+        <item name="android:windowBackground">@color/shark_light</item>
+        <item name="android:statusBarColor">@color/shark_light</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:textColor">@color/terme_card_content</item>
+        <item name="navigationViewStyle">@style/Widget.Terme.NavigationView</item>
+
+    </style>
+
+    <style name="Widget.Terme.NavigationView" parent="Widget.Design.NavigationView">
+        <item name="android:listDivider">@color/shuttle_gray</item>
+        <item name="itemIconTint">@drawable/menu_item_color_state</item>
+        <item name="itemTextAppearance">@style/TextAppearance.Terme.Navigation.Item</item>
+<!--        <item name="itemTextColor">@drawable/menu_item_color_state</item>-->
+        <item name="itemTextColor">@color/terme_card_title</item>
+        <item name="itemBackground">@drawable/menu_item_background_color_state</item>
+        <item name="android:background">@color/terme_card_background</item>
+    </style>
+
+    <style name="TextAppearance.Terme.Navigation.Item" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+<!--        <item name="android:fontFamily">@font/google_sans_medium</item>-->
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

@@ -7,57 +7,57 @@
     android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
-    <net.lynqfy.offical.kbd.LyKeyboard
+    <net.terme.offical.kbd.TermeKeyboard
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:keyText="Shift"
         app:keyType="arrowDown" />
 
-    <net.lynqfy.offical.kbd.LyKeyboard
+    <net.terme.offical.kbd.TermeKeyboard
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:keyText="Shift"
         app:keyType="arrowLeft" />
 
-    <net.lynqfy.offical.kbd.LyKeyboard
+    <net.terme.offical.kbd.TermeKeyboard
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:keyText="Shift"
         app:keyType="arrowRight" />
 
-    <net.lynqfy.offical.kbd.LyKeyboard
+    <net.terme.offical.kbd.TermeKeyboard
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:keyText="Shift"
         app:keyType="arrowUp" />
 
-    <net.lynqfy.offical.kbd.LyKeyboard
+    <net.terme.offical.kbd.TermeKeyboard
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:keyText="Shift"
         app:keyType="text" />
 
-    <net.lynqfy.offical.badge.LyBadge
+    <net.terme.offical.badge.TermeBadge
         app:badgeType="text"
         app:bText="test"
-        app:bTintColor="@color/ly_progress_yellow"
-        app:bBackgroundColor="@color/ly_progress_green"
+        app:bTintColor="@color/terme_progress_yellow"
+        app:bBackgroundColor="@color/terme_progress_green"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <net.lynqfy.offical.badge.LyBadge
+    <net.terme.offical.badge.TermeBadge
         app:badgeType="icon"
         app:bText="1"
-        app:bTintColor="@color/ly_progress_black"
-        app:bBackgroundColor="@color/ly_progress_pink"
+        app:bTintColor="@color/terme_progress_black"
+        app:bBackgroundColor="@color/terme_progress_pink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <net.lynqfy.offical.badge.LyBadge
+    <net.terme.offical.badge.TermeBadge
         app:badgeType="number"
         app:bText="55"
-        app:bTintColor="@color/ly_progress_orange"
-        app:bBackgroundColor="@color/ly_progress_indigo"
+        app:bTintColor="@color/terme_progress_orange"
+        app:bBackgroundColor="@color/terme_progress_indigo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </androidx.appcompat.widget.LinearLayoutCompat>

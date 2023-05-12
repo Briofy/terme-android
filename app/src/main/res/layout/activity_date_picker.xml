@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/rangeSelect"
             app:buttonText="Date Picker - Range Pick"
             android:layout_width="match_parent"
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"/>
 
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/singleSelect"
             app:buttonText="Date Picker - Single Pick"
             android:layout_width="match_parent"

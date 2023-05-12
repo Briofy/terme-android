@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <net.lynqfy.offical.timeline.LyTimelineView
+        <net.terme.offical.timeline.TermeTimelineView
             android:id="@+id/timeline_first"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
@@ -24,7 +24,7 @@
             app:line_color="?colorPrimary"
             app:timeline_item_type="first" />
 
-        <net.lynqfy.offical.timeline.LyTimelineView
+        <net.terme.offical.timeline.TermeTimelineView
             android:id="@+id/timeline_middle"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
@@ -37,7 +37,7 @@
             app:line_color="?colorPrimary"
             app:timeline_item_type="middle" />
 
-        <net.lynqfy.offical.timeline.LyTimelineView
+        <net.terme.offical.timeline.TermeTimelineView
             android:id="@+id/timeline_spacer"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
@@ -50,7 +50,7 @@
             app:line_style="dashed"
             app:timeline_item_type="spacer" />
 
-        <net.lynqfy.offical.timeline.LyTimelineView
+        <net.terme.offical.timeline.TermeTimelineView
             android:id="@+id/timeline_last"
             android:layout_width="wrap_content"
             android:layout_height="0dp"

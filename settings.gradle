@@ -13,6 +13,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Lynqfy"
+rootProject.name = "Terme"
 include ':app'
-include ':lynqfy'
+include ':Terme'

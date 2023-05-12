@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'net.lynqfy.test'
+    namespace 'net.terme.test'
     compileSdk 33
 
     defaultConfig {
-        applicationId "net.lynqfy.test"
+        applicationId "net.terme.test"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -43,7 +43,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation project(path: ':lynqfy')
+    implementation project(path: ':Terme')
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'

@@ -5,7 +5,7 @@
     android:id="@+id/root"
     android:layout_height="match_parent">
 
-    <net.lynqfy.offical.LyTextView
+    <net.terme.offical.TermeTextView
         android:id="@+id/tvTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,8 +17,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:ly_backgroundColor="@color/purple_500"
-        app:ly_cornerRadius="10dp"
-        app:ly_strokeColor="@color/black"
-        app:ly_strokeWidth="2dp" />
+        app:terme_backgroundColor="@color/purple_500"
+        app:terme_cornerRadius="10dp"
+        app:terme_strokeColor="@color/black"
+        app:terme_strokeWidth="2dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

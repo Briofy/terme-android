@@ -10,18 +10,18 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <net.lynqfy.offical.LyImageView
+        <net.terme.offical.TermeImageView
             android:id="@+id/circularImageView"
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_gravity="center"
             android:src="@drawable/image_test"
-            app:ly_border="true"
-            app:ly_border_color="#3f51b5"
-            app:ly_border_width="8dp"
-            app:ly_shadow="true"
-            app:ly_shadow_color="#3f51b5"
-            app:ly_shadow_radius="6dp" />
+            app:terme_border="true"
+            app:terme_border_color="#3f51b5"
+            app:terme_border_width="8dp"
+            app:terme_shadow="true"
+            app:terme_shadow_color="#3f51b5"
+            app:terme_shadow_radius="6dp" />
 
     </FrameLayout>
 
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Border Width :"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Shadow Radius :"
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <net.lynqfy.offical.LyTextView
+            <net.terme.offical.TermeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Shade: "

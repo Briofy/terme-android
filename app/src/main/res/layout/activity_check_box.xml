@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:textColor="@color/ly_card_background"
+    app:textColor="@color/terme_card_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
-        <net.lynqfy.offical.checkbox.LyCheckBox
+        <net.terme.offical.checkbox.TermeCheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:isDisabled="false"
@@ -19,11 +19,11 @@
             app:label="Medium"
             app:name="basic"
             app:size="medium"
-            app:textColor="@color/ly_card_title"
+            app:textColor="@color/terme_card_title"
             app:value="number" />
 
 
-        <net.lynqfy.offical.checkbox.LyCheckBox
+        <net.terme.offical.checkbox.TermeCheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:isDisabled="false"
@@ -31,10 +31,10 @@
             app:label="Large"
             app:name="basic"
             app:size="large"
-            app:textColor="@color/ly_card_title"
+            app:textColor="@color/terme_card_title"
             app:value="number" />
 
-        <net.lynqfy.offical.checkbox.LyCheckBox
+        <net.terme.offical.checkbox.TermeCheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:isDisabled="false"
@@ -42,10 +42,10 @@
             app:label="Xlarge"
             app:name="basic"
             app:size="xlarge"
-            app:textColor="@color/ly_card_title"
+            app:textColor="@color/terme_card_title"
             app:value="number" />
 
-        <net.lynqfy.offical.checkbox.LyCheckBox
+        <net.terme.offical.checkbox.TermeCheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:isDisabled="true"
@@ -53,7 +53,7 @@
             app:label="Xlarge"
             app:name="basic"
             app:size="xlarge"
-            app:textColor="@color/ly_card_title"
+            app:textColor="@color/terme_card_title"
             app:value="number" />
 
     </LinearLayout>

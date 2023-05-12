@@ -11,7 +11,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/btnToast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

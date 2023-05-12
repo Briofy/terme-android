@@ -17,7 +17,7 @@
 
 
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -27,12 +27,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabActitivy1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabActitivy2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabActitivy3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -70,12 +70,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -94,12 +94,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -118,12 +118,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -142,12 +142,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabImageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -156,7 +156,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -166,12 +166,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabAlert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -180,7 +180,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -190,12 +190,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -204,7 +204,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -214,12 +214,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabDatePicker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -229,7 +229,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -239,12 +239,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabTag"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -254,7 +254,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -264,12 +264,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabProgress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -279,7 +279,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -289,12 +289,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -303,7 +303,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -313,12 +313,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -327,7 +327,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -337,12 +337,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabToast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -351,7 +351,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -361,12 +361,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabCheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -375,7 +375,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -385,12 +385,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/tabSeekArc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -399,7 +399,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -409,12 +409,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/NavBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -424,7 +424,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -434,12 +434,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/timeLine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -447,7 +447,7 @@
             app:buttonText="Ly TimeLine"
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -457,11 +457,11 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
-        <net.lynqfy.offical.LyButton
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
+        <net.terme.offical.TermeButton
             android:id="@+id/progressButtoon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -470,7 +470,7 @@
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <net.lynqfy.offical.LyTextView
+        <net.terme.offical.TermeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -480,12 +480,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:ly_backgroundColor="@color/purple_700"
-            app:ly_cornerRadius="10dp"
-            app:ly_strokeColor="@color/purple_200"
-            app:ly_strokeWidth="2dp" />
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
 
-        <net.lynqfy.offical.LyButton
+        <net.terme.offical.TermeButton
             android:id="@+id/drawer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

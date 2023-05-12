@@ -10,50 +10,50 @@
         android:orientation="vertical"
         android:layout_height="match_parent">
 
-        <net.lynqfy.offical.progress.LyProgressBar
+        <net.terme.offical.progress.TermeProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:colorName="Indigo"
             app:progressValue="10" />
 
 
-        <net.lynqfy.offical.progress.LyProgressBar
+        <net.terme.offical.progress.TermeProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:colorName="Pink"
             app:progressValue="20" />
 
 
-        <net.lynqfy.offical.progress.LyProgressBar
+        <net.terme.offical.progress.TermeProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:colorName="Yellow"
             app:progressValue="30" />
-        <net.lynqfy.offical.progress.LyProgressBar
+        <net.terme.offical.progress.TermeProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:colorName="Purple"
             app:progressValue="40" />
 
-        <net.lynqfy.offical.progress.LyProgressBar
+        <net.terme.offical.progress.TermeProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:colorName="Orange"
             app:progressValue="50" />
 
-        <net.lynqfy.offical.progress.LyProgressBar
+        <net.terme.offical.progress.TermeProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:colorName="Dark"
             app:progressValue="60" />
 
-        <net.lynqfy.offical.progress.LyProgressBar
+        <net.terme.offical.progress.TermeProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:colorName="Green"
             app:progressValue="70" />
 
-        <net.lynqfy.offical.progress.LyProgressBar
+        <net.terme.offical.progress.TermeProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:colorName="Primary"

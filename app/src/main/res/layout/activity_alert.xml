@@ -8,7 +8,7 @@
     tools:context=".AlertActivity"
     tools:ignore="MissingDefaultResource">
 
-    <net.lynqfy.offical.LyButton
+    <net.terme.offical.TermeButton
         android:id="@+id/ly_success"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         app:buttonTextColorRes="@color/alert_button_success"
         android:layout_margin="10dp"
         />
-    <net.lynqfy.offical.LyButton
+    <net.terme.offical.TermeButton
         android:id="@+id/ly_error"
 
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
         app:buttonTextColorRes="@color/alert_text_error"
         android:layout_margin="10dp"
         />
-    <net.lynqfy.offical.LyButton
+    <net.terme.offical.TermeButton
         android:id="@+id/ly_warning"
 
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
         app:buttonTextColorRes="@color/alert_button_warning"
         android:layout_margin="10dp"
         />
-    <net.lynqfy.offical.LyButton
+    <net.terme.offical.TermeButton
         android:id="@+id/ly_info"
 
         android:layout_width="match_parent"
@@ -59,7 +59,7 @@
         app:buttonTextColorRes="@color/alert_text_info"   
         android:layout_margin="10dp"
         />
-    <net.lynqfy.offical.LyButton
+    <net.terme.offical.TermeButton
         android:id="@+id/ly_message"
 
         android:layout_width="match_parent"

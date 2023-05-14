@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import net.terme.offical.speeddial.SpeedDialActionItem
+import net.terme.test.R
 import net.terme.test.databinding.FragmentSlideshowBinding
 
 class SlideshowFragment : Fragment() {
@@ -23,15 +25,22 @@ class SlideshowFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val slideshowViewModel =
-            ViewModelProvider(this).get(SlideshowViewModel::class.java)
+            ViewModelProvider(this)[SlideshowViewModel::class.java]
 
         _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        binding.textviewSecond.also {
+            it.addActionItem(SpeedDialActionItem.Builder(View.generateViewId(), R.drawable.ic1).create())
+            it.addActionItem(SpeedDialActionItem.Builder(View.generateViewId(), R.drawable.ic1).create())
+            it.addActionItem(SpeedDialActionItem.Builder(View.generateViewId(), R.drawable.ic1).create())
+            it.addActionItem(SpeedDialActionItem.Builder(View.generateViewId(), R.drawable.ic1).create())
+            it.addActionItem(SpeedDialActionItem.Builder(View.generateViewId(), R.drawable.ic1).create())
+            it.addActionItem(SpeedDialActionItem.Builder(View.generateViewId(), R.drawable.ic1).create())
+            it.addActionItem(SpeedDialActionItem.Builder(View.generateViewId(), R.drawable.ic1).create())
 
-        val textView: TextView = binding.textSlideshow
-        slideshowViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
         }
+
+
         return root
     }
 

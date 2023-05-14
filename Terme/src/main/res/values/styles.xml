@@ -217,9 +217,11 @@
     <style name="Widget.TermeButton">
 
     </style>
+
     <style name="Widget.TermeProgressButton">
 
     </style>
+
     <declare-styleable name="TermeButton">
         <attr name="buttonText" format="string" />
         <attr name="backgroundType" format="enum">
@@ -243,12 +245,15 @@
         </attr>
         <attr name="buttonTextColorRes" format="reference" />
         <attr name="buttonEnable" format="boolean" />
+        <attr name="startAnimationFirst" format="boolean" />
+
         <attr name="icon" format="reference" />
         <attr name="leftIcon" format="reference" />
         <attr name="rightIcon" format="reference" />
 
         <attr name="ButtonBackground" format="reference" />
         <attr name="progressColorTint" format="reference" />
+        <attr name="anim_raw_res" format="reference" />
 
     </declare-styleable>
 
@@ -386,7 +391,8 @@
         <item name="colorNavigationItemSelected">@color/terme_card_title</item>
         <item name="colorNavigationItemBackgroundSelected">@color/terme_card_item_background</item>
         <item name="colorNavigationItemBackgroundPressed">@color/terme_card_title</item>
-        <item name="drawableNavigationItemBackground">@drawable/menu_item_background_color_state</item>
+        <item name="drawableNavigationItemBackground">@drawable/menu_item_background_color_state
+        </item>
         <item name="colorStateNavigationItem">@drawable/menu_item_color_state</item>
         <item name="colorControlNormal">@color/terme_card_content</item>
         <item name="android:windowBackground">@color/shark_light</item>
@@ -401,7 +407,7 @@
         <item name="android:listDivider">@color/shuttle_gray</item>
         <item name="itemIconTint">@drawable/menu_item_color_state</item>
         <item name="itemTextAppearance">@style/TextAppearance.Terme.Navigation.Item</item>
-<!--        <item name="itemTextColor">@drawable/menu_item_color_state</item>-->
+        <!--        <item name="itemTextColor">@drawable/menu_item_color_state</item>-->
         <item name="itemTextColor">@color/terme_card_title</item>
         <item name="itemBackground">@drawable/menu_item_background_color_state</item>
         <item name="android:background">@color/terme_card_background</item>
@@ -409,7 +415,7 @@
 
     <style name="TextAppearance.Terme.Navigation.Item" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/white</item>
-<!--        <item name="android:fontFamily">@font/google_sans_medium</item>-->
+        <!--        <item name="android:fontFamily">@font/google_sans_medium</item>-->
         <item name="android:textSize">14sp</item>
     </style>
 

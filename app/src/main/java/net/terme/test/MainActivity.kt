@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     private val activitytimeLine by lazy { findViewById<TermeButton>(R.id.timeLine) }
     private val activityProgressButton by lazy { findViewById<TermeButton>(R.id.progressButtoon) }
     private val activityDrawer by lazy { findViewById<TermeButton>(R.id.drawer) }
+    private val activityAnimationButton by lazy { findViewById<TermeButton>(R.id.animationButton) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,11 +56,11 @@ class MainActivity : AppCompatActivity() {
         activityNavBar.onClickListener = clickListener
         activitytimeLine.onClickListener = clickListener
         activityProgressButton.onClickListener = clickListener
-
+        activityAnimationButton.onClickListener = clickListener
         activityDrawer.onClickListener = clickListener
     }
 
-   private val clickListener = object : TermeView.OnClickListener {
+    private val clickListener = object : TermeView.OnClickListener {
         override fun onButtonClick(button: View) {
 
             startActivity(
@@ -87,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                         activitytimeLine.button -> TimelineActivity::class.java
                         activityDrawer.button -> DrawerActivity::class.java
                         activityProgressButton.button -> ProgressButtonActivity::class.java
-
+                        activityAnimationButton.button -> AnimationButtonActivity::class.java
                         else -> TabLayoutActivity3::class.java
                     },
                 )

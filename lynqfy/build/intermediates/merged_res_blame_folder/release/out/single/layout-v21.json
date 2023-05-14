@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/layout-v21/notification_template_custom_big.xml",
+        "source": "net.lynqfy.offical.lynqfy-core-1.9.0-22:/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/layout-v21/notification_template_icon_group.xml",
+        "source": "net.lynqfy.offical.lynqfy-core-1.9.0-22:/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/layout-v21/notification_action.xml",
+        "source": "net.lynqfy.offical.lynqfy-core-1.9.0-22:/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/layout-v21/notification_action_tombstone.xml",
+        "source": "net.lynqfy.offical.lynqfy-core-1.9.0-22:/layout-v21/notification_action_tombstone.xml"
+    }
+]

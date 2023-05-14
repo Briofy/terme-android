@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/color-night-v8/material_timepicker_modebutton_tint.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/color-night-v8/material_timepicker_modebutton_tint.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/color-night-v8/material_timepicker_button_stroke.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/color-night-v8/material_timepicker_button_stroke.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/color-night-v8/material_timepicker_clockface.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/color-night-v8/material_timepicker_clockface.xml"
+    }
+]

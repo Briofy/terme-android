@@ -1,0 +1,80 @@
+package net.lynqfy.offical.navbar.type.dropdown;
+
+import java.lang.System;
+
+@kotlin.Metadata(mv = {1, 8, 0}, k = 1, d1 = {"\u0000R\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\f\u0018\u00002\u00020\u0001B/\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\b\b\u0002\u0010\n\u001a\u00020\u000b\u00a2\u0006\u0002\u0010\fJ\u001a\u0010(\u001a\u00020\u00152\b\u0010)\u001a\u0004\u0018\u00010\u00072\u0006\u0010\b\u001a\u00020\tH\u0016J\b\u0010*\u001a\u00020\u0015H\u0016J\b\u0010+\u001a\u00020\u0015H\u0002R\u000e\u0010\u0006\u001a\u00020\u0007X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001b\u0010\r\u001a\u00020\u000e8BX\u0082\u0084\u0002\u00a2\u0006\f\n\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u000f\u0010\u0010R(\u0010\u0013\u001a\u0010\u0012\u0004\u0012\u00020\u0015\u0018\u00010\u0014j\u0004\u0018\u0001`\u0016X\u0096\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0017\u0010\u0018\"\u0004\b\u0019\u0010\u001aR(\u0010\u001b\u001a\u0010\u0012\u0004\u0012\u00020\u0015\u0018\u00010\u0014j\u0004\u0018\u0001`\u001cX\u0096\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u001d\u0010\u0018\"\u0004\b\u001e\u0010\u001aR\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001b\u0010\u001f\u001a\u00020 8BX\u0082\u0084\u0002\u00a2\u0006\f\n\u0004\b#\u0010\u0012\u001a\u0004\b!\u0010\"R\u001a\u0010\n\u001a\u00020\u000bX\u0096\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b$\u0010%\"\u0004\b&\u0010\'R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006,"}, d2 = {"Lnet/lynqfy/offical/navbar/type/dropdown/DoubleDropdownIm;", "Lnet/lynqfy/offical/navbar/type/dropdown/DoubleDropdown;", "parent", "Landroid/view/ViewGroup;", "typedArray", "Landroid/content/res/TypedArray;", "attr", "Landroid/util/AttributeSet;", "defStyleAttr", "", "type", "Lnet/lynqfy/offical/navbar/type/LyNavBarType;", "(Landroid/view/ViewGroup;Landroid/content/res/TypedArray;Landroid/util/AttributeSet;ILnet/lynqfy/offical/navbar/type/LyNavBarType;)V", "menuUI", "Lnet/lynqfy/offical/databinding/LyNavBarMenuUiBinding;", "getMenuUI", "()Lnet/lynqfy/offical/databinding/LyNavBarMenuUiBinding;", "menuUI$delegate", "Lkotlin/Lazy;", "onButtonAction", "Lkotlin/Function0;", "", "Lnet/lynqfy/offical/navbar/ButtonCallback;", "getOnButtonAction", "()Lkotlin/jvm/functions/Function0;", "setOnButtonAction", "(Lkotlin/jvm/functions/Function0;)V", "onMenuAction", "Lnet/lynqfy/offical/navbar/MenuCallback;", "getOnMenuAction", "setOnMenuAction", "toolbar", "Lnet/lynqfy/offical/databinding/LyNavBarUiBinding;", "getToolbar", "()Lnet/lynqfy/offical/databinding/LyNavBarUiBinding;", "toolbar$delegate", "getType", "()Lnet/lynqfy/offical/navbar/type/LyNavBarType;", "setType", "(Lnet/lynqfy/offical/navbar/type/LyNavBarType;)V", "initTheme", "attrs", "initUI", "showMenuWithLogin", "lynqfy_debug"})
+public final class DoubleDropdownIm implements net.lynqfy.offical.navbar.type.dropdown.DoubleDropdown {
+    private final android.view.ViewGroup parent = null;
+    private final android.content.res.TypedArray typedArray = null;
+    private final android.util.AttributeSet attr = null;
+    private final int defStyleAttr = 0;
+    @org.jetbrains.annotations.NotNull()
+    private net.lynqfy.offical.navbar.type.LyNavBarType type;
+    @org.jetbrains.annotations.Nullable()
+    private kotlin.jvm.functions.Function0<kotlin.Unit> onButtonAction;
+    @org.jetbrains.annotations.Nullable()
+    private kotlin.jvm.functions.Function0<kotlin.Unit> onMenuAction;
+    private final kotlin.Lazy toolbar$delegate = null;
+    private final kotlin.Lazy menuUI$delegate = null;
+    
+    public DoubleDropdownIm(@org.jetbrains.annotations.NotNull()
+    android.view.ViewGroup parent, @org.jetbrains.annotations.NotNull()
+    android.content.res.TypedArray typedArray, @org.jetbrains.annotations.NotNull()
+    android.util.AttributeSet attr, int defStyleAttr, @org.jetbrains.annotations.NotNull()
+    net.lynqfy.offical.navbar.type.LyNavBarType type) {
+        super();
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    @java.lang.Override()
+    public net.lynqfy.offical.navbar.type.LyNavBarType getType() {
+        return null;
+    }
+    
+    @java.lang.Override()
+    public void setType(@org.jetbrains.annotations.NotNull()
+    net.lynqfy.offical.navbar.type.LyNavBarType p0) {
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    @java.lang.Override()
+    public kotlin.jvm.functions.Function0<kotlin.Unit> getOnButtonAction() {
+        return null;
+    }
+    
+    @java.lang.Override()
+    public void setOnButtonAction(@org.jetbrains.annotations.Nullable()
+    kotlin.jvm.functions.Function0<kotlin.Unit> p0) {
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    @java.lang.Override()
+    public kotlin.jvm.functions.Function0<kotlin.Unit> getOnMenuAction() {
+        return null;
+    }
+    
+    @java.lang.Override()
+    public void setOnMenuAction(@org.jetbrains.annotations.Nullable()
+    kotlin.jvm.functions.Function0<kotlin.Unit> p0) {
+    }
+    
+    @java.lang.Override()
+    public void initTheme(@org.jetbrains.annotations.Nullable()
+    android.util.AttributeSet attrs, int defStyleAttr) {
+    }
+    
+    private final void showMenuWithLogin() {
+    }
+    
+    @java.lang.Override()
+    public void initUI() {
+    }
+    
+    private final net.lynqfy.offical.databinding.LyNavBarUiBinding getToolbar() {
+        return null;
+    }
+    
+    private final net.lynqfy.offical.databinding.LyNavBarMenuUiBinding getMenuUI() {
+        return null;
+    }
+}

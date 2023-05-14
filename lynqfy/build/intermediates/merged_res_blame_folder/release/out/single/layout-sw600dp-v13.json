@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/layout-sw600dp-v13/mtrl_layout_snackbar.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/layout-sw600dp-v13/mtrl_layout_snackbar.xml"
+    },
+    {
+        "merged": "net.lynqfy.offical.lynqfy-merged_res-33:/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "net.lynqfy.offical.lynqfy-material-1.8.0-16:/layout-sw600dp-v13/design_layout_snackbar.xml"
+    }
+]

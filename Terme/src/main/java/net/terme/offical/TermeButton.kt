@@ -11,6 +11,7 @@ import android.widget.ImageView
 import androidx.annotation.ColorRes
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.ContextCompat
+import com.airbnb.lottie.LottieAnimationView
 import net.terme.offical.R
 import net.terme.offical.base.TermeView
 import net.terme.offical.spinner.TermeSpinner
@@ -40,8 +41,10 @@ class TermeButton : TermeView {
 
     private var bgColor = R.color.defualt_button_color
     private var progressColor = R.color.test_color
+    private var animRawRes = R.raw.test_anim
 
     private var icon = R.drawable.ic_deaful_icon
+     var startAnimationFirst: Boolean = false
 
     private var leftIcon: Int = -1
 
@@ -52,6 +55,8 @@ class TermeButton : TermeView {
         super.init(mContext, attr, defStyleAttr)
         button = mView.findViewById(R.id.btn)
         progress = mView.findViewById(R.id.progress)
+        anim = mView.findViewById(R.id.anim)
+
         attr?.apply {
             val typedArray = context.obtainStyledAttributes(
                 this,
@@ -68,6 +73,12 @@ class TermeButton : TermeView {
                 R.styleable.TermeButton_progressColorTint,
                 R.color.test_color
             )
+
+            animRawRes = typedArray.getResourceId(
+                R.styleable.TermeButton_anim_raw_res,
+                R.raw.test_anim
+            )
+
             icon = typedArray.getResourceId(R.styleable.TermeButton_icon, R.drawable.ic_deaful_icon)
             Log.i("CunstomBtnIconTest", "icon=$icon ")
             leftIcon = typedArray.getResourceId(R.styleable.TermeButton_leftIcon, -1)
@@ -76,6 +87,8 @@ class TermeButton : TermeView {
                 R.color.white_black
             )
             buttonEnable = typedArray.getBoolean(R.styleable.TermeButton_buttonEnable, true)
+            startAnimationFirst = typedArray.getBoolean(R.styleable.TermeButton_startAnimationFirst, false)
+
             equalHeightAndWidth =
                 typedArray.getBoolean(R.styleable.TermeButton_equalHeightAndWidth, false)
             rightIcon = typedArray.getResourceId(R.styleable.TermeButton_rightIcon, -1)
@@ -118,6 +131,7 @@ class TermeButton : TermeView {
 
     lateinit var button: AppCompatButton
     lateinit var progress: TermeSpinner
+    lateinit var anim: LottieAnimationView
 
 
     fun setTint(@ColorRes color: Int) {
@@ -126,6 +140,8 @@ class TermeButton : TermeView {
     }
 
     var isProgress = false
+    var isAnimated = false
+
     fun startProgress() {
         if (buttonModel == ButtonModel.PROGRESS_BUTTON) {
             progress.visibility = VISIBLE
@@ -149,6 +165,34 @@ class TermeButton : TermeView {
             }
 
             isProgress = false
+
+
+        }
+    }
+
+    fun showAnimation() {
+        if (buttonModel == ButtonModel.LOTTIE_BUTTON) {
+            anim.visibility = VISIBLE
+            if (buttonType == ButtonType.TEXT)
+                button.text = ""
+            else if (buttonType == ButtonType.IMAGE) {
+                image?.visibility = View.GONE
+            }
+            isAnimated = true
+        }
+    }
+
+    fun hideAnimation() {
+        if (buttonModel == ButtonModel.LOTTIE_BUTTON) {
+            anim.visibility = GONE
+
+            if (buttonType == ButtonType.TEXT)
+                button.text = buttonText
+            else if (buttonType == ButtonType.IMAGE) {
+                image?.visibility = View.VISIBLE
+            }
+
+            isAnimated = false
 
 
         }
@@ -256,7 +300,26 @@ class TermeButton : TermeView {
                         progress.translationZ = 900f
                     }
                 })
+        } else if (buttonModel == ButtonModel.LOTTIE_BUTTON) {
+            anim.setAnimation(animRawRes)
+
+            button.viewTreeObserver
+                .addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
+                    override fun onGlobalLayout() {
+                        button.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                        val size = min(button.width, button.height)
+                        val lp = FrameLayout.LayoutParams(size, size)
+                        lp.gravity = Gravity.CENTER
+
+                        anim.layoutParams = lp
+                        anim.elevation = 500f
+                        anim.translationZ = 900f
+                    }
+                })
+            if (startAnimationFirst)
+                showAnimation()
         }
+
 
     }
 

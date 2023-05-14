@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Common Ly Tab Layout"
+            app:buttonText="Common Terme Tab Layout"
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:buttonEnable="false"
-            app:buttonText="Segment Ly Tab Layout"
+            app:buttonText="Segment Terme Tab Layout"
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Sliding Ly Tab Layout"
+            app:buttonText="Sliding Terme Tab Layout"
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -80,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Button"
+            app:buttonText="Terme Button"
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Edit Text"
+            app:buttonText="Terme Edit Text"
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -128,7 +128,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Text View"
+            app:buttonText="Terme Text View"
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -152,7 +152,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Image View"
+            app:buttonText="Terme Image View"
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -176,7 +176,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Alert "
+            app:buttonText="Terme Alert "
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -200,7 +200,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly CardView "
+            app:buttonText="Terme CardView "
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -224,7 +224,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Date Picker "
+            app:buttonText="Terme Date Picker "
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -249,7 +249,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Tag "
+            app:buttonText="Terme Tag "
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -274,7 +274,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Progress Bar "
+            app:buttonText="Terme Progress Bar "
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -299,7 +299,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Radio Button "
+            app:buttonText="Terme Radio Button "
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -323,7 +323,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Spinner "
+            app:buttonText="Terme Spinner "
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -347,7 +347,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Toast "
+            app:buttonText="Terme Toast "
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -371,7 +371,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Check Box "
+            app:buttonText="Terme Check Box "
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -395,7 +395,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly Seek Arc "
+            app:buttonText="Terme Seek Arc "
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -419,7 +419,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly NavBar"
+            app:buttonText="Terme NavBar"
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -444,7 +444,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly TimeLine"
+            app:buttonText="Terme TimeLine"
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
         <net.terme.offical.TermeTextView
@@ -466,7 +466,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly TimeLine"
+            app:buttonText="Terme TimeLine"
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -476,7 +476,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:padding="10dp"
-            android:text="18- 19 KBD- Drawer"
+            android:text="19-KBD and Navigation Drawer"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -490,7 +490,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:buttonText="Ly KBD and Drawer"
+            app:buttonText="Terme KBD and Drawer"
+            app:buttonTextColorRes="@color/white"
+            app:layout_constraintTop_toTopOf="parent" />
+        <net.terme.offical.TermeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="20-Animation Button"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:terme_backgroundColor="@color/purple_700"
+            app:terme_cornerRadius="10dp"
+            app:terme_strokeColor="@color/purple_200"
+            app:terme_strokeWidth="2dp" />
+
+        <net.terme.offical.TermeButton
+            android:id="@+id/animationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:buttonText="Terme Animation Button"
             app:buttonTextColorRes="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 

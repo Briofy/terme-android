@@ -1,6 +1,6 @@
 package net.terme.offical.speeddial;
 
-import static net.terme.offical.speeddial.SpeedDialActionItem.RESOURCE_NOT_SET;
+import static net.terme.offical.speeddial.TermeSpeedDialActionItem.RESOURCE_NOT_SET;
 import static net.terme.offical.speeddial.TermeSpeedDialView.ExpansionMode.BOTTOM;
 import static net.terme.offical.speeddial.TermeSpeedDialView.ExpansionMode.LEFT;
 import static net.terme.offical.speeddial.TermeSpeedDialView.ExpansionMode.RIGHT;
@@ -20,7 +20,6 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -51,9 +50,11 @@ import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton.OnVisibilityChangedListener;
+import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.android.material.snackbar.Snackbar;
 
 import net.terme.offical.R;
+import net.terme.offical.tooltips.TermeTooltip;
 
 import java.lang.annotation.Retention;
 import java.lang.reflect.Field;
@@ -77,7 +78,7 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
     private static final int MAIN_FAB_HORIZONTAL_MARGIN_IN_DP = 4;
     private static final int MAIN_FAB_VERTICAL_MARGIN_IN_DP = -2;
     private final InstanceState mInstanceState = new InstanceState();
-    private List<FabWithLabelView> mFabWithLabelViews = new ArrayList<>();
+    private final List<TermeFabWithLabelView> mTermeFabWithLabelViews = new ArrayList<>();
     @Nullable
     private Drawable mMainFabClosedDrawable = null;
     @Nullable
@@ -85,6 +86,7 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
     @Nullable
     private Drawable mMainFabCloseOriginalDrawable;
     private FloatingActionButton mMainFab;
+    private ShapeAppearanceModel mShapeAppearanceModel;
     @IdRes
     private int mOverlayLayoutId;
     @Nullable
@@ -93,18 +95,35 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
     private OnChangeListener mOnChangeListener;
     @Nullable
     private OnActionSelectedListener mOnActionSelectedListener;
-    private OnActionSelectedListener mOnActionSelectedProxyListener = new OnActionSelectedListener() {
+    private final OnActionSelectedListener mOnActionSelectedProxyListener = new OnActionSelectedListener() {
         @Override
-        public boolean onActionSelected(SpeedDialActionItem actionItem) {
+        public boolean onActionSelected(TermeSpeedDialActionItem actionItem) {
             if (mOnActionSelectedListener != null) {
-                boolean consumed = mOnActionSelectedListener.onActionSelected(actionItem);
-                if (!consumed) {
-                    close(false);
+                if (mOnActionSelectedListener.onActionSelected(actionItem)) {
+                    if (actionItem.isEnableToolTip()) {
+                        String msg = actionItem.getLabel(getContext());
+                        int bColor = actionItem.getLabelBackgroundColor();
+                        int tColor = actionItem.getLabelColor();
+                        int exp = getExpansionMode();
+                        TermeTooltip.Position position = TermeTooltip.Position.LEFT;
+                        if (exp == LEFT || exp == RIGHT) {
+                            position = TermeTooltip.Position.TOP;
+                        }
+                        TermeTooltip.on(findViewById(actionItem.getId()))
+                                .autoHide(true, 4000)
+                                .position(position)
+                                .corner(30)
+                                .color(bColor != RESOURCE_NOT_SET ? bColor : -1)
+                                .titleColor(tColor != RESOURCE_NOT_SET ? tColor : -1)
+                                .title(msg != null ? msg : "actionItem")
+                                .show();
+
+                    }
+                    return true;
                 }
-                return consumed;
-            } else {
-                return false;
+                close(false);
             }
+            return false;
         }
     };
 
@@ -147,20 +166,20 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
                 case TOP:
                 case BOTTOM:
                     setOrientation(VERTICAL);
-                    for (FabWithLabelView fabWithLabelView : mFabWithLabelViews) {
-                        fabWithLabelView.setOrientation(HORIZONTAL);
+                    for (TermeFabWithLabelView termeFabWithLabelView : mTermeFabWithLabelViews) {
+                        termeFabWithLabelView.setOrientation(HORIZONTAL);
                     }
                     break;
                 case LEFT:
                 case RIGHT:
                     setOrientation(HORIZONTAL);
-                    for (FabWithLabelView fabWithLabelView : mFabWithLabelViews) {
-                        fabWithLabelView.setOrientation(VERTICAL);
+                    for (TermeFabWithLabelView termeFabWithLabelView : mTermeFabWithLabelViews) {
+                        termeFabWithLabelView.setOrientation(VERTICAL);
                     }
                     break;
             }
             close(false);
-            ArrayList<SpeedDialActionItem> actionItems = getActionItems();
+            ArrayList<TermeSpeedDialActionItem> actionItems = getActionItems();
             clearActionItems();
             addAllActionItems(actionItems);
         }
@@ -274,12 +293,7 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
         }
         mOverlayLayout = overlayLayout;
         if (overlayLayout != null) {
-            overlayLayout.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    close();
-                }
-            });
+            overlayLayout.setOnClickListener(view -> close());
             showHideOverlay(isOpen(), false);
         }
     }
@@ -298,7 +312,7 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
         Menu menu = popupMenu.getMenu();
         for (int i = 0; i < menu.size(); i++) {
             MenuItem menuItem = menu.getItem(i);
-            SpeedDialActionItem actionItem = new SpeedDialActionItem.Builder(menuItem.getItemId(), menuItem.getIcon())
+            TermeSpeedDialActionItem actionItem = new TermeSpeedDialActionItem.Builder(menuItem.getItemId(), menuItem.getIcon())
                     .setLabel(menuItem.getTitle() != null ? menuItem.getTitle().toString() : null)
                     .create();
             addActionItem(actionItem);
@@ -306,66 +320,67 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
     }
 
     /**
-     * Appends all of the {@link SpeedDialActionItem} to the end of the list, in the order that they are returned by
+     * Appends all of the {@link TermeSpeedDialActionItem} to the end of the list, in the order that they are returned by
      * the specified
      * collection's Iterator.
      *
-     * @param actionItemCollection collection containing {@link SpeedDialActionItem} to be added to this list
-     * @return a collection containing the instances of {@link FabWithLabelView} added.
+     * @param actionItemCollection collection containing {@link TermeSpeedDialActionItem} to be added to this list
+     * @return a collection containing the instances of {@link TermeFabWithLabelView} added.
      */
-    public Collection<FabWithLabelView> addAllActionItems(Collection<SpeedDialActionItem> actionItemCollection) {
-        ArrayList<FabWithLabelView> fabWithLabelViews = new ArrayList<>();
-        for (SpeedDialActionItem speedDialActionItem : actionItemCollection) {
-            fabWithLabelViews.add(addActionItem(speedDialActionItem));
+    public Collection<TermeFabWithLabelView> addAllActionItems(Collection<TermeSpeedDialActionItem> actionItemCollection) {
+        ArrayList<TermeFabWithLabelView> termeFabWithLabelViews = new ArrayList<>();
+        for (TermeSpeedDialActionItem termeSpeedDialActionItem : actionItemCollection) {
+            termeFabWithLabelViews.add(addActionItem(termeSpeedDialActionItem));
         }
-        return fabWithLabelViews;
+        return termeFabWithLabelViews;
     }
 
     /**
-     * Appends the specified {@link SpeedDialActionItem} to the end of this list.
+     * Appends the specified {@link TermeSpeedDialActionItem} to the end of this list.
      *
-     * @param speedDialActionItem {@link SpeedDialActionItem} to be appended to this list
-     * @return the instance of the {@link FabWithLabelView} if the add was successful, null otherwise.
+     * @param termeSpeedDialActionItem {@link TermeSpeedDialActionItem} to be appended to this list
+     * @return the instance of the {@link TermeFabWithLabelView} if the add was successful, null otherwise.
      */
     @Nullable
-    public FabWithLabelView addActionItem(SpeedDialActionItem speedDialActionItem) {
-        return addActionItem(speedDialActionItem, mFabWithLabelViews.size());
+    public TermeFabWithLabelView addActionItem(TermeSpeedDialActionItem termeSpeedDialActionItem) {
+        return addActionItem(termeSpeedDialActionItem, mTermeFabWithLabelViews.size());
     }
 
     /**
-     * Inserts the specified {@link SpeedDialActionItem} at the specified position in this list. Shifts the element
+     * Inserts the specified {@link TermeSpeedDialActionItem} at the specified position in this list. Shifts the element
      * currently at that position (if any) and any subsequent elements to the right (adds one to their indices).
      *
-     * @param actionItem {@link SpeedDialActionItem} to be appended to this list
+     * @param actionItem {@link TermeSpeedDialActionItem} to be appended to this list
      * @param position   index at which the specified element is to be inserted
-     * @return the instance of the {@link FabWithLabelView} if the add was successful, null otherwise.
+     * @return the instance of the {@link TermeFabWithLabelView} if the add was successful, null otherwise.
      */
     @Nullable
-    public FabWithLabelView addActionItem(SpeedDialActionItem actionItem, int position) {
+    public TermeFabWithLabelView addActionItem(TermeSpeedDialActionItem actionItem, int position) {
         return addActionItem(actionItem, position, true);
     }
 
     /**
-     * Inserts the specified {@link SpeedDialActionItem} at the specified position in this list. Shifts the element
+     * Inserts the specified {@link TermeSpeedDialActionItem} at the specified position in this list. Shifts the element
      * currently at that position (if any) and any subsequent elements to the right (adds one to their indices).
      *
-     * @param actionItem {@link SpeedDialActionItem} to be appended to this list
+     * @param actionItem {@link TermeSpeedDialActionItem} to be appended to this list
      * @param position   index at which the specified element is to be inserted
      * @param animate    true to animate the insertion, false to insert instantly
-     * @return the instance of the {@link FabWithLabelView} if the add was successful, null otherwise.
+     * @return the instance of the {@link TermeFabWithLabelView} if the add was successful, null otherwise.
      */
     @Nullable
-    public FabWithLabelView addActionItem(SpeedDialActionItem actionItem, int position, boolean animate) {
-        FabWithLabelView oldView = findFabWithLabelViewById(actionItem.getId());
+    public TermeFabWithLabelView addActionItem(TermeSpeedDialActionItem actionItem, int position, boolean animate) {
+        TermeFabWithLabelView oldView = findFabWithLabelViewById(actionItem.getId());
         if (oldView != null) {
             return replaceActionItem(oldView.getSpeedDialActionItem(), actionItem);
         } else {
-            FabWithLabelView newView = actionItem.createFabWithLabelView(getContext());
+            TermeFabWithLabelView newView = actionItem.createFabWithLabelView(getContext());
             newView.setOrientation(getOrientation() == VERTICAL ? HORIZONTAL : VERTICAL);
             newView.setOnActionSelectedListener(mOnActionSelectedProxyListener);
+            newView.setShapeAppearanceModel(mShapeAppearanceModel);
             int layoutPosition = getLayoutPosition(position);
             addView(newView, layoutPosition);
-            mFabWithLabelViews.add(position, newView);
+            mTermeFabWithLabelViews.add(position, newView);
             if (isOpen()) {
                 if (animate) {
                     showWithAnimationFabWithLabelView(newView, 0);
@@ -378,80 +393,80 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
     }
 
     /**
-     * Removes the {@link SpeedDialActionItem} at the specified position in this list. Shifts any subsequent elements
+     * Removes the {@link TermeSpeedDialActionItem} at the specified position in this list. Shifts any subsequent elements
      * to the left (subtracts one from their indices).
      *
-     * @param position the index of the {@link SpeedDialActionItem} to be removed
-     * @return the {@link SpeedDialActionItem} that was removed from the list
+     * @param position the index of the {@link TermeSpeedDialActionItem} to be removed
+     * @return the {@link TermeSpeedDialActionItem} that was removed from the list
      */
     @Nullable
-    public SpeedDialActionItem removeActionItem(int position) {
-        SpeedDialActionItem speedDialActionItem = mFabWithLabelViews.get(position).getSpeedDialActionItem();
-        removeActionItem(speedDialActionItem);
-        return speedDialActionItem;
+    public TermeSpeedDialActionItem removeActionItem(int position) {
+        TermeSpeedDialActionItem termeSpeedDialActionItem = mTermeFabWithLabelViews.get(position).getSpeedDialActionItem();
+        removeActionItem(termeSpeedDialActionItem);
+        return termeSpeedDialActionItem;
     }
 
     /**
-     * Removes the specified {@link SpeedDialActionItem} from this list, if it is present. If the list does not
+     * Removes the specified {@link TermeSpeedDialActionItem} from this list, if it is present. If the list does not
      * contain the element, it is unchanged.
      * <p>
      * Returns true if this list contained the specified element (or equivalently, if this list changed
      * as a result of the call).
      *
-     * @param actionItem {@link SpeedDialActionItem} to be removed from this list, if present
+     * @param actionItem {@link TermeSpeedDialActionItem} to be removed from this list, if present
      * @return true if this list contained the specified element
      */
-    public boolean removeActionItem(@Nullable SpeedDialActionItem actionItem) {
+    public boolean removeActionItem(@Nullable TermeSpeedDialActionItem actionItem) {
         return actionItem != null && removeActionItemById(actionItem.getId()) != null;
     }
 
     /**
-     * Finds and removes the first {@link SpeedDialActionItem} with the given ID, if it is present. If the list does not
+     * Finds and removes the first {@link TermeSpeedDialActionItem} with the given ID, if it is present. If the list does not
      * contain the element, it is unchanged.
      *
      * @param idRes the ID to search for
-     * @return the {@link SpeedDialActionItem} that was removed from the list, or null otherwise
+     * @return the {@link TermeSpeedDialActionItem} that was removed from the list, or null otherwise
      */
     @Nullable
-    public SpeedDialActionItem removeActionItemById(@IdRes int idRes) {
+    public TermeSpeedDialActionItem removeActionItemById(@IdRes int idRes) {
         return removeActionItem(findFabWithLabelViewById(idRes));
     }
 
     /**
-     * Replace the {@link SpeedDialActionItem} at the specified position in this list with the one provided as
+     * Replace the {@link TermeSpeedDialActionItem} at the specified position in this list with the one provided as
      * parameter.
      *
-     * @param newActionItem {@link SpeedDialActionItem} to use for the replacement
-     * @param position      the index of the {@link SpeedDialActionItem} to be replaced
-     * @return the instance of the new {@link FabWithLabelView} if the replace was successful, null otherwise.
+     * @param newActionItem {@link TermeSpeedDialActionItem} to use for the replacement
+     * @param position      the index of the {@link TermeSpeedDialActionItem} to be replaced
+     * @return the instance of the new {@link TermeFabWithLabelView} if the replace was successful, null otherwise.
      */
     @Nullable
-    public FabWithLabelView replaceActionItem(SpeedDialActionItem newActionItem, int position) {
-        return replaceActionItem(mFabWithLabelViews.get(position).getSpeedDialActionItem(), newActionItem);
+    public TermeFabWithLabelView replaceActionItem(TermeSpeedDialActionItem newActionItem, int position) {
+        return replaceActionItem(mTermeFabWithLabelViews.get(position).getSpeedDialActionItem(), newActionItem);
     }
 
     /**
-     * Replace an already added {@link SpeedDialActionItem} with the one provided as parameter.
+     * Replace an already added {@link TermeSpeedDialActionItem} with the one provided as parameter.
      *
-     * @param oldSpeedDialActionItem the old {@link SpeedDialActionItem} to remove
-     * @param newSpeedDialActionItem the new {@link SpeedDialActionItem} to add
-     * @return the instance of the new {@link FabWithLabelView} if the replace was successful, null otherwise.
+     * @param oldTermeSpeedDialActionItem the old {@link TermeSpeedDialActionItem} to remove
+     * @param newTermeSpeedDialActionItem the new {@link TermeSpeedDialActionItem} to add
+     * @return the instance of the new {@link TermeFabWithLabelView} if the replace was successful, null otherwise.
      */
     @Nullable
-    public FabWithLabelView replaceActionItem(@Nullable SpeedDialActionItem oldSpeedDialActionItem,
-                                              SpeedDialActionItem newSpeedDialActionItem) {
-        if (oldSpeedDialActionItem == null) {
+    public TermeFabWithLabelView replaceActionItem(@Nullable TermeSpeedDialActionItem oldTermeSpeedDialActionItem,
+                                                   TermeSpeedDialActionItem newTermeSpeedDialActionItem) {
+        if (oldTermeSpeedDialActionItem == null) {
             return null;
         } else {
-            FabWithLabelView oldView = findFabWithLabelViewById(oldSpeedDialActionItem.getId());
+            TermeFabWithLabelView oldView = findFabWithLabelViewById(oldTermeSpeedDialActionItem.getId());
             if (oldView != null) {
-                int index = mFabWithLabelViews.indexOf(oldView);
+                int index = mTermeFabWithLabelViews.indexOf(oldView);
                 if (index < 0) {
                     return null;
                 }
-                removeActionItem(findFabWithLabelViewById(newSpeedDialActionItem.getId()), null, false);
-                removeActionItem(findFabWithLabelViewById(oldSpeedDialActionItem.getId()), null, false);
-                return addActionItem(newSpeedDialActionItem, index, false);
+                removeActionItem(findFabWithLabelViewById(newTermeSpeedDialActionItem.getId()), null, false);
+                removeActionItem(findFabWithLabelViewById(oldTermeSpeedDialActionItem.getId()), null, false);
+                return addActionItem(newTermeSpeedDialActionItem, index, false);
             } else {
                 return null;
             }
@@ -459,23 +474,23 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
     }
 
     /**
-     * Removes all of the {@link SpeedDialActionItem} from this list.
+     * Removes all of the {@link TermeSpeedDialActionItem} from this list.
      */
     public void clearActionItems() {
-        Iterator<FabWithLabelView> it = mFabWithLabelViews.iterator();
+        Iterator<TermeFabWithLabelView> it = mTermeFabWithLabelViews.iterator();
         while (it.hasNext()) {
-            FabWithLabelView fabWithLabelView = it.next();
-            removeActionItem(fabWithLabelView, it, true);
+            TermeFabWithLabelView termeFabWithLabelView = it.next();
+            removeActionItem(termeFabWithLabelView, it, true);
         }
     }
 
     @NonNull
-    public ArrayList<SpeedDialActionItem> getActionItems() {
-        ArrayList<SpeedDialActionItem> speedDialActionItems = new ArrayList<>(mFabWithLabelViews.size());
-        for (FabWithLabelView fabWithLabelView : mFabWithLabelViews) {
-            speedDialActionItems.add(fabWithLabelView.getSpeedDialActionItem());
+    public ArrayList<TermeSpeedDialActionItem> getActionItems() {
+        ArrayList<TermeSpeedDialActionItem> termeSpeedDialActionItems = new ArrayList<>(mTermeFabWithLabelViews.size());
+        for (TermeFabWithLabelView termeFabWithLabelView : mTermeFabWithLabelViews) {
+            termeSpeedDialActionItems.add(termeFabWithLabelView.getSpeedDialActionItem());
         }
-        return speedDialActionItems;
+        return termeSpeedDialActionItems;
     }
 
     @NonNull
@@ -492,9 +507,9 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
     public void setOnActionSelectedListener(@Nullable OnActionSelectedListener listener) {
         mOnActionSelectedListener = listener;
 
-        for (int index = 0; index < mFabWithLabelViews.size(); index++) {
-            final FabWithLabelView fabWithLabelView = mFabWithLabelViews.get(index);
-            fabWithLabelView.setOnActionSelectedListener(mOnActionSelectedProxyListener);
+        for (int index = 0; index < mTermeFabWithLabelViews.size(); index++) {
+            final TermeFabWithLabelView termeFabWithLabelView = mTermeFabWithLabelViews.get(index);
+            termeFabWithLabelView.setOnActionSelectedListener(mOnActionSelectedProxyListener);
         }
     }
 
@@ -629,7 +644,7 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
     @Override
     protected Parcelable onSaveInstanceState() {
         Bundle bundle = new Bundle();
-        mInstanceState.mSpeedDialActionItems = getActionItems();
+        mInstanceState.mTermeSpeedDialActionItems = getActionItems();
         bundle.putParcelable(InstanceState.class.getName(), mInstanceState);
         bundle.putParcelable(STATE_KEY_SUPER, super.onSaveInstanceState());
         return bundle;
@@ -641,8 +656,8 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
             Bundle bundle = (Bundle) state;
             InstanceState instanceState = bundle.getParcelable(InstanceState.class.getName());
             if (instanceState != null
-                    && instanceState.mSpeedDialActionItems != null
-                    && !instanceState.mSpeedDialActionItems.isEmpty()) {
+                    && instanceState.mTermeSpeedDialActionItems != null
+                    && !instanceState.mTermeSpeedDialActionItems.isEmpty()) {
                 setUseReverseAnimationOnClose(instanceState.mUseReverseAnimationOnClose);
                 setMainFabAnimationRotateAngle(instanceState.mMainFabAnimationRotateAngle);
                 setMainFabOpenedBackgroundColor(instanceState.mMainFabOpenedBackgroundColor);
@@ -650,7 +665,7 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
                 setMainFabOpenedIconColor(instanceState.mMainFabOpenedIconColor);
                 setMainFabClosedIconColor(instanceState.mMainFabClosedIconColor);
                 setExpansionMode(instanceState.mExpansionMode, true);
-                addAllActionItems(instanceState.mSpeedDialActionItems);
+                addAllActionItems(instanceState.mTermeSpeedDialActionItems);
                 toggle(instanceState.mIsOpen, false);
             }
             state = bundle.getParcelable(STATE_KEY_SUPER);
@@ -666,26 +681,26 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
 
     private int getLayoutPosition(int position) {
         if (getExpansionMode() == TOP || getExpansionMode() == LEFT) {
-            return mFabWithLabelViews.size() - position;
+            return mTermeFabWithLabelViews.size() - position;
         } else {
             return position + 1;
         }
     }
 
     @Nullable
-    private SpeedDialActionItem removeActionItem(@Nullable FabWithLabelView view,
-                                                 @Nullable Iterator<FabWithLabelView> it,
-                                                 boolean animate) {
+    private TermeSpeedDialActionItem removeActionItem(@Nullable TermeFabWithLabelView view,
+                                                      @Nullable Iterator<TermeFabWithLabelView> it,
+                                                      boolean animate) {
         if (view != null) {
-            SpeedDialActionItem speedDialActionItem = view.getSpeedDialActionItem();
+            TermeSpeedDialActionItem termeSpeedDialActionItem = view.getSpeedDialActionItem();
             if (it != null) {
                 it.remove();
             } else {
-                mFabWithLabelViews.remove(view);
+                mTermeFabWithLabelViews.remove(view);
             }
 
             if (isOpen()) {
-                if (mFabWithLabelViews.isEmpty()) {
+                if (mTermeFabWithLabelViews.isEmpty()) {
                     close();
                 }
                 if (animate) {
@@ -696,14 +711,14 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
             } else {
                 removeView(view);
             }
-            return speedDialActionItem;
+            return termeSpeedDialActionItem;
         } else {
             return null;
         }
     }
 
     @Nullable
-    private SpeedDialActionItem removeActionItem(@Nullable FabWithLabelView view) {
+    private TermeSpeedDialActionItem removeActionItem(@Nullable TermeFabWithLabelView view) {
         return removeActionItem(view, null, true);
     }
 
@@ -716,35 +731,44 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
         }
         TypedArray styledAttrs = context.obtainStyledAttributes(attrs, R.styleable.TermeSpeedDialView, 0, 0);
         try {
+
+            boolean isSquare = styledAttrs.getBoolean(R.styleable.TermeSpeedDialView_fabIsSquare, false);
+
+            int shapeAppearanceResId = isSquare ?
+                    R.style.RoundedShapeAppearance : R.style.CircularShapeAppearance;
+            mShapeAppearanceModel = ShapeAppearanceModel.builder(getContext(), shapeAppearanceResId, shapeAppearanceResId).build();
+
+            mMainFab.setShapeAppearanceModel(mShapeAppearanceModel);
+
             setEnabled(styledAttrs.getBoolean(R.styleable.TermeSpeedDialView_android_enabled, isEnabled()));
-            setUseReverseAnimationOnClose(styledAttrs.getBoolean(R.styleable.TermeSpeedDialView_sdUseReverseAnimationOnClose,
+            setUseReverseAnimationOnClose(styledAttrs.getBoolean(R.styleable.TermeSpeedDialView_useReverseAnimationOnClose,
                     getUseReverseAnimationOnClose()));
 
-            setMainFabAnimationRotateAngle(styledAttrs.getFloat(R.styleable.TermeSpeedDialView_sdMainFabAnimationRotateAngle,
+            setMainFabAnimationRotateAngle(styledAttrs.getFloat(R.styleable.TermeSpeedDialView_mainFabAnimationRotateAngle,
                     getMainFabAnimationRotateAngle()));
-            @DrawableRes int openDrawableRes = styledAttrs.getResourceId(R.styleable.TermeSpeedDialView_sdMainFabClosedSrc,
+            @DrawableRes int openDrawableRes = styledAttrs.getResourceId(R.styleable.TermeSpeedDialView_mainFabClosedSrc,
                     RESOURCE_NOT_SET);
             if (openDrawableRes != RESOURCE_NOT_SET) {
                 setMainFabClosedDrawable(AppCompatResources.getDrawable(getContext(), openDrawableRes));
             }
-            int closeDrawableRes = styledAttrs.getResourceId(R.styleable.TermeSpeedDialView_sdMainFabOpenedSrc,
+            int closeDrawableRes = styledAttrs.getResourceId(R.styleable.TermeSpeedDialView_mainFabOpenedSrc,
                     RESOURCE_NOT_SET);
             if (closeDrawableRes != RESOURCE_NOT_SET) {
                 setMainFabOpenedDrawable(AppCompatResources.getDrawable(context, closeDrawableRes));
             }
-            setExpansionMode(styledAttrs.getInt(R.styleable.TermeSpeedDialView_sdExpansionMode, getExpansionMode()), true);
+            setExpansionMode(styledAttrs.getInt(R.styleable.TermeSpeedDialView_expansionMode, getExpansionMode()), true);
 
-            setMainFabClosedBackgroundColor(styledAttrs.getColor(R.styleable.TermeSpeedDialView_sdMainFabClosedBackgroundColor,
+            setMainFabClosedBackgroundColor(styledAttrs.getColor(R.styleable.TermeSpeedDialView_mainFabClosedBackgroundColor,
                     getMainFabClosedBackgroundColor()));
-            setMainFabOpenedBackgroundColor(styledAttrs.getColor(R.styleable.TermeSpeedDialView_sdMainFabOpenedBackgroundColor,
+            setMainFabOpenedBackgroundColor(styledAttrs.getColor(R.styleable.TermeSpeedDialView_mainFabOpenedBackgroundColor,
                     getMainFabOpenedBackgroundColor()));
-            setMainFabClosedIconColor(styledAttrs.getColor(R.styleable.TermeSpeedDialView_sdMainFabClosedIconColor,
+            setMainFabClosedIconColor(styledAttrs.getColor(R.styleable.TermeSpeedDialView_mainFabClosedIconColor,
                     getMainFabClosedIconColor()));
-            setMainFabOpenedIconColor(styledAttrs.getColor(R.styleable.TermeSpeedDialView_sdMainFabOpenedIconColor,
+            setMainFabOpenedIconColor(styledAttrs.getColor(R.styleable.TermeSpeedDialView_mainFabOpenedIconColor,
                     getMainFabOpenedIconColor()));
-            mOverlayLayoutId = styledAttrs.getResourceId(R.styleable.TermeSpeedDialView_sdOverlayLayout, RESOURCE_NOT_SET);
+            mOverlayLayoutId = styledAttrs.getResourceId(R.styleable.TermeSpeedDialView_overlayLayout, RESOURCE_NOT_SET);
         } catch (Exception e) {
-            Timber.e(e, "Failure setting FabWithLabelView icon");
+            Timber.e(e, "Failure setting TermeFabWithLabelView icon");
         } finally {
             styledAttrs.recycle();
         }
@@ -765,23 +789,20 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
         floatingActionButton.setFocusable(true);
         floatingActionButton.setSize(FloatingActionButton.SIZE_NORMAL);
         floatingActionButton.setContentDescription(getContentDescription());
-        floatingActionButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(final View view) {
-                if (isOpen()) {
-                    if (mOnChangeListener == null || !mOnChangeListener.onMainActionSelected()) {
-                        close();
-                    }
-                } else {
-                    open();
+        floatingActionButton.setOnClickListener(view -> {
+            if (isOpen()) {
+                if (mOnChangeListener == null || !mOnChangeListener.onMainActionSelected()) {
+                    close();
                 }
+            } else {
+                open();
             }
         });
         return floatingActionButton;
     }
 
     private void toggle(boolean show, boolean animate) {
-        if (show && mFabWithLabelViews.isEmpty()) {
+        if (show && mTermeFabWithLabelViews.isEmpty()) {
             show = false;
             if (mOnChangeListener != null) {
                 mOnChangeListener.onMainActionSelected();
@@ -897,10 +918,10 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
     }
 
     @Nullable
-    private FabWithLabelView findFabWithLabelViewById(@IdRes int id) {
-        for (FabWithLabelView fabWithLabelView : mFabWithLabelViews) {
-            if (fabWithLabelView.getId() == id) {
-                return fabWithLabelView;
+    private TermeFabWithLabelView findFabWithLabelViewById(@IdRes int id) {
+        for (TermeFabWithLabelView termeFabWithLabelView : mTermeFabWithLabelViews) {
+            if (termeFabWithLabelView.getId() == id) {
+                return termeFabWithLabelView;
             }
         }
         return null;
@@ -910,20 +931,20 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
      * Set menus visibility (visible or invisible).
      */
     private void visibilitySetup(boolean visible, boolean animate, boolean reverseAnimation) {
-        int size = mFabWithLabelViews.size();
+        int size = mTermeFabWithLabelViews.size();
         if (visible) {
             for (int i = 0; i < size; i++) {
-                FabWithLabelView fabWithLabelView = mFabWithLabelViews.get(i);
-                fabWithLabelView.setAlpha(1);
-                fabWithLabelView.setVisibility(VISIBLE);
+                TermeFabWithLabelView termeFabWithLabelView = mTermeFabWithLabelViews.get(i);
+                termeFabWithLabelView.setAlpha(1);
+                termeFabWithLabelView.setVisibility(VISIBLE);
                 if (animate) {
-                    showWithAnimationFabWithLabelView(fabWithLabelView, i * ACTION_ANIM_DELAY);
+                    showWithAnimationFabWithLabelView(termeFabWithLabelView, i * ACTION_ANIM_DELAY);
                 }
                 if (i == 0) {
-                    fabWithLabelView.getFab().requestFocus();
+                    termeFabWithLabelView.getFab().requestFocus();
                 }
                 if (i == size - 1) {
-                    fabWithLabelView.getFab().setNextFocusUpId(fabWithLabelView.getFab().getId());
+                    termeFabWithLabelView.getFab().setNextFocusUpId(termeFabWithLabelView.getFab().getId());
                     getMainFab().setNextFocusDownId(getMainFab().getId());
                     getMainFab().setNextFocusForwardId(getMainFab().getId());
                 }
@@ -931,26 +952,26 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
         } else {
             for (int i = 0; i < size; i++) {
                 int index = reverseAnimation ? size - 1 - i : i;
-                FabWithLabelView fabWithLabelView = mFabWithLabelViews.get(index);
+                TermeFabWithLabelView termeFabWithLabelView = mTermeFabWithLabelViews.get(index);
                 if (animate) {
                     if (reverseAnimation) {
-                        hideWithAnimationFabWithLabelView(fabWithLabelView, i * ACTION_ANIM_DELAY);
+                        hideWithAnimationFabWithLabelView(termeFabWithLabelView, i * ACTION_ANIM_DELAY);
                     } else {
-                        UiUtils.shrinkAnim(fabWithLabelView, false);
+                        UiUtils.shrinkAnim(termeFabWithLabelView, false);
                     }
                 } else {
-                    fabWithLabelView.setAlpha(0);
-                    fabWithLabelView.setVisibility(GONE);
+                    termeFabWithLabelView.setAlpha(0);
+                    termeFabWithLabelView.setVisibility(GONE);
                 }
             }
         }
     }
 
-    private void showWithAnimationFabWithLabelView(FabWithLabelView fabWithLabelView, int delay) {
-        ViewCompat.animate(fabWithLabelView).cancel();
-        UiUtils.enlargeAnim(fabWithLabelView.getFab(), delay);
-        if (fabWithLabelView.isLabelEnabled()) {
-            CardView labelBackground = fabWithLabelView.getLabelBackground();
+    private void showWithAnimationFabWithLabelView(TermeFabWithLabelView termeFabWithLabelView, int delay) {
+        ViewCompat.animate(termeFabWithLabelView).cancel();
+        UiUtils.enlargeAnim(termeFabWithLabelView.getFab(), delay);
+        if (termeFabWithLabelView.isLabelEnabled()) {
+            CardView labelBackground = termeFabWithLabelView.getLabelBackground();
             ViewCompat.animate(labelBackground).cancel();
             Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.sd_fade_and_translate_in);
             animation.setStartOffset(delay);
@@ -958,11 +979,11 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
         }
     }
 
-    private void hideWithAnimationFabWithLabelView(final FabWithLabelView fabWithLabelView, int delay) {
-        ViewCompat.animate(fabWithLabelView).cancel();
-        UiUtils.shrinkAnim(fabWithLabelView.getFab(), delay);
-        if (fabWithLabelView.isLabelEnabled()) {
-            final CardView labelBackground = fabWithLabelView.getLabelBackground();
+    private void hideWithAnimationFabWithLabelView(final TermeFabWithLabelView termeFabWithLabelView, int delay) {
+        ViewCompat.animate(termeFabWithLabelView).cancel();
+        UiUtils.shrinkAnim(termeFabWithLabelView.getFab(), delay);
+        if (termeFabWithLabelView.isLabelEnabled()) {
+            final CardView labelBackground = termeFabWithLabelView.getLabelBackground();
             ViewCompat.animate(labelBackground).cancel();
             Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.sd_fade_and_translate_out);
             animation.setAnimationListener(new Animation.AnimationListener() {
@@ -1010,10 +1031,10 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
         /**
          * Called when a speed dial action has been clicked.
          *
-         * @param actionItem the {@link SpeedDialActionItem} that was selected.
+         * @param actionItem the {@link TermeSpeedDialActionItem} that was selected.
          * @return true to keep the Speed Dial open, false otherwise.
          */
-        boolean onActionSelected(SpeedDialActionItem actionItem);
+        boolean onActionSelected(TermeSpeedDialActionItem actionItem);
     }
 
     @Retention(SOURCE)
@@ -1039,7 +1060,7 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
         private int mExpansionMode = TOP;
         private float mMainFabAnimationRotateAngle = DEFAULT_ROTATE_ANGLE;
         private boolean mUseReverseAnimationOnClose = false;
-        private ArrayList<SpeedDialActionItem> mSpeedDialActionItems = new ArrayList<>();
+        private ArrayList<TermeSpeedDialActionItem> mTermeSpeedDialActionItems = new ArrayList<>();
 
         @Override
         public int describeContents() {
@@ -1056,7 +1077,7 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
             dest.writeInt(this.mExpansionMode);
             dest.writeFloat(this.mMainFabAnimationRotateAngle);
             dest.writeByte(this.mUseReverseAnimationOnClose ? (byte) 1 : (byte) 0);
-            dest.writeTypedList(this.mSpeedDialActionItems);
+            dest.writeTypedList(this.mTermeSpeedDialActionItems);
         }
 
         public InstanceState() {
@@ -1071,7 +1092,7 @@ public class TermeSpeedDialView extends LinearLayout implements CoordinatorLayou
             this.mExpansionMode = in.readInt();
             this.mMainFabAnimationRotateAngle = in.readFloat();
             this.mUseReverseAnimationOnClose = in.readByte() != 0;
-            this.mSpeedDialActionItems = in.createTypedArrayList(SpeedDialActionItem.CREATOR);
+            this.mTermeSpeedDialActionItems = in.createTypedArrayList(TermeSpeedDialActionItem.CREATOR);
         }
 
         public static final Creator<InstanceState> CREATOR = new Creator<InstanceState>() {

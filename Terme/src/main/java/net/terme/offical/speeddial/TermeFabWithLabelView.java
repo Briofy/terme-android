@@ -1,5 +1,10 @@
 package net.terme.offical.speeddial;
 
+import static com.google.android.material.floatingactionbutton.FloatingActionButton.SIZE_AUTO;
+import static com.google.android.material.floatingactionbutton.FloatingActionButton.SIZE_MINI;
+import static com.google.android.material.floatingactionbutton.FloatingActionButton.SIZE_NORMAL;
+import static net.terme.offical.speeddial.TermeSpeedDialActionItem.RESOURCE_NOT_SET;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -22,28 +27,25 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.core.widget.ImageViewCompat;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import static com.google.android.material.floatingactionbutton.FloatingActionButton.SIZE_AUTO;
-import static com.google.android.material.floatingactionbutton.FloatingActionButton.SIZE_MINI;
-import static com.google.android.material.floatingactionbutton.FloatingActionButton.SIZE_NORMAL;
-import static net.terme.offical.speeddial.SpeedDialActionItem.RESOURCE_NOT_SET;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.shape.ShapeAppearanceModel;
 
 import net.terme.offical.R;
+
+import timber.log.Timber;
 
 /**
  * View that contains fab button and its label.
  */
 @SuppressWarnings({"unused", "WeakerAccess"})
-public class FabWithLabelView extends LinearLayout {
-    private static final String TAG = FabWithLabelView.class.getSimpleName();
-
+public class TermeFabWithLabelView extends LinearLayout {
     private TextView mLabelTextView;
     private FloatingActionButton mFab;
     private CardView mLabelCardView;
     private boolean mIsLabelEnabled;
     @Nullable
-    private SpeedDialActionItem mSpeedDialActionItem;
+    private TermeSpeedDialActionItem mTermeSpeedDialActionItem;
     @Nullable
     private TermeSpeedDialView.OnActionSelectedListener mOnActionSelectedListener;
     @FloatingActionButton.Size
@@ -52,17 +54,17 @@ public class FabWithLabelView extends LinearLayout {
     @Nullable
     private Drawable mLabelCardViewBackground;
 
-    public FabWithLabelView(Context context) {
+    public TermeFabWithLabelView(Context context) {
         super(context);
         init(context, null);
     }
 
-    public FabWithLabelView(Context context, @Nullable AttributeSet attrs) {
+    public TermeFabWithLabelView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public FabWithLabelView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public TermeFabWithLabelView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
@@ -117,24 +119,24 @@ public class FabWithLabelView extends LinearLayout {
         return mFab;
     }
 
-    public SpeedDialActionItem getSpeedDialActionItem() {
-        if (mSpeedDialActionItem == null) {
-            throw new IllegalStateException("SpeedDialActionItem not set yet!");
+    public TermeSpeedDialActionItem getSpeedDialActionItem() {
+        if (mTermeSpeedDialActionItem == null) {
+            throw new IllegalStateException("TermeSpeedDialActionItem not set yet!");
         }
-        return mSpeedDialActionItem;
+        return mTermeSpeedDialActionItem;
     }
 
     /**
-     * Returns an instance of the {@link SpeedDialActionItem.Builder} initialized with the current instance of the
-     * {@link SpeedDialActionItem} to make it easier to modify the current Action Item settings.
+     * Returns an instance of the {@link TermeSpeedDialActionItem.Builder} initialized with the current instance of the
+     * {@link TermeSpeedDialActionItem} to make it easier to modify the current Action Item settings.
      */
-    public SpeedDialActionItem.Builder getSpeedDialActionItemBuilder() {
-        return new SpeedDialActionItem.Builder(getSpeedDialActionItem());
+    public TermeSpeedDialActionItem.Builder getSpeedDialActionItemBuilder() {
+        return new TermeSpeedDialActionItem.Builder(getSpeedDialActionItem());
     }
 
-    public void setSpeedDialActionItem(SpeedDialActionItem actionItem) {
-        mSpeedDialActionItem = actionItem;
-        if (actionItem.getFabType().equals(SpeedDialActionItem.TYPE_FILL)) {
+    public void setSpeedDialActionItem(TermeSpeedDialActionItem actionItem) {
+        mTermeSpeedDialActionItem = actionItem;
+        if (actionItem.getFabType().equals(TermeSpeedDialActionItem.TYPE_FILL)) {
             this.removeView(mFab);
             View view = inflate(getContext(), R.layout.sd_fill_fab, this);
             FloatingActionButton newFab = view.findViewById(R.id.sd_fab_fill);
@@ -143,8 +145,8 @@ public class FabWithLabelView extends LinearLayout {
         setId(actionItem.getId());
         setLabel(actionItem.getLabel(getContext()));
         setFabContentDescription(actionItem.getContentDescription(getContext()));
-        SpeedDialActionItem speedDialActionItem = getSpeedDialActionItem();
-        setLabelClickable(speedDialActionItem != null && speedDialActionItem.isLabelClickable());
+        TermeSpeedDialActionItem termeSpeedDialActionItem = getSpeedDialActionItem();
+        setLabelClickable(termeSpeedDialActionItem != null && termeSpeedDialActionItem.isLabelClickable());
         setFabIcon(actionItem.getFabImageDrawable(getContext()));
         int imageTintColor = actionItem.getFabImageTintColor();
         if (imageTintColor == RESOURCE_NOT_SET) {
@@ -167,16 +169,19 @@ public class FabWithLabelView extends LinearLayout {
         setLabelColor(labelColor);
         int labelBackgroundColor = actionItem.getLabelBackgroundColor();
         if (labelBackgroundColor == RESOURCE_NOT_SET) {
-            labelBackgroundColor = ResourcesCompat.getColor(getResources(), R.color.sd_label_background_color,
-                    getContext().getTheme());
+            labelBackgroundColor = ResourcesCompat.getColor(getResources(), R.color.sd_label_background_color, getContext().getTheme());
         }
         setLabelBackgroundColor(labelBackgroundColor);
-        if (actionItem.getFabSize() == SIZE_AUTO || actionItem.getFabType().equals(SpeedDialActionItem.TYPE_FILL)) {
+        if (actionItem.getFabSize() == SIZE_AUTO || actionItem.getFabType().equals(TermeSpeedDialActionItem.TYPE_FILL)) {
             getFab().setSize(SIZE_MINI);
         } else {
             getFab().setSize(actionItem.getFabSize());
         }
         setFabSize(actionItem.getFabSize());
+
+        if (!actionItem.isLabelClickable()) {
+            mLabelCardView.setVisibility(GONE);
+        }
     }
 
     /**
@@ -190,10 +195,10 @@ public class FabWithLabelView extends LinearLayout {
             setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    SpeedDialActionItem speedDialActionItem = getSpeedDialActionItem();
+                    TermeSpeedDialActionItem termeSpeedDialActionItem = getSpeedDialActionItem();
                     if (mOnActionSelectedListener != null
-                            && speedDialActionItem != null) {
-                        if (speedDialActionItem.isLabelClickable()) {
+                            && termeSpeedDialActionItem != null) {
+                        if (termeSpeedDialActionItem.isLabelClickable()) {
                             UiUtils.performTap(getLabelBackground());
                         } else {
                             UiUtils.performTap(getFab());
@@ -204,10 +209,10 @@ public class FabWithLabelView extends LinearLayout {
             getFab().setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    SpeedDialActionItem speedDialActionItem = getSpeedDialActionItem();
+                    TermeSpeedDialActionItem termeSpeedDialActionItem = getSpeedDialActionItem();
                     if (mOnActionSelectedListener != null
-                            && speedDialActionItem != null) {
-                        mOnActionSelectedListener.onActionSelected(speedDialActionItem);
+                            && termeSpeedDialActionItem != null) {
+                        mOnActionSelectedListener.onActionSelected(termeSpeedDialActionItem);
                     }
                 }
             });
@@ -215,11 +220,11 @@ public class FabWithLabelView extends LinearLayout {
             getLabelBackground().setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    SpeedDialActionItem speedDialActionItem = getSpeedDialActionItem();
+                    TermeSpeedDialActionItem termeSpeedDialActionItem = getSpeedDialActionItem();
                     if (mOnActionSelectedListener != null
-                            && speedDialActionItem != null
-                            && speedDialActionItem.isLabelClickable()) {
-                        mOnActionSelectedListener.onActionSelected(speedDialActionItem);
+                            && termeSpeedDialActionItem != null
+                            && termeSpeedDialActionItem.isLabelClickable()) {
+                        mOnActionSelectedListener.onActionSelected(termeSpeedDialActionItem);
                     }
                 }
             });
@@ -245,37 +250,37 @@ public class FabWithLabelView extends LinearLayout {
         mLabelTextView = rootView.findViewById(R.id.sd_label);
         mLabelCardView = rootView.findViewById(R.id.sd_label_container);
 
-        setFabSize(SIZE_MINI);
+//        setFabSize(SIZE_MINI);
         setOrientation(LinearLayout.HORIZONTAL);
         setClipChildren(false);
         setClipToPadding(false);
 
         TypedArray attr = context.obtainStyledAttributes(attrs,
-                R.styleable.FabWithLabelView, 0, 0);
+                R.styleable.TermeFabWithLabelView, 0, 0);
 
         try {
-            @DrawableRes int src = attr.getResourceId(R.styleable.FabWithLabelView_srcCompat, RESOURCE_NOT_SET);
+            @DrawableRes int src = attr.getResourceId(R.styleable.TermeFabWithLabelView_srcCompat, RESOURCE_NOT_SET);
             if (src == RESOURCE_NOT_SET) {
-                src = attr.getResourceId(R.styleable.FabWithLabelView_android_src, RESOURCE_NOT_SET);
+                src = attr.getResourceId(R.styleable.TermeFabWithLabelView_android_src, RESOURCE_NOT_SET);
             }
-            SpeedDialActionItem.Builder builder = new SpeedDialActionItem.Builder(getId(), src);
-            String labelText = attr.getString(R.styleable.FabWithLabelView_fabLabel);
+            TermeSpeedDialActionItem.Builder builder = new TermeSpeedDialActionItem.Builder(getId(), src);
+            String labelText = attr.getString(R.styleable.TermeFabWithLabelView_fabLabel);
             builder.setLabel(labelText);
             @ColorInt int fabBackgroundColor = UiUtils.getPrimaryColor(context);
-            fabBackgroundColor = attr.getColor(R.styleable.FabWithLabelView_fabBackgroundColor, fabBackgroundColor);
+            fabBackgroundColor = attr.getColor(R.styleable.TermeFabWithLabelView_fabBackgroundColor, fabBackgroundColor);
             builder.setFabBackgroundColor(fabBackgroundColor);
             @ColorInt int labelColor = RESOURCE_NOT_SET;
-            labelColor = attr.getColor(R.styleable.FabWithLabelView_fabLabelColor, labelColor);
+            labelColor = attr.getColor(R.styleable.TermeFabWithLabelView_fabLabelColor, labelColor);
             builder.setLabelColor(labelColor);
             @ColorInt int labelBackgroundColor = RESOURCE_NOT_SET;
-            labelBackgroundColor = attr.getColor(R.styleable.FabWithLabelView_fabLabelBackgroundColor,
+            labelBackgroundColor = attr.getColor(R.styleable.TermeFabWithLabelView_fabLabelBackgroundColor,
                     labelBackgroundColor);
             builder.setLabelBackgroundColor(labelBackgroundColor);
-            boolean labelClickable = attr.getBoolean(R.styleable.FabWithLabelView_fabLabelClickable, true);
+            boolean labelClickable = attr.getBoolean(R.styleable.TermeFabWithLabelView_fabLabelClickable, true);
             builder.setLabelClickable(labelClickable);
             setSpeedDialActionItem(builder.create());
         } catch (Exception e) {
-            Log.e(TAG, "Failure setting FabWithLabelView icon", e);
+            Timber.e(e, "Failure setting TermeFabWithLabelView icon");
         } finally {
             attr.recycle();
         }
@@ -317,6 +322,10 @@ public class FabWithLabelView extends LinearLayout {
      */
     private void setFabIcon(@Nullable Drawable mDrawable) {
         mFab.setImageDrawable(mDrawable);
+    }
+
+    public void setShapeAppearanceModel(ShapeAppearanceModel model){
+        mFab.setShapeAppearanceModel(model);
     }
 
     /**
@@ -370,6 +379,10 @@ public class FabWithLabelView extends LinearLayout {
 
     private void setLabelColor(@ColorInt int color) {
         mLabelTextView.setTextColor(color);
+    }
+
+    public void setLabel(String text) {
+        mLabelTextView.setText(text);
     }
 
     private void setLabelBackgroundColor(@ColorInt int color) {

@@ -1,5 +1,7 @@
 package net.terme.offical.speeddial;
 
+import static com.google.android.material.floatingactionbutton.FloatingActionButton.SIZE_AUTO;
+
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Parcel;
@@ -14,20 +16,20 @@ import androidx.annotation.StringDef;
 import androidx.annotation.StringRes;
 import androidx.annotation.StyleRes;
 import androidx.appcompat.content.res.AppCompatResources;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import static com.google.android.material.floatingactionbutton.FloatingActionButton.SIZE_AUTO;
-
 @SuppressWarnings({"unused", "WeakerAccess"})
-public class SpeedDialActionItem implements Parcelable {
+public class TermeSpeedDialActionItem implements Parcelable {
     public static final int RESOURCE_NOT_SET = Integer.MIN_VALUE;
 
     @StringDef({TYPE_NORMAL, TYPE_FILL})
     @Retention(RetentionPolicy.RUNTIME)
-    public @interface FabType { };
+    public @interface FabType {
+    }
     public static final String TYPE_NORMAL = "normal";
     public static final String TYPE_FILL = "fill";
 
@@ -55,13 +57,23 @@ public class SpeedDialActionItem implements Parcelable {
     private final int mLabelColor;
     @ColorInt
     private final int mLabelBackgroundColor;
-    private final boolean mLabelClickable;
+    private boolean mLabelClickable ;
     @FloatingActionButton.Size
     private final int mFabSize;
     @StyleRes
     private final int mTheme;
 
-    private SpeedDialActionItem(Builder builder) {
+    private boolean enableToolTip = true;
+
+    public void isEnableToolTip(boolean enableToolTip) {
+        this.enableToolTip = enableToolTip;
+    }
+
+    public boolean isEnableToolTip() {
+        return enableToolTip;
+    }
+
+    private TermeSpeedDialActionItem(Builder builder) {
         mId = builder.mId;
         mLabel = builder.mLabel;
         mLabelRes = builder.mLabelRes;
@@ -78,6 +90,11 @@ public class SpeedDialActionItem implements Parcelable {
         mLabelClickable = builder.mLabelClickable;
         mFabSize = builder.mFabSize;
         mTheme = builder.mTheme;
+
+
+        if (mLabel != null || mLabelRes != RESOURCE_NOT_SET) {
+            mLabelClickable = true;
+        }
     }
 
     public int getId() {
@@ -109,7 +126,7 @@ public class SpeedDialActionItem implements Parcelable {
     /**
      * Gets the current Drawable, or null if no Drawable has been assigned.
      *
-     * @param context A context to retrieve the Drawable from (needed for SpeedDialActionItem.Builder(int, int).
+     * @param context A context to retrieve the Drawable from (needed for TermeSpeedDialActionItem.Builder(int, int).
      * @return the speed dial item drawable, or null if no drawable has been assigned.
      */
     @Nullable
@@ -160,16 +177,16 @@ public class SpeedDialActionItem implements Parcelable {
         return mTheme;
     }
 
-    public FabWithLabelView createFabWithLabelView(Context context) {
-        FabWithLabelView fabWithLabelView;
+    public TermeFabWithLabelView createFabWithLabelView(Context context) {
+        TermeFabWithLabelView termeFabWithLabelView;
         int theme = getTheme();
         if (theme == RESOURCE_NOT_SET) {
-            fabWithLabelView = new FabWithLabelView(context);
+            termeFabWithLabelView = new TermeFabWithLabelView(context);
         } else {
-            fabWithLabelView = new FabWithLabelView(new ContextThemeWrapper(context, theme), null, theme);
+            termeFabWithLabelView = new TermeFabWithLabelView(new ContextThemeWrapper(context, theme), null, theme);
         }
-        fabWithLabelView.setSpeedDialActionItem(this);
-        return fabWithLabelView;
+        termeFabWithLabelView.setSpeedDialActionItem(this);
+        return termeFabWithLabelView;
     }
 
     @FloatingActionButton.Size
@@ -203,9 +220,11 @@ public class SpeedDialActionItem implements Parcelable {
         private int mLabelColor = RESOURCE_NOT_SET;
         @ColorInt
         private int mLabelBackgroundColor = RESOURCE_NOT_SET;
-        private boolean mLabelClickable = true;
+        private boolean mLabelClickable = false;
         @FloatingActionButton.Size
         private int mFabSize = SIZE_AUTO;
+
+
         @StyleRes
         private int mTheme = RESOURCE_NOT_SET;
 
@@ -238,28 +257,28 @@ public class SpeedDialActionItem implements Parcelable {
         }
 
         /**
-         * Creates a builder for a speed dial action item that uses a {@link SpeedDialActionItem} instance to
+         * Creates a builder for a speed dial action item that uses a {@link TermeSpeedDialActionItem} instance to
          * initialize the default values.
          *
-         * @param speedDialActionItem it will be used for the default values of the builder.
+         * @param termeSpeedDialActionItem it will be used for the default values of the builder.
          */
-        public Builder(SpeedDialActionItem speedDialActionItem) {
-            mId = speedDialActionItem.mId;
-            mLabel = speedDialActionItem.mLabel;
-            mLabelRes = speedDialActionItem.mLabelRes;
-            mContentDescription = speedDialActionItem.mContentDescription;
-            mContentDescriptionRes = speedDialActionItem.mContentDescriptionRes;
-            mFabImageResource = speedDialActionItem.mFabImageResource;
-            mFabImageDrawable = speedDialActionItem.mFabImageDrawable;
-            mFabImageTintColor = speedDialActionItem.mFabImageTintColor;
-            mFabImageTint = speedDialActionItem.mFabImageTint;
-            mFabType = speedDialActionItem.mFabType;
-            mFabBackgroundColor = speedDialActionItem.mFabBackgroundColor;
-            mLabelColor = speedDialActionItem.mLabelColor;
-            mLabelBackgroundColor = speedDialActionItem.mLabelBackgroundColor;
-            mLabelClickable = speedDialActionItem.mLabelClickable;
-            mFabSize = speedDialActionItem.mFabSize;
-            mTheme = speedDialActionItem.mTheme;
+        public Builder(TermeSpeedDialActionItem termeSpeedDialActionItem) {
+            mId = termeSpeedDialActionItem.mId;
+            mLabel = termeSpeedDialActionItem.mLabel;
+            mLabelRes = termeSpeedDialActionItem.mLabelRes;
+            mContentDescription = termeSpeedDialActionItem.mContentDescription;
+            mContentDescriptionRes = termeSpeedDialActionItem.mContentDescriptionRes;
+            mFabImageResource = termeSpeedDialActionItem.mFabImageResource;
+            mFabImageDrawable = termeSpeedDialActionItem.mFabImageDrawable;
+            mFabImageTintColor = termeSpeedDialActionItem.mFabImageTintColor;
+            mFabImageTint = termeSpeedDialActionItem.mFabImageTint;
+            mFabType = termeSpeedDialActionItem.mFabType;
+            mFabBackgroundColor = termeSpeedDialActionItem.mFabBackgroundColor;
+            mLabelColor = termeSpeedDialActionItem.mLabelColor;
+            mLabelBackgroundColor = termeSpeedDialActionItem.mLabelBackgroundColor;
+            mLabelClickable = termeSpeedDialActionItem.mLabelClickable;
+            mFabSize = termeSpeedDialActionItem.mFabSize;
+            mTheme = termeSpeedDialActionItem.mTheme;
         }
 
         public Builder setLabel(@Nullable String label) {
@@ -299,9 +318,9 @@ public class SpeedDialActionItem implements Parcelable {
         }
 
         /**
-         * set SpeedDialActionItem size.
-         * SpeedDialActionItem.TYPE_NORMAL Use normal Fab.
-         * SpeedDialActionItem.TYPE_FILL Set Floating Action Button image to fill the button.
+         * set TermeSpeedDialActionItem size.
+         * TermeSpeedDialActionItem.TYPE_NORMAL Use normal Fab.
+         * TermeSpeedDialActionItem.TYPE_FILL Set Floating Action Button image to fill the button.
          */
         public Builder setFabType(@FabType String fabType) {
             mFabType = fabType;
@@ -333,8 +352,8 @@ public class SpeedDialActionItem implements Parcelable {
             return this;
         }
 
-        public SpeedDialActionItem create() {
-            return new SpeedDialActionItem(this);
+        public TermeSpeedDialActionItem create() {
+            return new TermeSpeedDialActionItem(this);
         }
 
         public Builder setFabSize(@FloatingActionButton.Size int fabSize) {
@@ -368,7 +387,7 @@ public class SpeedDialActionItem implements Parcelable {
         dest.writeInt(this.mTheme);
     }
 
-    protected SpeedDialActionItem(Parcel in) {
+    protected TermeSpeedDialActionItem(Parcel in) {
         this.mId = in.readInt();
         this.mLabel = in.readString();
         this.mLabelRes = in.readInt();
@@ -387,15 +406,15 @@ public class SpeedDialActionItem implements Parcelable {
         this.mTheme = in.readInt();
     }
 
-    public static final Creator<SpeedDialActionItem> CREATOR = new Creator<SpeedDialActionItem>() {
+    public static final Creator<TermeSpeedDialActionItem> CREATOR = new Creator<TermeSpeedDialActionItem>() {
         @Override
-        public SpeedDialActionItem createFromParcel(Parcel source) {
-            return new SpeedDialActionItem(source);
+        public TermeSpeedDialActionItem createFromParcel(Parcel source) {
+            return new TermeSpeedDialActionItem(source);
         }
 
         @Override
-        public SpeedDialActionItem[] newArray(int size) {
-            return new SpeedDialActionItem[size];
+        public TermeSpeedDialActionItem[] newArray(int size) {
+            return new TermeSpeedDialActionItem[size];
         }
     };
 }

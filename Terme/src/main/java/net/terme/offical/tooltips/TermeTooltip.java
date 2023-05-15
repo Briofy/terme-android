@@ -13,6 +13,12 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
+import android.text.Html;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.view.Window;
+import android.widget.TextView;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.StringRes;
@@ -20,13 +26,6 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-
-import android.text.Html;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
-import android.view.Window;
-import android.widget.TextView;
 
 import net.terme.offical.R;
 
@@ -208,12 +207,16 @@ public class TermeTooltip {
     }
 
     public TermeTooltip titleColor(int color) {
-        this.tooltip_view.setTitleColor(color);
+        if (color != -1) {
+            this.tooltip_view.setTitleColor(color);
+        }
         return this;
     }
 
     public TermeTooltip color(int color) {
-        this.tooltip_view.setColor(color);
+        if (color != -1) {
+            this.tooltip_view.setColor(color);
+        }
         return this;
     }
 
@@ -430,16 +433,18 @@ public class TermeTooltip {
             titleView.setPadding(0, 0, 0, 0);
             childView.setPadding(0, 0, 0, 0);
 
+            titleView.setVisibility(GONE);
+            childView.setVisibility(GONE);
             bubblePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
             bubblePaint.setColor(color);
             bubblePaint.setStyle(Paint.Style.FILL);
 
             borderPaint = null;
 
-            setShadowColor(context.getResources().getColor(R.color.terme_card_shadow ,null));
-            setColor(context.getResources()      .getColor(R.color.terme_card_background, null));
-            setTitleColor(context.getResources() .getColor(R.color.terme_card_title, null));
-            setTextColor(context.getResources()  .getColor(R.color.terme_card_content, null));
+            setShadowColor(context.getResources().getColor(R.color.terme_card_shadow, null));
+            setColor(context.getResources().getColor(R.color.terme_card_background, null));
+            setTitleColor(context.getResources().getColor(R.color.terme_card_title, null));
+            setTextColor(context.getResources().getColor(R.color.terme_card_content, null));
 
             setLayerType(LAYER_TYPE_SOFTWARE, bubblePaint);
 
@@ -505,18 +510,22 @@ public class TermeTooltip {
         }
 
         public void setTitle(String text) {
+
             titleView.setText(Html.fromHtml(text));
+            titleView.setVisibility(VISIBLE);
             postInvalidate();
         }
 
         public void setTitle(int text) {
             titleView.setText(text);
+            titleView.setVisibility(VISIBLE);
             postInvalidate();
         }
 
         public void setText(String text) {
             if (childView instanceof TextView) {
                 ((TextView) this.childView).setText(Html.fromHtml(text));
+                this.childView.setVisibility(VISIBLE);
             }
             postInvalidate();
         }
@@ -524,6 +533,7 @@ public class TermeTooltip {
         public void setText(int text) {
             if (childView instanceof TextView) {
                 ((TextView) this.childView).setText(text);
+                this.childView.setVisibility(VISIBLE);
             }
             postInvalidate();
         }

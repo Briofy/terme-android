@@ -105,8 +105,8 @@
     <color name="mako">#3d4043</color>
 
 
-    <color name="sd_label_text_color">#757575</color>
-    <color name="sd_label_background_color">@color/cardview_light_background</color>
+    <color name="sd_label_text_color">@color/terme_card_title</color>
+    <color name="sd_label_background_color">@color/terme_card_background</color>
     <color name="sd_overlay_color">#aaffffff</color>
 
 </resources>

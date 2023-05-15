@@ -17,15 +17,15 @@ class TagActivity : AppCompatActivity() {
         val tag2 = findViewById<TermeNavBar>(R.id.navbar1)
         val navbar2 = findViewById<TermeNavBar>(R.id.navbar2)
 
-        tag2.onMenuAction {
-           Log.e("TEST" , "TermeNavBar is clicked : onMenuAction")
-        }
-        navbar2.onMenuAction {
-           Log.e("TEST" , "TermeNavBar is clicked : onMenuAction")
-        }
-        navbar2.onButtonAction {
-           Log.e("TEST" , "TermeNavBar is clicked : onButtonAction")
-        }
+//        tag2.onMenuAction {
+//           Log.e("TEST" , "TermeNavBar is clicked : onMenuAction")
+//        }
+//        navbar2.onMenuAction {
+//           Log.e("TEST" , "TermeNavBar is clicked : onMenuAction")
+//        }
+//        navbar2.onButtonAction {
+//           Log.e("TEST" , "TermeNavBar is clicked : onButtonAction")
+//        }
 
         TermeTooltip
             .on(this, tag3)

@@ -13,8 +13,7 @@
         android:foreground="?attr/selectableItemBackground"
         app:cardCornerRadius="4dp"
         app:cardElevation="1dp"
-        app:cardUseCompatPadding="true"
-        app:contentPadding="4dp">
+        app:cardUseCompatPadding="true">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/sd_label"
@@ -29,9 +28,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|end"
-        app:fabSize="mini"
+        app:shapeAppearanceOverlay="@style/RoundedShapeAppearance"
+        app:fabSize="normal"
         app:tint="@null"
-        app:useCompatPadding="true"
         android:importantForAccessibility="no" />
 
 </merge>

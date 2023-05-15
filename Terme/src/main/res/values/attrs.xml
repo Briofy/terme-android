@@ -245,7 +245,7 @@
         <attr name="drawableNavigationItemBackground" format="reference" />
     </declare-styleable>
 
-    <declare-styleable name="FabWithLabelView">
+    <declare-styleable name="TermeFabWithLabelView">
         <attr name="android:src" />
         <attr name="srcCompat" />
         <attr name="fabLabel" format="string" />
@@ -253,25 +253,27 @@
         <attr name="fabLabelColor" format="color" />
         <attr name="fabLabelBackgroundColor" format="color" />
         <attr name="fabLabelClickable" format="boolean" />
+        />
     </declare-styleable>
 
     <declare-styleable name="TermeSpeedDialView">
         <attr name="android:enabled" />
-        <attr name="sdExpansionMode" format="enum">
+        <attr name="expansionMode" format="enum">
             <enum name="top" value="0" />
             <enum name="bottom" value="1" />
             <enum name="left" value="2" />
             <enum name="right" value="3" />
         </attr>
-        <attr name="sdMainFabAnimationRotateAngle" format="float" />
-        <attr name="sdMainFabClosedSrc" format="reference" />
-        <attr name="sdMainFabClosedIconColor" format="color" />
-        <attr name="sdMainFabClosedBackgroundColor" format="color" />
-        <attr name="sdMainFabOpenedSrc" format="reference" />
-        <attr name="sdMainFabOpenedIconColor" format="color" />
-        <attr name="sdMainFabOpenedBackgroundColor" format="color" />
-        <attr name="sdOverlayLayout" format="reference" />
-        <attr name="sdUseReverseAnimationOnClose" format="boolean" />
+        <attr name="fabIsSquare" format="boolean"/>
+        <attr name="mainFabAnimationRotateAngle" format="float" />
+        <attr name="mainFabClosedSrc" format="reference" />
+        <attr name="mainFabClosedIconColor" format="color" />
+        <attr name="mainFabClosedBackgroundColor" format="color" />
+        <attr name="mainFabOpenedSrc" format="reference" />
+        <attr name="mainFabOpenedIconColor" format="color" />
+        <attr name="mainFabOpenedBackgroundColor" format="color" />
+        <attr name="overlayLayout" format="reference" />
+        <attr name="useReverseAnimationOnClose" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="SpeedDialOverlayLayout">

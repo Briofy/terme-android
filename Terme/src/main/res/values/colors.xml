@@ -109,4 +109,8 @@
     <color name="sd_label_background_color">@color/terme_card_background</color>
     <color name="sd_overlay_color">#aaffffff</color>
 
+
+    <color name="skeleton_mask">#E0E0E0</color>
+    <color name="skeleton_shimmer">#d5d5d5</color>
+
 </resources>

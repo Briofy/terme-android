@@ -43,13 +43,13 @@ class TermeSkeletonConfig(
 
         fun default(context: Context): TermeSkeletonConfig {
             return TermeSkeletonConfig(
-                maskColor = ContextCompat.getColor(context, TermeTermeTermeSkeletonLayout.DEFAULT_MASK_COLOR),
-                maskCornerRadius = TermeTermeTermeSkeletonLayout.DEFAULT_MASK_CORNER_RADIUS,
-                showShimmer = TermeTermeTermeSkeletonLayout.DEFAULT_SHIMMER_SHOW,
-                shimmerColor = ContextCompat.getColor(context, TermeTermeTermeSkeletonLayout.DEFAULT_SHIMMER_COLOR),
-                shimmerDurationInMillis = TermeTermeTermeSkeletonLayout.DEFAULT_SHIMMER_DURATION_IN_MILLIS,
-                shimmerDirection = TermeTermeTermeSkeletonLayout.DEFAULT_SHIMMER_DIRECTION,
-                shimmerAngle = TermeTermeTermeSkeletonLayout.DEFAULT_SHIMMER_ANGLE
+                maskColor = ContextCompat.getColor(context, TermeSkeletonLayout.DEFAULT_MASK_COLOR),
+                maskCornerRadius = TermeSkeletonLayout.DEFAULT_MASK_CORNER_RADIUS,
+                showShimmer = TermeSkeletonLayout.DEFAULT_SHIMMER_SHOW,
+                shimmerColor = ContextCompat.getColor(context, TermeSkeletonLayout.DEFAULT_SHIMMER_COLOR),
+                shimmerDurationInMillis = TermeSkeletonLayout.DEFAULT_SHIMMER_DURATION_IN_MILLIS,
+                shimmerDirection = TermeSkeletonLayout.DEFAULT_SHIMMER_DIRECTION,
+                shimmerAngle = TermeSkeletonLayout.DEFAULT_SHIMMER_ANGLE
             )
         }
     }

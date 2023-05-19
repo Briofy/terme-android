@@ -7,25 +7,26 @@ import android.view.View
 import android.widget.FrameLayout
 import net.terme.offical.R
 import net.terme.offical.base.views
-import net.terme.offical.skeleton.mask.TermeTermeSkeletonMask
+import net.terme.offical.skeleton.mask.TermeSkeletonMask
 import net.terme.offical.skeleton.mask.TermeSkeletonMaskFactory
 import net.terme.offical.skeleton.mask.TermeSkeletonShimmerDirection
 import timber.log.Timber
 
-open class TermeTermeTermeSkeletonLayout @JvmOverloads constructor(
+open class TermeSkeletonLayout @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,
     originView: View? = null,
     private val config: TermeSkeletonConfig = TermeSkeletonConfig.default(context)
-) : FrameLayout(context, attrs, defStyleAttr), TermeTermeSkeleton, TermeSkeletonStyle by config {
+) : FrameLayout(context, attrs, defStyleAttr),
+    TermeSkeleton, TermeSkeletonStyle by config {
 
     internal constructor(
         originView: View,
         config: TermeSkeletonConfig
     ) : this(originView.context, null, 0, originView, config)
 
-    private var mask: TermeTermeSkeletonMask? = null
+    private var mask: TermeSkeletonMask? = null
     private var isSkeleton: Boolean = false
     private var isRendered: Boolean = false
 

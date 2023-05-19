@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_badge">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="net.terme.test.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:id="@+id/nav_badge"
+        android:name="net.terme.test.ui.badge.TermeBadgeFragment"
+        android:label="@string/menu_badge"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="net.terme.test.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:id="@+id/nav_skeleton"
+        android:name="net.terme.test.ui.skeleton.TSkeletonFragment"
+        android:label="@string/menu_skeleton"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="net.terme.test.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:id="@+id/nav_speed_dial"
+        android:name="net.terme.test.ui.speeddial.TermeSpeedDialFragment"
+        android:label="@string/menu_speed_dial"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

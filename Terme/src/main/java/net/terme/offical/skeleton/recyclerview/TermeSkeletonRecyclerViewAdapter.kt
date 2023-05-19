@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.recyclerview.widget.RecyclerView
 import net.terme.offical.skeleton.TermeSkeletonConfig
-import net.terme.offical.skeleton.TermeTermeTermeSkeletonLayout
+import net.terme.offical.skeleton.TermeSkeletonLayout
 import net.terme.offical.skeleton.createSkeleton
 
 internal class TermeSkeletonRecyclerViewAdapter(
@@ -16,7 +16,7 @@ internal class TermeSkeletonRecyclerViewAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TermeSkeletonRecyclerViewHolder {
         val originView = LayoutInflater.from(parent.context).inflate(layoutResId, parent, false)
-        val skeleton = originView.createSkeleton(config) as TermeTermeTermeSkeletonLayout
+        val skeleton = originView.createSkeleton(config) as TermeSkeletonLayout
         skeleton.layoutParams = originView.layoutParams
         skeleton.showSkeleton()
         return TermeSkeletonRecyclerViewHolder(skeleton)

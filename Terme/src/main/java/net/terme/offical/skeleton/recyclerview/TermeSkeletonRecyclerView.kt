@@ -1,20 +1,19 @@
-package net.terme.offical.skeleton.pager2
+package net.terme.offical.skeleton.recyclerview
 
 import androidx.annotation.LayoutRes
-import androidx.viewpager2.widget.ViewPager2
-import net.terme.offical.skeleton.TermeTermeSkeleton
+import androidx.recyclerview.widget.RecyclerView
+import net.terme.offical.skeleton.TermeSkeleton
 import net.terme.offical.skeleton.TermeSkeletonConfig
 import net.terme.offical.skeleton.TermeSkeletonStyle
-import net.terme.offical.skeleton.recyclerview.TermeSkeletonRecyclerViewAdapter
 
-internal class TermeTermeSkeletonViewPager2(
-    private val viewPager: ViewPager2,
+internal class TermeSkeletonRecyclerView(
+    private val recyclerView: RecyclerView,
     @LayoutRes layoutResId: Int,
     itemCount: Int,
     config: TermeSkeletonConfig
-) : TermeTermeSkeleton, TermeSkeletonStyle by config {
+) : TermeSkeleton, TermeSkeletonStyle by config {
 
-    private val originalAdapter = viewPager.adapter
+    private val originalAdapter = recyclerView.adapter
     private var skeletonAdapter = TermeSkeletonRecyclerViewAdapter(layoutResId, itemCount, config)
 
     init {
@@ -22,14 +21,14 @@ internal class TermeTermeSkeletonViewPager2(
     }
 
     override fun showOriginal() {
-        viewPager.adapter = originalAdapter
+        recyclerView.adapter = originalAdapter
     }
 
     override fun showSkeleton() {
-        viewPager.adapter = skeletonAdapter
+        recyclerView.adapter = skeletonAdapter
     }
 
     override fun isSkeleton(): Boolean {
-        return viewPager.adapter == skeletonAdapter
+        return recyclerView.adapter == skeletonAdapter
     }
 }

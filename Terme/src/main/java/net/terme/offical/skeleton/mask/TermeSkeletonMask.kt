@@ -9,7 +9,7 @@ import androidx.viewpager2.widget.ViewPager2
 import net.terme.offical.base.views
 import timber.log.Timber
 
-internal abstract class TermeTermeSkeletonMask(protected val parent: View, @ColorInt color: Int) : TermeSkeletonMaskable {
+internal abstract class TermeSkeletonMask(protected val parent: View, @ColorInt color: Int) : TermeSkeletonMaskable {
 
     var color: Int = color
         set(value) {
@@ -70,7 +70,7 @@ internal abstract class TermeTermeSkeletonMask(protected val parent: View, @Colo
 
     private fun validate(view: View) {
         when (view) {
-            is RecyclerView, is ViewPager2 -> Timber.w("Passing ViewGroup with reusable children to TermeTermeTermeSkeletonLayout - consider using applySkeleton() instead")
+            is RecyclerView, is ViewPager2 -> Timber.w("Passing ViewGroup with reusable children to TermeSkeletonLayout - consider using applySkeleton() instead")
         }
     }
 }

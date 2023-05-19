@@ -13,14 +13,14 @@ import kotlin.math.cos
 import kotlin.math.floor
 import kotlin.math.sin
 
-internal class TermeTermeSkeletonMaskShimmer(
+internal class TermeSkeletonMaskShimmer(
     parent: View,
     @ColorInt maskColor: Int,
     @ColorInt private val shimmerColor: Int,
     private val durationInMillis: Long,
     private val shimmerDirection: TermeSkeletonShimmerDirection,
     private val shimmerAngle: Int
-) : TermeTermeSkeletonMask(parent, maskColor) {
+) : TermeSkeletonMask(parent, maskColor) {
 
     private val refreshIntervalInMillis: Long by lazy { ((1000f / parent.context.refreshRateInSeconds()) * .9f).toLong() }
     private val width: Float = parent.width.toFloat()

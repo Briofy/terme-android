@@ -8,10 +8,10 @@ internal object TermeSkeletonMaskFactory {
     fun createMask(
         view: View,
         config: TermeSkeletonConfig
-    ): TermeTermeSkeletonMask {
+    ): TermeSkeletonMask {
         return when (config.showShimmer) {
-            true -> TermeTermeSkeletonMaskShimmer(view, config.maskColor, config.shimmerColor, config.shimmerDurationInMillis, config.shimmerDirection, config.shimmerAngle)
-            false -> TermeTermeSkeletonMaskSolid(view, config.maskColor)
+            true -> TermeSkeletonMaskShimmer(view, config.maskColor, config.shimmerColor, config.shimmerDurationInMillis, config.shimmerDirection, config.shimmerAngle)
+            false -> TermeSkeletonMaskSolid(view, config.maskColor)
         }
     }
 }

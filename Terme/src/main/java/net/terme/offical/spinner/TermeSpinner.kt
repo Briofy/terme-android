@@ -104,12 +104,12 @@ class TermeSpinner : MaterialCardView, TermeBaseProgressBar.OnProgressBarChangeL
 
 
     private fun refreshTintColor() {
-        if (tiniColor>0)
-        ui.progressBar.indeterminateDrawable.setColorFilter(
-            context.getColor(tiniColor),
-            android.graphics.PorterDuff.Mode.MULTIPLY
-        );
-
+        if (tiniColor>0) {
+            ui.progressBar.indeterminateDrawable.setColorFilter(
+                context.getColor(tiniColor),
+                android.graphics.PorterDuff.Mode.MULTIPLY
+            )
+        }
     }
     private val ui by lazy {
         LySpinnerUiBinding.inflate(LayoutInflater.from(context), this, true)

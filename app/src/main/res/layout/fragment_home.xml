@@ -7,6 +7,13 @@
     android:orientation="vertical"
     tools:context=".ui.badge.TermeBadgeFragment">
 
+    <net.terme.offical.dropdown.TermeDropdownMenu
+        android:id="@+id/dropdown_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:ddmDividerPadding="13dp"
+        app:ddmTabTextSize="13sp"/>
+
     <net.terme.offical.kbd.TermeKeyboard
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

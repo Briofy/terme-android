@@ -293,4 +293,15 @@
         </attr>
         <attr name="shimmerAngle" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="TermeDropdownMenu">
+        <attr name="ddmTabTextSize" format="dimension"/>
+        <attr name="ddmTabTextColorNormal" format="color"/>
+        <attr name="ddmTabTextColorSelected" format="color"/>
+        <attr name="ddmTabIconNormal" format="reference"/>
+        <attr name="ddmTabIconSelected" format="reference"/>
+        <attr name="ddmBorderColor" format="color"/>
+        <attr name="ddmDividerColor" format="color"/>
+        <attr name="ddmDividerPadding" format="dimension"/>
+    </declare-styleable>
 </resources>

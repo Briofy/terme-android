@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import net.terme.offical.dropdown.TermeDropItem
+import net.terme.test.R
 import net.terme.test.databinding.FragmentHomeBinding
 
 class TermeBadgeFragment : Fragment() {
@@ -22,6 +24,13 @@ class TermeBadgeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val list = mutableListOf<TermeDropItem>()
+       val icon =  resources.getDrawable(R.drawable.ic3 ,null)
+        for (i in 0 .. 10){
+            list.add(TermeDropItem(text = "Item $i" , icon = icon))
+        }
+        binding.dropdownMenu.add("GGG" , list)
+
         val root: View = binding.root
         return root
     }

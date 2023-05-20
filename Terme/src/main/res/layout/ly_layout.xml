@@ -2,7 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
         <import type="android.view.View" />
     </data>
 
@@ -16,7 +15,6 @@
         android:minWidth="400dp"
         android:minHeight="60dp"
         android:textDirection="rtl">
-
 
         <ImageView
             android:id="@+id/img_icon"
